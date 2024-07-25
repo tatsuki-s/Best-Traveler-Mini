@@ -1,0 +1,354 @@
+body {
+  background-color: white;
+  color:black;
+  font-family:'serif','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 0; 
+  margin-top: 20vh; /*マージンの幅を管理*/
+} 
+a {
+  border: none;
+  text-decoration: none;
+  color: black;
+}
+
+li {
+
+  list-style: none;
+  text-align: center;
+}
+.langes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+/*名前。そのまんま*/
+.HeaderItems .container .Name .n {
+  text-shadow:1px 1px 0 white, -1px -1px 0 white,
+            -1px 1px 0 white, 1px -1px 0 white,
+            0px 1px 0  white,  0-1px 0 white,
+            -1px 0 0 white, 1px 0 0 white;
+  color: black;
+  font-size: 50px;
+  margin: 0 auto;
+  border-bottom: 1px solid white;
+  transition: all 0.5s 0s ease;
+}
+.HeaderItems .container .Name .n:hover {
+  border-bottom: 2px solid white;
+  color: white;
+  text-shadow: none;
+}
+
+/*px指定あり*/
+header {
+  background-color: black;
+  width: 100%;
+  position: fixed; /* ヘッダーを固定する */
+  top: 0; /* 上部から配置の基準位置を決める */
+  left: 0; /* 左から配置の基準位置を決める */
+  z-index: 70; 
+}
+/*px指定あり。浮いたヘッダーの文としてmarginをとる。*/
+.menu-content .MENU {
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px white;
+  border-bottom: solid 2px white;
+}
+.menu-content .MENU:before, .menu-content .MENU:after{
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: white;
+}
+.menu-content .MENU:before {left: 10px;}
+.menu-content .MENU:after {right: 10px;}
+.menu-content .MENU {
+
+  padding: 0;
+}
+
+
+/*headerの中身*/
+.HeaderItems {
+  display: flex;
+  justify-content: space-between;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*px指定あり*/
+.icons {
+  max-width: 80px;
+  height: 80px;
+  margin-left: 30px;
+  margin-right: 15px;
+}
+/*ボタン。ハンバーガーメニューのこと。*/
+.menu-btn {
+  position: fixed;
+  top: 13px;
+  right: 10px;
+  height: 60px;
+  width: 60px;
+  z-index: 90;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  height: 70px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  background-color: black;
+  border-radius: 50%;
+  transition: all 1s;
+  cursor: pointer;
+}
+.menu-btn:hover {
+  background-color: rgb(49, 49, 49);
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 30px;
+  border-radius: 3px;
+  background-color: white;
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn {
+  border: 1px solid black;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: black;/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+#menu-btn-check {
+  display: none;
+}
+/*ハンバーガーの内容*/
+.MENU {
+  text-align: center;
+  font-size: 50px;
+}
+.menu-content {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  overflow-y: auto; /* 垂直方向にスクロール可能にする */
+  z-index: 80;
+  background-color: black;
+}
+.menu-content ul {
+  padding: 0px 10px 0;
+  margin-top: 0;
+}
+.menu-content ul li {
+  margin-bottom: 15px;
+  list-style: none;
+}
+.menu-content ul li a {
+  border-bottom: solid 1px white;
+  margin-bottom: 0;
+  display: block;
+  width: 100%;
+  font-size: 40px;
+  box-sizing: border-box;
+  color: white;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+/*下のwidthとleftの値を足して１００％にすること*/
+.menu-content {
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 100%;/*leftの値を変更してメニューを画面外へ*/
+  z-index: 90;
+  background-color: black;
+  transition: all 0.5s;/*アニメーション設定*/
+  text-align: center;
+} 
+#menu-btn-check:checked ~ .menu-content {
+  left: 50%;/*メニューを画面内へ*/
+}
+.gengo {
+  margin-right: 100px;
+  font-size: 50px;
+  text-align: center;
+  width: 250px;
+  height: 70px;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*ここからfooterの記述*/
+footer {
+  padding-top: 20px;
+  background-color: black;
+  padding-bottom: 10px;
+}
+.FootName {
+  text-align: center;
+}
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.FootName {
+  font-size: 40px;
+}
+.options {
+  font-size: 25px;
+  margin: 15px;
+  transition: 0.2s;
+}
+.FootName a {
+  border-bottom: 2px solid white;
+  transition: all 1s 0s ease-in;
+  text-shadow:1px 1px 0 white, -1px -1px 0 white,
+            -1px 1px 0 white, 1px -1px 0 white,
+            0px 1px 0  white,  0-1px 0 white,
+            -1px 0 0 white, 1px 0 0 white;
+  color: black;
+}
+.FootName a:hover {
+  border-bottom: 1px solid white;
+  color: white;
+  text-shadow: none;
+}
+.fot .na {
+  color: white;
+  transition: all 0.5s 0s ease;
+}
+.fot .na:hover {
+  border-bottom: 1px solid white;
+}
+
+
+
+.aaaaa {
+  color: #2486FE;
+}
+
+
+
+
+@media screen and (max-width: 959px) {
+/* 959px以下に適用されるCSS（タブレット用） */
+  .icons {
+      width: 65px;
+      height: 65px;
+      margin-right: 0;
+  }
+  
+  .Name {
+      font-size: 30px;
+  }
+  .menu-content .MENU {
+      font-size: 40px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+  }
+  .gengo {
+      font-size:30px;
+      height: 50px;
+      margin: 0 auto;
+  }
+  .lang {
+      display: none;
+  }
+  .menu-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 5px;
+      right: 0px;
+      width: 65px;
+      height: 65px;
+  }
+  .menu-btn:hover {
+      background-color: black;
+  }
+  main {
+      margin-top: 80px;
+  }
+  .langes {
+      display: block;
+  }
+  .menu-content ul li a {
+      font-size: 20px;
+  }
+  .menu-content {
+      width: 100%;
+      
+  } 
+  
+  #menu-btn-check:checked ~ .menu-content {
+      left: 0;/*メニューを画面内へ*/
+  }
+  .menu-btn {
+      border-radius: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+/* 480px以下に適用されるCSS（スマホ用） */
+  .sp {
+      display: block;
+  }
+  .icons {
+      display: none;
+  }
+}
+

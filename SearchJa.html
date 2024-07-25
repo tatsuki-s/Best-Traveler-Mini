@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja_JP">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="css/HomeJa.css">
+        <link href="css/Search.css" rel="stylesheet" />
+
+        <title>一関から平泉までの乗り換えバス</title>
+        <meta name="description" content="一関から平泉までの乗り換えバスのご案内です。他言語対応していて誰でも使いやすいサイトとなっています" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="HeaderItems">
+                <div class="container">
+                    <a href="TopPage.html"><img src="image/icon.jpg" class="icons" alt="ホーム画面のアイコン"></a> <!--リンクを入れる。ホーム画面への-->
+                    <h1 class="Name"><a href="TopPage.html" class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</a></h1>
+                </div> 
+                
+            </div>
+        </header>
+        <main>
+            <!--これらはハンバーガーメニューだけど、これってfixedで固定しているだけだからヘッダーだと思ってくれ-->
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <!--<h1 class="MENU">メニュー</h1>-->
+                    <ul>
+                        <li style="color: white;">
+                            <h1 class="menu">メニュー</h1>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="TopPageJa.html" class="house">ホーム</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="#" class="contact">お問い合わせ</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="#" class="line">路線選択</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="SearchJa.html" class="site">検索</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="PriJa.html" class="site">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                    <div id="box">
+                        <select id="mySelect" onchange="redirectToSite()">
+                            <option value="" style="display: none;">Language</option>
+                            <option value="TopPageJa.html">日本語</option>
+                            <option value="HomeEn.html">English</option>
+                        </select>
+                    </div>
+                </div>
+                <!--ここまでメニュー-->
+            </div>
+
+            <!--内容上はここから始まる-->
+            <div id="Maincontainer">
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="no-select" oninput="searchFunction()" placeholder="検索...">
+                </div>
+                <ul id="itemList">
+                    <li data-reading="ichinosekiekimae, itinosekiekimae, itinoseki, ichinoseki, 一関駅前, 一ノ関駅前"><a href="ichinoseki.html"><p class="en">ichinosekiekimae</p><p class="ja">一ノ関駅前</p></a></li>
+                    <li data-reading="omachidori, ohmachidori, oomachidouri, oomatidori, oomachidori, oomachidoori"><a href="#"><p class="en">ohmachidori</p><p class="ja">大町通り</p></a></li>
+                    <li data-reading="oomachikado, omatikado, Oomachikado, oomatikado"><a href="#"><p class="en">ohmachikado</p><p class="ja">大町角</p></a></li>
+                    <li data-reading="ichinosekiichikoumae, itinosekiitikoumae, ichinosekiichikomae, itinosekiitikomae"><a href="#"><p class="en">ichinosekiichikomae</p><p class="ja">一関一高前</p></a></li>
+                    <li data-reading="iw, iwaibashi, iwaibasi, iwaibrige, iwai brige"><a href="#"><p class="en">iwaibashi</p><p class="ja">磐井橋</p></a></li>
+                    <li data-reading="takeyama"><a href="#"><p class="en">takeyama</p><p class="ja">竹山</p></a></li>
+                    <li data-reading="haishiwajinjamae, haisiwajinjamae"><a href="#"><p class="en">haishiwajinjamae</p><p class="ja">配志和神社前</p></a></li>
+                    <li data-reading="yamanomeichome, yamanomeittyome, yamanomeicchome"><a href="#"><p class="en">yamanomeicchome</p><p class="ja">山目一丁目</p></a></li>
+                    <li data-reading="nakasatoshiminsentamae, nakasatosiminsentamae, nakasatoshimincentermae, nakasatosimincentermae, なかさとしみんせんたーまえ, なかざとしみんせんたーまえ"><a href="#"><p class="en">nakasatoshimincentermae</p><p class="ja">中里市民センター前</p></a></li>
+                    <li data-reading="yamanomeekimae, yamanomestation, 山目駅前, 山ノ目駅前"><a href="#"><p class="en">yamanomeekimae</p><p class="ja">山目駅前</p></a></li>
+                    <li data-reading="sawadairiguchi, sawadairiguti, 沢田入口, 澤田入口"><a href="#"><p class="en">sawadairiguchi</p><p class="ja">沢田入口</p></a></li>
+                    <li data-reading="nakasatoshinmachi, nakasatoshinnmachi, nakasatosinmachi, nakasatoshinnmachi, nakasatoshinmati, nakasatosinnmachi, nakasatosinmati, 中里新町, なかさとしんまち, なかざとしんまち"><a href="#"><p class="en">nakasatoshimincentermae</p><p class="ja">中里新町</p></a></li>
+                    <li data-reading="taisa, daisa, oosa, 大佐, たいさ, おおさ"><a href="#"><p class="en">taisa</p><p class="ja">大佐</p></a></li>
+                    <li data-reading="kawayashiki, kawayasiki, 川屋敷, かわやしき"><a href="#"><p class="en">kawayashiki</p><p class="ja">川屋敷</p></a></li>
+                    <li data-reading="sano, 佐野, さの"><a href="#"><p class="en">sano</p><p class="ja">佐野</p></a></li>
+                    <li data-reading="gion, gien, 祇園, ぎおん, ぎえん"><a href="#"><p class="en">gion</p><p class="ja">祇園</p></a></li>
+                    <li data-reading="motuji, moutuuji, motuuji, mootuji, moutuuji, 毛越寺, もうつうじ"><a href="#"><p class="en">moutuuji</p><p class="ja">毛越寺</p></a></li>
+                    <li data-reading="hiraizumiekimae, hiraizumistation, 平泉駅前, ひらいずみえきまえ"><a href="#"><p class="en">hiraizumiekimae</p><p class="ja">平泉駅前</p></a></li>
+                    <li data-reading="suzusawa, 鈴沢, 鈴澤, すずさわ"><a href="#"><p class="en">suzusawa</p><p class="ja">鈴沢</p></a></a></li>
+                    <li data-reading="hanadate, 花館, はなだて"><a href="#"><p class="en">hanadate</p><p class="ja">花館</p></a></a></li>
+                    <li data-reading="tyusonji, tyuusonji, tyusonnji, tyuusonji, tyusonzi, chusonji, chuusonji, chusonnji, chusonzi, chuusonzi, 中尊寺, ちゅうそんじ"><a href="#"><p class="en">chusonji</p><p class="ja">中尊寺</p></a></a></li>
+                    <li data-reading="koromokawabashi, koromokawahashi, koromokawabasi, koromokawahasi, ikawabashi, ikawahashi, ikawabasi, ikawahasi, 衣川橋, いかわばし, ころもかわばし"><a href="#"><p class="en">koromokawabashi</p><p class="ja">衣川橋</p></a></li>
+                    <li data-reading="sehara, sebara, 瀬原, せはら"><a href="#"><p class="en">sehara</p><p class="ja">瀬原</p></a></li>
+                    <li data-reading="tokusawa, tokuzawa, 徳沢, 徳澤, とくさわ, とくざわ"><a href="#"><p class="en">tokusawa</p><p class="ja">徳沢</p></a></li>
+                    <li data-reading="tyogiri, tyougiri, chogiri, choogiri"><a href="#"><p class="en">chogiri</p><p class="ja">丁切</p></a></li>
+                    <li data-reading="mikkamachi, mikkamati, mikkacho, mikkatyou, mikamachi, mikamati, mikacho, mikkachou, mikkatyo, 三日町, 3日町, みっかまち, みっかちょう"><a href="#"><p class="en">mikkacho</p><p class="ja">三日町</p></a></li>
+                    <li data-reading="nanokamachi, nanokamati, nanokacho, nanokachou, nanokatyo, nanokatyou, 七日町, 7日町, なのかまち, なのかちょう"><a href="#"><p class="en">nanokacho</p><p class="ja">七日町</p></a></li>
+                    <li data-reading="maesawashinmachi, maesawachinnmachi, maesawashinmachi, maesawasinnmati, 前沢新町, 前澤新町, まえさわしんまち"><a href="#"><p class="en">maesawashinmachi</p><p class="ja">前沢新町</p></a></li>
+                    <li data-reading="nijuninmachi, nizyuninmati, nijuuninnmachi, nizyuuninnmachi, 二十人町, にじゅうにんちょう, にじゅうにんまち"><a href="#"><p class="en">nijuninmachi</p><p class="ja">二十人町</p></a></li>
+                    <li data-reading="botaiguti, botaiguchi, 母体口, ぼたいぐち"><a href="#"><p class="en">botaiguchi</p><p class="ja">母体口</p></a></li>
+                    <li data-reading="maesawahoikushomae, maesawahoikusyomae, 前沢保育所前, 前澤保育所前, まえさわほいくしょまえ"><a href="#"><p class="en">maesawahoikushomae</p><p class="ja">前沢保育所前</p></a></li>
+                    <li data-reading="ionmaesawa, ionnmaesawa, aeonmaesawa, イオン前沢, イオン前澤, いおんまえさわ"><a href="#"><p class="en">ionmaesawa</p><p class="ja">イオン前沢</p></a></li>
+                    <li id="noResult" style="display: none;"><p style="color: black;">見つかりませんか？スペルをお確かめください。</p></li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <h1 class="FootName fot"><a href="#" class="nav">BEST&nbsp;TRAVELER.</a></h1>
+                <ul class="cont">
+                    <li class="options fot blockes">
+                        <a href="TopPageJa.html" class="na house">ホーム</a>
+                    </li>
+                    <li class="options fot blockes">
+                        <a href="#" class="na contact">お問い合わせ</a>
+                    </li>
+                    <li class="options fot blockes">
+                        <a href="#" class="na line">路線選択</a>
+                    </li>
+                    <li class="options fot blockes">
+                        <a href="SearchJa.html" class="na site">検索</a>
+                    </li>
+                    <li class="options fot blockes">
+                        <a href="PriJa.html" class="na line" style="font-size: 17px;">プライバシーポリシー</a>
+                    </li>
+                </ul>
+            </div>
+            <p>Copyright © 2024 Agroup All Rights Reserved.</p>
+        </footer>
+        <script src="js/S.js"></script>
+        <script src="js/search.js"></script>
+    </body>
+</html>

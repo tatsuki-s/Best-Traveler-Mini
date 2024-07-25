@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja_JP">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="css/HomeJa.css" rel="stylesheet" />
+        <link href="css/main-一関平泉線トップ.css" rel="stylesheet" />
+
+        <title>一関から平泉までの乗り換えバス</title>
+        <meta name="description" content="一関から平泉までの乗り換えバスのご案内です。他言語対応していて誰でも使いやすいサイトとなっています" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="HeaderItems">
+                <div class="container">
+                    <a href="TopPage.html"><img src="image/icon.jpg" class="icons" alt="ホーム画面のアイコン"></a> <!--リンクを入れる。ホーム画面への-->
+                    <h1 class="Name"><a href="TopPage.html" class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</a></h1>
+                    <h1 class="spaced">From Ichinoseki_ekimae</h1>
+                </div> 
+                
+            </div>
+        </header>
+        <main>
+            <!--これらはハンバーガーメニューだけど、これってfixedで固定しているだけだからヘッダーだと思ってくれ-->
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <!--<h1 class="MENU">メニュー</h1>-->
+                    <ul>
+                        <li style="color: white;">
+                            <h1 class="menu">メニュー</h1>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="TopPageJa.html" class="house">ホーム</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="#" class="contact">お問い合わせ</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="#" class="line">路線選択</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="SearchJa.html" class="site">検索</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="PriJa.html" class="site">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                    <div id="box">
+                        <select id="mySelect" onchange="redirectToSite()">
+                            <option value="" style="display: none;">Language</option>
+                            <option value="TopPageJa.html">日本語</option>
+                            <option value="HomeEn.html">English</option>
+                        </select>
+                    </div>
+                </div>
+                <!--ここまでメニュー-->
+            </div>
+            
+
+            <!--内容上はここから始まる-->
+            <div class="naiyou">
+                <div class="dicLineName">
+                    <select class="lineName">
+                        <option><h1>一関平泉線</h1></option>
+                    </select>    
+                </div>
+                <!-- <div class="atama">
+                    <div class="divclock">
+                        <p class="clock"></p>
+                    </div>
+                </div> -->
+
+                <div class="allBusStop">
+                    <div class="dbus1">
+                        <a href="ichinoseki.html" class="bus1 effect aka">一ノ関駅前</a>
+                    </div>   
+                    <div class="aida">
+                        <p style="margin:0%;">　　　</p>
+                    </div>
+                    <div class="dbus1">
+                        <a href="#" class="bus1 effect aka">大町通り</a>
+                    </div>
+                    <div class="aida">
+                        <p style="margin:0%;">　　　</p>
+                    </div>
+                    <div class="dbus1">
+                        <a href="#" class="bus1 effect aka">大町角</a>
+                    </div>
+                    <div class="aida">
+                        <p style="margin:0%;">　　　</p>
+                    </div>
+                    <div class="dbus1">
+                        <a href="#" class="bus1 effect aka">一関一校前</a>
+                    </div>
+                    <div class="aida">
+                        <p style="margin:0%;">　　　</p>
+                    </div>
+                    <div class="dbus1">
+                        <a href="#" class="bus1 effect aka">磐井橋</a>
+                    </div>
+                    <div class="aida">
+                        <p style="margin:0%;">　　　</p>
+                    </div>
+                    <div class="dbus1">
+                        <a href="#" class="bus1 effect aka">竹山</a>
+                    </div>
+                    <div class="aida">
+                        <p style="margin:0%;">　　　</p>
+                    </div>
+                    <div class="dbus1">
+                        <a href="#" class="bus1 effect aka">配志和神社前</a>
+                    </div>
+                    <div class="aida">
+                        <p style="margin:0%;">　　　</p>
+                    </div>
+                    <div class="dbus1">
+                        <a href="#" class="bus1 effect aka">山目一丁目</a>
+                    </div>
+                    <div class="aida">
+                        <p style="margin:0%;">　　　</p>
+                    </div>
+                    <div class="dbus1">
+                        <a href="#" class="bus1 effect aka">中里市民センター前</a>
+                    </div>
+                    <div class="aida">
+                        <p style="margin:0%;">　　　</p>
+                    </div>
+                    <div class="dbus1">
+                        <a href="#" class="bus1 effect aka">山ノ目駅前</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+<!-- ここから下はフッター -->
+
+<footer>
+    <div class="footer">
+        <h1 class="FootName fot"><a href="#" class="nav">BEST&nbsp;TRAVELER.</a></h1>
+        <ul class="cont">
+            <li class="options fot blockes">
+                <a href="TopPageJa.html" class="na house">ホーム</a>
+            </li>
+            <li class="options fot blockes">
+                <a href="#" class="na contact">お問い合わせ</a>
+            </li>
+            <li class="options fot blockes">
+                <a href="#" class="na line">路線選択</a>
+            </li>
+            <li class="options fot blockes">
+                <a href="SearchJa.html" class="na site">検索</a>
+            </li>
+            <li class="options fot blockes">
+                <a href="PriJa.html" class="na line" style="font-size: 17px;">プライバシーポリシー</a>
+            </li>
+        </ul>
+    </div>
+    <p>Copyright © 2024 Agroup All Rights Reserved.</p>
+</footer>
+<script src="js/S.js"></script>
+<script src="js/home.js"></script>
+<script src="js/inner.js"></script>
+<script src="js/HOME.js"></script>
+</body>
+</html>

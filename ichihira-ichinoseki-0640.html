@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja_JP">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="css/HomeJa.css" rel="stylesheet"/>
+        <link href="css/busStopTable.css" rel="stylesheet"/>
+
+        <title>一関から平泉までの乗り換えバス</title>
+        <meta name="description" content="一関から平泉までの乗り換えバスのご案内です。他言語対応していて誰でも使いやすいサイトとなっています" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="HeaderItems">
+                <div class="container">
+                    <a href="TopPage.html"><img src="image/icon.jpg" class="icons" alt="ホーム画面のアイコン"></a> <!--リンクを入れる。ホーム画面への-->
+                    <h1 class="Name"><a href="TopPage.html" class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</a></h1>
+                </div> 
+                
+            </div>
+        </header>
+        <main>
+            <!--これらはハンバーガーメニューだけど、これってfixedで固定しているだけだからヘッダーだと思ってくれ-->
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <!--<h1 class="MENU">メニュー</h1>-->
+                    <ul>
+                        <li style="color: white;">
+                            <h1 class="menu">メニュー</h1>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="TopPageJa.html" class="house">ホーム</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="#" class="contact">お問い合わせ</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="#" class="line">路線選択</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="SearchJa.html" class="site">検索</a>
+                        </li>
+                        <li class="ite blockes">
+                            <a href="PriJa.html" class="site">プライバシーポリシー</a>
+                        </li>
+                    </ul>
+                    <div id="box">
+                        <select id="mySelect" onchange="redirectToSite()">
+                            <option value="" style="display: none;">Language</option>
+                            <option value="TopPageJa.html">日本語</option>
+                            <option value="HomeEn.html">English</option>
+                        </select>
+                    </div>
+                </div>
+                <!--ここまでメニュー-->
+            </div>
+            <!--内容上はここから始まる-->
+            <div class="Maincontainer">
+                <div class="tables">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>出発地</th>
+                                <th>停車バス停</th>
+                                <th>停車時刻</th>
+                                <th>運賃</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&#9733</td>
+                                <td>一関駅前&nbsp;10番のりば</td>
+                                <td>&nbsp;6:40</td>
+                                <td class="kara"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>大町通り</td>
+                                <td>&nbsp;6:42</td>
+                                <td>170円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>大町角</td>
+                                <td>&nbsp;6:43</td>
+                                <td>170円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>一関一高前</td>
+                                <td>&nbsp;6:44</td>
+                                <td>170円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>磐井橋</td>
+                                <td>&nbsp;6:45</td>
+                                <td>170円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>竹山</td>
+                                <td>&nbsp;6:47</td>
+                                <td>170円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>配志和神社前</td>
+                                <td>&nbsp;6:48</td>
+                                <td>250円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>山目一丁目</td>
+                                <td>&nbsp;6:49</td>
+                                <td>250円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>中里市民センター前</td>
+                                <td>&nbsp;6:50</td>
+                                <td>250円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>山目駅前</td>
+                                <td>&nbsp;6:51</td>
+                                <td>320円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>沢田入口</td>
+                                <td>&nbsp;6:51</td>
+                                <td>320円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>中里新町</td>
+                                <td>&nbsp;6:52</td>
+                                <td>320円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>大佐</td>
+                                <td>&nbsp;6:53</td>
+                                <td>340円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>川屋敷</td>
+                                <td>&nbsp;6:54</td>
+                                <td>340円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>佐野</td>
+                                <td>&nbsp;6:55</td>
+                                <td>350円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>祇園</td>
+                                <td>&nbsp;6:56</td>
+                                <td>350円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>毛越寺</td>
+                                <td>&nbsp;6:58</td>
+                                <td>350円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>平泉駅前</td>
+                                <td>&nbsp;7:00</td>
+                                <td>350円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>鈴沢</td>
+                                <td>&nbsp;7:02</td>
+                                <td>370円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>花館</td>
+                                <td>&nbsp;7:03</td>
+                                <td>390円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>中尊寺</td>
+                                <td>&nbsp;7:04</td>
+                                <td>390円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>衣川橋</td>
+                                <td>&nbsp;7:06</td>
+                                <td>410円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>瀬原</td>
+                                <td>&nbsp;7:08</td>
+                                <td>440円</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+
+            </div>    
+        </main>
+        <footer>
+            <div class="footer">
+                <h1 class="FootName fot"><a href="#" class="nav">BEST&nbsp;TRAVELER.</a></h1>
+                <ul class="cont">
+                    <li class="options fot blockes">
+                        <a href="TopPageJa.html" class="na house">ホーム</a>
+                    </li>
+                    <li class="options fot blockes">
+                        <a href="#" class="na contact">お問い合わせ</a>
+                    </li>
+                    <li class="options fot blockes">
+                        <a href="#" class="na line">路線選択</a>
+                    </li>
+                    <li class="options fot blockes">
+                        <a href="SearchJa.html" class="na site">検索</a>
+                    </li>
+                    <li class="options fot blockes">
+                        <a href="PriJa.html" class="na line" style="font-size: 17px;">プライバシーポリシー</a>
+                    </li>
+                </ul>
+            </div>
+            <p>Copyright © 2024 Agroup All Rights Reserved.</p>
+        </footer>
+        <script src="js/S.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>
