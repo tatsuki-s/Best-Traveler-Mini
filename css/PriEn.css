@@ -3,14 +3,15 @@ body {
     font-family:'serif','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0; 
     margin: 0 auto; /*マージンの幅を管理*/
-    color: white;
+    color: black;
 }
 a {
-    display: inline-block;
+    display: block;
     border: none;
     text-decoration: none;
     color: black;
 }
+
 
 ul {
     padding-left: 0;
@@ -127,6 +128,7 @@ header {
     border: 1px solid white;
 }
 
+
 .menu-btn span,
 .menu-btn span:before,
 .menu-btn span:after {
@@ -161,6 +163,9 @@ header {
     top: 0;
     transform: rotate(-45deg);
 }
+#menu-btn-check:checked ~ .menu-btn {
+    border: 1px solid white;
+}
 #menu-btn-check {
     display: none;
 }
@@ -173,10 +178,9 @@ header {
 
 }
 .menu-content {
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
-
     width: 50%;
     height: 100%;
     position: fixed;
@@ -206,10 +210,10 @@ header {
 }
 /*下のwidthとleftの値を足して１００％にすること*/
 .menu-content {
+    overflow-x: hidden;
     width: 50%;
     height: 100%;
     position: fixed;
-    overflow-x: hidden;
     top: 0px;
     left: 100%;/*leftの値を変更してメニューを画面外へ*/
     z-index: 90;
@@ -237,7 +241,6 @@ header {
 #siteSelector option[value=""] {
     display: none;
 }
-
 .blockes a{
     max-width: 100%;
     transition: all 0.5s 0.1s ease;
@@ -256,35 +259,25 @@ header {
     margin-bottom: 20px;
     box-shadow: 0px 1px 20px white;
 }
-.searchResult {
-    display: none;
-    margin: 10px 0;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-}
-
-.searchResult.show {
-    display: block;
-}
-
-
-#itemList li {
-    display: list-item; /* Ensure the items are displayed correctly */
-
-}
 #box select:hover {
     cursor: pointer;
-    box-shadow: 0px 1px 30px white;/*                                                                                        */
-
+    box-shadow: 0px 1px 30px white;
 }
 /*ここからmainの記述*/
 main {
-    margin-top: 20vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    background-color: rgb(240, 240, 240);
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    min-height: 100vh;
+}
+#ma {
+    margin: 0 8vw 0 8vw;
+}
+.tyt{
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    border-left: solid 5px #7db4e6;/*左線*/
 }
 
 a,
@@ -294,6 +287,7 @@ a,
     -ms-user-select: none;     /* Internet Explorer/Edge */
     user-select: none;         /* Standard syntax */
 }
+
 
 /*ここからfooterの記述*/
 footer {
@@ -341,29 +335,33 @@ footer p {
     color: black;
 }
 .FootName a:hover {
+    
     border-bottom: 1px solid white;
     color: white;
     text-shadow: none;
 }
-
+#poli {
+    display: block;
+}
 
 
 /* デフォルトのスタイル.つまり英語用のスタイルと同じにすればいい */
 .fot .na {
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     padding: 20px;
-    padding-bottom: 10px;
 }
+
 
 
 
 
 @media screen and (max-width: 1180px) {
 	/* 959px以下に適用されるCSS（デカめのタブレット用） */
-    #itemList li a {
-        width: 70vw;
+    span {
+        display: none !important;
     }
+    
     .menu-btn:hover {
         background-color: black;
     }
@@ -371,17 +369,6 @@ footer p {
         width: 65px;
         height: 65px;
         margin-right: 0;
-    }
-    #itemList li a {
-        font-size: 20px;
-    }
-    main {
-        margin-left: 7vw;
-        padding-top: 30px;
-        margin-right: 7vw;
-    }
-    #itemList {
-        min-height: 100vh;
     }
     
     .HeaderItems .container .Name .n:hover {
@@ -391,12 +378,10 @@ footer p {
                   -1px 0 0 white, 1px 0 0 white;
         color: black;
         border-bottom: 1px solid white;
+        transition: none;
     }
     .menu-btn:hover {
         background-color: rgb(49, 49, 49);
-    }
-    .Name {
-        font-size: 30px;
     }
     .menu-content .MENU {
         font-size: 40px;
@@ -424,17 +409,20 @@ footer p {
     .menu-btn:hover {
         background-color: black;
     }
-    .time li a:hover {
-        background-color: black;
-        color: white;
+    main {
+        margin-left: 7vw;
+        padding-top: 20vh;
+        margin-right: 7vw;
     }
     .langes {
         display: block;
     }
     .menu-content ul li a {
-        font-size: 30px;
+        font-size: 35px;
     }
-    
+    #itemList li a {
+        width: 70vw;
+    }
     .menu-btn {
         border-radius: 50%;
     }
@@ -460,9 +448,16 @@ footer p {
         margin-right: 10px;
     }
     .fot .na {
-        font-size: 20px;
-        padding: 20px;
+        font-size: 30px;
+        padding: 20px 30px 20px;
         margin-bottom: 0;
+    }
+    .options {
+        width: 220px;
+        font-size: 25px;
+        padding-bottom: 5px;
+        text-align: center;
+        transition: all 1s 0s ease;
     }
     .FootName a:hover {
         display: inline;
@@ -490,20 +485,17 @@ footer p {
         transform: translateY(0px);
         border: none;
     }
-    main {
-        margin-left: 7vw;
-        padding-top: 30px;
-        margin-right: 7vw;
-    }
+    
 }
 @media screen and (max-width: 710px) {
 	/* 710px以下に適用されるCSS（タブレット用） */
     /*.sp {
         display: block;
     }*/
+
     main {
         margin-left: 5vw;
-        padding-top: 30px;
+        padding-top: 18vh;
         margin-right: 5vw;
     }
     .icons {
@@ -516,13 +508,14 @@ footer p {
     #menu-btn-check:checked ~ .menu-content {
         left: 30%;/*メニューを画面内へ*/
     }
+    #itemList li a {
+        width: 80vw;
+    }
     .menu-content {
-        width: 70%;
+        width: 70vw;
         
     } 
-    #itemList li a {
-        font-size: 16px;
-    }
+
     
     #menu-btn-check:checked ~ .menu-content {
         left: 30%;/*メニューを画面内へ*/
@@ -533,22 +526,27 @@ footer p {
     }
     .options {
         font-size: 20px;
+        width: 200px;
         margin-top: 0;
         margin-bottom: 10px;
     }
     .cont {
         margin-top: 30px;
     }
+
 }
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
     /*.sp {
         display: block;
     }*/
+    
+    #itemList li a{
+        width: 70vw;
+    }
     .ja {
         font-size: 25px;
     }
-    
     .icons {
         display: none;
     }
@@ -588,12 +586,20 @@ footer p {
         margin-right: 10px;
     }
     .fot .na {
+
         border: none;
+    }
+    a .na {
+        padding-bottom: 0;
     }
     .options {
         font-size: 20px;
         margin-top: 0;
         margin-bottom: 10px;
     }
+    #itemList li a {
+        font-size: 16px;
+    }
+    
 }
 

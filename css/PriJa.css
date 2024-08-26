@@ -1,3 +1,287 @@
+body {
+    background-color: rgba(233, 233, 233, 0.845);
+    font-family:'serif','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0; 
+    margin: 0 auto; /*マージンの幅を管理*/
+    color: black;
+}
+a {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    padding-left: 0;
+}
+li {
+
+    list-style: none;
+    text-align: center;
+}
+.langes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .spaced {
+    align-items: normal;
+    margin-bottom: 0;
+    margin-left: 20px;
+}
+/*名前。そのまんま*/
+.HeaderItems .container .Name .n {
+    text-shadow:1px 1px 0 white, -1px -1px 0 white,
+              -1px 1px 0 white, 1px -1px 0 white,
+              0px 1px 0  white,  0-1px 0 white,
+              -1px 0 0 white, 1px 0 0 white;
+    color: black;
+    font-size: 50px;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+    transition: all 1s 0s ease-in;
+}
+.HeaderItems .container .Name .n:hover {
+    color: white;
+    text-shadow: none;
+}
+/*px指定あり*/
+header {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    background-color: black;
+    width: 100%;
+    position: fixed; /* ヘッダーを固定する */
+    top: 0; /* 上部から配置の基準位置を決める */
+    left: 0; /* 左から配置の基準位置を決める */
+    z-index: 70; 
+}
+
+/*px指定あり。浮いたヘッダーの文としてmarginをとる。*/
+.menu-content .MENU {
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    padding: 0.5em 1.5em;
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+}
+.menu-content .MENU:before, .menu-content .MENU:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: white;
+}
+.menu-content .MENU:before {left: 10px;}
+.menu-content .MENU:after {right: 10px;}
+.menu-content .MENU {
+
+    padding: 0;
+}
+/*headerの中身*/
+.HeaderItems {
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*px指定あり*/
+.icons {
+    max-width: 80px;
+    height: 80px;
+    margin-left: 30px;
+    margin-right: 15px;
+}
+/*ボタン。ハンバーガーメニューのこと。*/
+.menu-btn {
+    position: fixed;
+    top: 13px;
+    right: 10px;
+    height: 60px;
+    width: 60px;
+    z-index: 90;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    height: 70px;
+    width: 70px;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-color: black;
+    border-radius: 50%;
+    transition: all 1s;
+    cursor: pointer;
+    transition: all 0.5 0s ease;
+}
+.menu-btn:hover {
+    border: 1px solid white;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 30px;
+    border-radius: 3px;
+    background-color: white;
+    position: absolute;
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+#menu-btn-check:checked ~ .menu-btn {
+    border: 1px solid black;
+}
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: black;/*メニューオープン時は真ん中の線を透明にする*/
+}
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check {
+    display: none;
+}
+/*ハンバーガーの内容*/
+.menu {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+.menu-content {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    overflow-y: auto; /* 垂直方向にスクロール可能にする */
+    z-index: 80;
+    background-color: black;
+}
+.menu-content ul {
+    padding: 0px 10px 0;
+    margin-top: 0;
+}
+.menu-content ul li {
+    margin-bottom: 15px;
+    list-style: none;
+}
+.menu-content ul li a {
+    border-bottom: solid 1px white;
+    margin-bottom: 0;
+    display: block;
+    width: 100%;
+    font-size: 40px;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+}
+/*下のwidthとleftの値を足して１００％にすること*/
+.menu-content {
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    top: 0px;
+    left: 100%;/*leftの値を変更してメニューを画面外へ*/
+    z-index: 90;
+    background-color: black;
+    overflow-y: auto;
+    transition: all 0.5s;/*アニメーション設定*/
+    text-align: center;
+} 
+#menu-btn-check:checked ~ .menu-content {
+    left: 50%;/*メニューを画面内へ*/
+}
+.langes {
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+
+}
+.langes #siteSelector{
+    background-color: black;
+    text-align: center;
+    color: white;
+    border: none;
+    font-size: 40px;
+}
+/* 初期オプション「Language」を非表示にする */
+#siteSelector option[value=""] {
+    display: none;
+}
+
+.blockes a{
+    max-width: 100%;
+    transition: all 0.5s 0.1s ease;
+}
+.blockes a:hover{
+    transform: scale(1.2);
+}
+#box select{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 90%;
+    border: 1px solid white;
+    font-size: 40px;
+    height: 70px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 20px white;
+}
+.searchResult {
+    display: none;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.searchResult.show {
+    display: block;
+}
+
+
+#itemList li {
+    display: list-item; /* Ensure the items are displayed correctly */
+
+}
+#box select:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 30px white;/*                                                                                        */
+
+}
 /*ここからmainの記述*/
 main {
     margin-left: 10vw;
@@ -20,19 +304,320 @@ main {
     border-left: solid 5px #7db4e6;/*左線*/
 }
 
+/* テキスト選択を無効にするスタイル */
+a,
+.no-select {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Standard syntax */
+}
 
 
 /*ここからfooterの記述*/
+footer {
+    border-top: 1px solid white;
+    padding-top: 20px;
+    background-color: black;
+    padding-bottom: 10px;
+}
+footer p {
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+}
+.FootName {
+    text-align: center;
+}
+.cont {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FootName {
+    font-size: 40px;
+}
+.options {
+    width: 220px;
+    font-size: 25px;
+    padding-bottom: 5px;
+    text-align: center;
+    transition:  all 1s 0s ease;
+}
+.options:hover {
+    transform: translateY(-10px);
+    border-bottom: 1px solid white;
+}
+.FootName a {
+    display: inline;
+    border-bottom: 2px solid white;
+    transition: all 1s 0s ease-in;
+    text-shadow:1px 1px 0 white, -1px -1px 0 white,
+              -1px 1px 0 white, 1px -1px 0 white,
+              0px 1px 0  white,  0-1px 0 white,
+              -1px 0 0 white, 1px 0 0 white;
+    color: black;
+}
+.FootName a:hover {
+    border-bottom: 1px solid white;
+    color: white;
+    text-shadow: none;
+}
+
+
+
+/* デフォルトのスタイル.つまり英語用のスタイルと同じにすればいい */
+.fot .na {
+    font-size: 20px;
+    color: white;
+    padding: 20px;
+    /* padding-bottom: 10px; */
+}
+.cont .pry .na {
+    padding: 20px;
+    font-size: 18px;
+} 
 
 
 
 
-@media screen and (max-width: 480px) {
-	/* 480px以下に適用されるCSS（スマホ用） */
-    #ma h1 {
-        font-size: 24px;
+
+@media screen and (max-width: 1180px) {
+	/* 959px以下に適用されるCSS（デカめのタブレット用） */
+    #itemList li a {
+        width: 70vw;
     }
-    .tyt {
+    .menu-btn:hover {
+        background-color: black;
+    }
+    .icons {
+        width: 65px;
+        height: 65px;
+        margin-right: 0;
+    }
+    #itemList li a {
         font-size: 20px;
     }
+    main {
+        margin-left: 7vw;
+        padding-top: 20vh;
+        margin-right: 7vw;
+    }
+    #itemList {
+        min-height: 100vh;
+    }
+    
+    .HeaderItems .container .Name .n:hover {
+        text-shadow:1px 1px 0 white, -1px -1px 0 white,
+                  -1px 1px 0 white, 1px -1px 0 white,
+                  0px 1px 0  white,  0-1px 0 white,
+                  -1px 0 0 white, 1px 0 0 white;
+        color: black;
+        border-bottom: 1px solid white;
+    }
+    .menu-btn:hover {
+        background-color: rgb(49, 49, 49);
+    }
+    .Name {
+        font-size: 30px;
+    }
+    .menu-content .MENU {
+        font-size: 40px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .gengo {
+        font-size:30px;
+        height: 30px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .lang {
+        display: none;
+    }
+    .menu-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 5px;
+        right: 0px;
+        width: 65px;
+        height: 65px;
+    }
+    .menu-btn:hover {
+        background-color: black;
+    }
+    .time li a:hover {
+        background-color: black;
+        color: white;
+    }
+    .langes {
+        display: block;
+    }
+    .menu-content ul li a {
+        font-size: 30px;
+    }
+    
+    .menu-btn {
+        border-radius: 50%;
+    }
+    .cont {
+        flex-direction: column;
+    }
+    .spaced {
+        display: none;
+    }
+    .HeaderItems .container .Name .n {
+        font-size: 40px;
+        margin-left: 10px;
+    }
+    .time li a {
+        font-size: 60px;
+        padding: 0px 5px 0px;
+    }
+    .left {
+        flex: 2.2;
+    }
+    .right {
+        flex: 7.8;
+        margin-right: 10px;
+    }
+    .fot .na {
+        font-size: 20px;
+        padding: 20px;
+        margin-bottom: 0;
+    }
+    .FootName a:hover {
+        display: inline;
+        border-bottom: 2px solid white;
+        transition: all 1s 0s ease-in;
+        text-shadow:1px 1px 0 white, -1px -1px 0 white,
+                  -1px 1px 0 white, 1px -1px 0 white,
+                  0px 1px 0  white,  0-1px 0 white,
+                  -1px 0 0 white, 1px 0 0 white;
+        color: black;
+    }
+
+    .lang-en .fot .na {
+        font-size: 30px;
+        padding: 20px;
+        margin-bottom: 0;
+    }
+    .blockes a {
+        max-width: none;
+    }
+    .blockes a:hover {
+        transform: scale(1.0);
+    }
+    .options:hover {
+        transform: translateY(0px);
+        border: none;
+    }
+    main {
+        margin-left: 7vw;
+        padding-top: 20vh;
+        margin-right: 7vw;
+    }
 }
+@media screen and (max-width: 710px) {
+	/* 710px以下に適用されるCSS（タブレット用） */
+    /*.sp {
+        display: block;
+    }*/
+    main {
+        margin-left: 5vw;
+        padding-top: 18vh;
+        margin-right: 5vw;
+    }
+    .icons {
+        margin-left: 15px;
+    }
+    .menu-content {
+        width: 70%;
+        
+    } 
+    #menu-btn-check:checked ~ .menu-content {
+        left: 30%;/*メニューを画面内へ*/
+    }
+    .menu-content {
+        width: 70%;
+        
+    } 
+    #itemList li a {
+        font-size: 16px;
+    }
+    
+    #menu-btn-check:checked ~ .menu-content {
+        left: 30%;/*メニューを画面内へ*/
+    }
+    .time li a {
+        font-size: 40px;
+        padding: 0px 5px 0px;
+    }
+    .options {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .cont {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    /*.sp {
+        display: block;
+    }*/
+    .ja {
+        font-size: 25px;
+    }
+    
+    .icons {
+        display: none;
+    }
+    .cont {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .menu-content {
+        width: 100%;
+        
+    } 
+    .menu {
+        font-size: 40px;
+    }
+    #menu-btn-check:checked ~ .menu-content {
+        left: 0;/*メニューを画面内へ*/
+    }
+    .spaced {
+        display: none;
+    }
+    .HeaderItems .container .Name .n {
+        font-size: 30px;
+        margin-left: 10px;
+    }
+    .left {
+        flex: 2.8;
+    }
+    .time li a {
+        font-size: 40px;
+        padding: 0px 5px 0px;
+    }
+    .right {
+        flex: 7.2;
+        margin-right: 10px;
+    }
+    .fot .na {
+        border: none;
+    }
+    .options {
+        font-size: 20px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+

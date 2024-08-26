@@ -6,6 +6,8 @@ body {
     margin: 0 auto; /*マージンの幅を管理*/
     color: white;
 }
+
+
 a {
     /* display: block; */
     border: none;
@@ -192,10 +194,11 @@ footer p {
     font-size: 25px;
     text-align: center;
     transition: 0.2s;
+    border: none;
 }
 .FootName a {
     display: inline;
-    border-bottom: 2px solid white;
+    /* border-bottom: 2px solid white; */
     transition: all 1s 0s ease-in;
     text-shadow:1px 1px 0 white, -1px -1px 0 white,
               -1px 1px 0 white, 1px -1px 0 white,
@@ -203,19 +206,19 @@ footer p {
               -1px 0 0 white, 1px 0 0 white;
     color: black;
 }
-.FootName a:hover {
+/* .FootName a:hover {
     border-bottom: 1px solid white;
     color: white;
     text-shadow: none;
-}
+} */
 .fot .na {
 
     color: white;
     transition: all 0.5s 0s ease;
 }
-.fot .na:hover {
+/* .fot .na:hover {
     border-bottom: 1px solid white;
-}
+} */
 
 
 
@@ -239,7 +242,7 @@ footer p {
         color: black;
         font-size: 50px;
         margin: 0 auto;
-        border-bottom: 1px solid white;
+        /* border-bottom: 1px solid white; */
         transition: all 0.5s 0s ease;
     }
     .menu-btn:hover {
@@ -315,7 +318,7 @@ footer p {
 
     .FootName a:hover {
         display: inline;
-        border-bottom: 2px solid white;
+        /* border-bottom: 2px solid white; */
         transition: all 1s 0s ease-in;
         text-shadow:1px 1px 0 white, -1px -1px 0 white,
                   -1px 1px 0 white, 1px -1px 0 white,
@@ -356,7 +359,8 @@ footer p {
         width: 150px;
         margin-top: 0;
         margin-bottom: 10px;
-        border-bottom: 1px solid white;
+        border: none;
+        /* border-bottom: 1px solid white; */
     }
     .cont {
         margin-top: 30px;
@@ -369,17 +373,22 @@ footer p {
     /*.sp {
         display: block;
     }*/
+
+    body {
+        display: block;
+    }
     
     .MainContainer {
 		display: block;
+        height: 100%;
      }
      
      main {
-		height: 1100px;
+		height: 100%;
      }
      
      .right img {
-		max-width: 100vw;
+		max-width: 90vw;
       }
 
     
@@ -423,7 +432,7 @@ footer p {
 
     .right {
         margin-right: 10px;
-        height: 300px;
+        height: 100%;
 	}
     .fot .na {
         border: none;
@@ -433,12 +442,18 @@ footer p {
         width: auto;
         margin-top: 0;
         margin-bottom: 10px;
-        border-bottom: 1px solid white;
+        border: none;
+        /* border-bottom: 1px solid white; */
+    }
+    .mainAndFooter {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
     
     footer {
 		position: sticky;
-		margin-top: 400px;
+		/* margin-top: 400px; */
     }
 }
 

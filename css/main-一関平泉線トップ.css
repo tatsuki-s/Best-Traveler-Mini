@@ -13,6 +13,7 @@ main {
 .naiyou {
   display: flex;
   flex-flow: column;
+  padding-top:20vh;
   background-color: rgb(240, 240, 240);
   color: black;
   margin-left: 10vw;

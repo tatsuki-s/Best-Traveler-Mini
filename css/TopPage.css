@@ -25,7 +25,8 @@ li {
 }
 /*ここからmainの記述*/
 main {
-    /* margin-top: 150px; */
+    margin-top: 150px;
+    width: 70vw;
     margin-left: 15vw;
     margin-right: 15vw;
     margin-bottom: 30px;
@@ -46,9 +47,9 @@ h2 {
     
   }
 
-  /* span {
+  span {
     display:inline-block;
-  } */
+  }
   
   @keyframes slideIn {
     0% {
@@ -77,4 +78,5 @@ h2 {
     padding: 10px;
     border-radius: 20px;
 }
+
 

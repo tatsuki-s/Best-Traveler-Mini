@@ -5,7 +5,9 @@
     border-color: red;
 } */
 
-
+body {
+    color: black;
+}
 
 /* セル内の文字の周りに幅をもたせ,中央寄せ */
 table th,
@@ -39,6 +41,11 @@ table {
 
 main {
     margin-left: 10vw;
+    margin-right: 10vw;
+    background-color: rgb(240, 240, 240);
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    min-height: 100vh;margin-left: 10vw;
     margin-right: 10vw;
     background-color: rgb(240, 240, 240);
     padding-top: 20vh;

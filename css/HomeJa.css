@@ -3,7 +3,7 @@ body {
     font-family:'serif','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0; 
     margin: 0 auto; /*マージンの幅を管理*/
-    color: black;
+    color: white;
 }
 a {
     display: inline-block;
@@ -284,15 +284,9 @@ header {
 }
 /*ここからmainの記述*/
 main {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    background-color: rgb(240, 240, 240);
-    padding-top: 20vh;
-    padding-bottom: 10vh;
-    min-height: 100vh;
+    margin-top: 20vh;
 }
 
-/* テキスト選択を無効にするスタイル */
 a,
 .no-select {
     -webkit-user-select: none; /* Safari */
@@ -300,7 +294,6 @@ a,
     -ms-user-select: none;     /* Internet Explorer/Edge */
     user-select: none;         /* Standard syntax */
 }
-
 
 /*ここからfooterの記述*/
 footer {
@@ -360,13 +353,8 @@ footer p {
     font-size: 20px;
     color: white;
     padding: 20px;
-    /* padding-bottom: 10px; */
+    padding-bottom: 10px;
 }
-.cont .pry .na {
-    padding: 20px;
-    font-size: 18px;
-} 
-
 
 
 
@@ -389,7 +377,7 @@ footer p {
     }
     main {
         margin-left: 7vw;
-        padding-top: 20vh;
+        padding-top: 30px;
         margin-right: 7vw;
     }
     #itemList {
@@ -504,7 +492,7 @@ footer p {
     }
     main {
         margin-left: 7vw;
-        padding-top: 20vh;
+        padding-top: 30px;
         margin-right: 7vw;
     }
 }
@@ -515,7 +503,7 @@ footer p {
     }*/
     main {
         margin-left: 5vw;
-        padding-top: 18vh;
+        padding-top: 30px;
         margin-right: 5vw;
     }
     .icons {

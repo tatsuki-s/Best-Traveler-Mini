@@ -1,0 +1,27 @@
+main {
+    margin-top: 150px;
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 30px;
+    color: black;
+    /* これは路線数が足りない応急処置 */
+    padding-bottom: 300px;
+}
+
+.MainContainer a {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px black;
+} 
+
+#ichihira a {
+    color:rgb(255, 255, 0);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#tsukiichi a {
+    color:rgb(255, 132, 0);
+    font-size: 30px;
+    font-weight: bold;
+}

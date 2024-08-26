@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <link href="css/PriJa.css" rel="stylesheet" />
+        <link href="css/HomeJa.css" rel="stylesheet"/>
+        <link href="css/busStopTable.css" rel="stylesheet"/>
 
         <link rel="icon" href="image/favicon.ico"> 
 
@@ -17,6 +18,7 @@
                 <div class="container">
                     <a href="TopPageJa.html"><img src="image/icon.jpg" class="icons" alt="ホーム画面のアイコン"></a> <!--リンクを入れる。ホーム画面への-->
                     <h1 class="Name"><a href="TopPageJa.html" class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</a></h1>
+                    <h1 class="spaced">From Ichinoseki_ekimae</h1>
                 </div> 
                 
             </div>
@@ -40,7 +42,7 @@
                             <a href="#" class="contact">お問い合わせ</a>
                         </li>
                         <li class="ite blockes">
-                            <a href="LineJa.html" class="line">路線選択</a>
+                            <a href="#" class="line">路線選択</a>
                         </li>
                         <li class="ite blockes">
                             <a href="SearchJa.html" class="site">検索</a>
@@ -61,19 +63,41 @@
             </div>
 
             <!--内容上はここから始まる-->
-            <div id="ma">
-                <h1 >プライバシーポリシー</h1>
-                <p>当ウェブサイト（以下、「当サイト」といいます）は、利用者の個人情報の保護に最大限の注意を払っています。以下に、当サイトのプライバシーポリシーを記載いたします。</p><br>
-                <h2 class="tyt">個人情報の取り扱いについて</h2>
-                <p>一切個人情報を収集しません。</p>
-                <h2 class="tyt">クッキーの使用について</h2>
-                <p>クッキーを使用しません。</p>
-                <h2 class="tyt">プライバシーポリシーの改正</h2>
-                <p>当サイトは、必要に応じてプライバシーポリシーを改定することがあります。改定後のポリシーは、当サイトに掲載した時点で効力を生じます。</p>
-                <h2 class="tyt">お問い合わせ先</h2>
-                <p>プライバシーポリシーに関するお問い合わせは、以下の連絡先までお願いいたします</p>
-                <p>連絡先メールアドレス:example@example.com<br>電話番号:000-0000-0000</p>
-            </div>
+            <div id="Maincontainer">
+                <div class="tables">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>出発地</th>
+                                <th>停車バス停</th>
+                                <th>停車時刻</th>
+                                <th>運賃</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&#9733<!--基準の駅に星マーク。ここより上に運賃は書かないが，バス停名があるなら書く--></td>
+                                <td>（乗車バス停名）</td>
+                                <td>&nbsp;0:00</td>
+                                <td class="kara"><!--karaクラスはセルに斜線を引くようにしてる。乗るバス停から運賃はとらないから--></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>（バス停名）</td>
+                                <td>&nbsp;0:00</td>
+                                <td>（運賃）円</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>（バス停名）</td>
+                                <td>&nbsp;0:00</td>
+                                <td>（運賃）円</td>
+                            </tr>
+                        </tbody>    
+                    </table>
+                </div>
+
+            </div>    
         </main>
         <footer>
             <div class="footer">
@@ -86,7 +110,7 @@
                         <a href="#" class="na contact">お問い合わせ</a>
                     </li>
                     <li class="options fot blockes">
-                        <a href="LineJa.html" class="na line">路線選択</a>
+                        <a href="#" class="na line">路線選択</a>
                     </li>
                     <li class="options fot blockes">
                         <a href="SearchJa.html" class="na site">検索</a>
@@ -98,7 +122,6 @@
             </div>
             <p>Copyright © 2024 Agroup All Rights Reserved.</p>
         </footer>
-        <script src="js/S.js"></script>
         <script src="js/S.js"></script>
         <script src="js/home.js"></script>
     </body>
