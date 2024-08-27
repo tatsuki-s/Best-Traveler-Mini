@@ -12,57 +12,11 @@
         <meta name="description" content="This is a guide for transfer buses from Ichinoseki to Hiraizumi. The site is available in other languages and is easy to use for everyone!" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <body>
-            <header>
-                <div class="HeaderItems">
-                    <div class="container">
-                        <a href="TopPageEn.html"><img src="image/icon.jpg" class="icons" alt="ホーム画面のアイコン"></a> <!--リンクを入れる。ホーム画面への-->
-                        <h1 class="Name"><a href="TopPageEn.html" class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</a></h1>
-                    </div> 
-                    
-                </div>
-            </header>
-            <main>
-                <!--これらはハンバーガーメニューだけど、これってfixedで固定しているだけだからヘッダーだと思ってくれ-->
-                <div class="hamburger-menu">
-                    <input type="checkbox" id="menu-btn-check">
-                    <label for="menu-btn-check" class="menu-btn"><span></span></label>
-                    <!--ここからメニュー-->
-                    <div class="menu-content">
-                        <!--<h1 class="MENU">メニュー</h1>-->
-                        <ul>
-                            <li style="color: white;">
-                                <h1 class="menu">メニュー</h1>
-                            </li>
-                            <li class="ite blockes">
-                                <a href="TopPageEn.html" class="house">Home</a>
-                            </li>
-                            <li class="ite blockes">
-                                <a href="#" class="contact">Contact</a>
-                            </li>
-                            <li class="ite blockes">
-                                <a href="LineJa.html" class="line">Line</a>
-                            </li>
-                            <li class="ite blockes">
-                                <a href="SearchJa.html" class="site">Search</a>
-                            </li>
-                            <li class="ite blockes">
-                                <a href="PriEn.html" class="site"">Privacy&nbsp;Policy</a>
-                            </li>
-                        </ul>
-                        <div id="box">
-                            <select id="mySelect" onchange="redirectToSite()">
-                                <option value="" style="display: none;">Language</option>
-                                <option value="TopPageJa.html">日本語</option>
-                                <option value="TopPageEn.html">English</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!--ここまでメニュー-->
-                </div>
-    
-            <!--内容上はここから始まる-->
+</head>
+<body>
+    <div id="header"></div>
+    <main>
+        <!--内容上はここから始まる-->
             <div class="welcome">
                 <h1>Welcome&nbsp;to&nbsp;<span class="appNameTitle">&quot;BEST&nbsp;TRAVELER.&quot;</span></h1>
             </div>
@@ -100,34 +54,11 @@
             <div class="jump">
                 <a href="一関平泉線トップ.html">View bus stops on the Ichinoseki Hiraizumi Line</a>
             </div>
-
-
         </main>
-        <footer>
-            <div class="footer">
-                <h1 class="FootName fot"><a href="TopPageJa.html" class="nav">BEST&nbsp;TRAVELER.</a></h1>
-                <ul class="cont">
-                    <li class="options fot blockes">
-                        <a href="TopPageJa.html" class="na house">Home</a>
-                    </li>
-                    <li class="options fot blockes">
-                        <a href="#" class="na contact">Contact</a>
-                    </li>
-                    <li class="options fot blockes">
-                        <a href="LineJa.html" class="na line">Line</a>
-                    </li>
-                    <li class="options fot blockes">
-                        <a href="SearchJa.html" class="na site">Search</a>
-                    </li>
-                    <li class="options fot blockes">
-                        <a href="PriEn.html" class="na line" style="font-size: 17px;">Privacy&nbsp;Policy</a>
-                    </li>
-                </ul>
-            </div>
-            <p>Copyright © 2024 Agroup All Rights Reserved.</p>
-        </footer>
+        <div id="footer"></div>
         <script src="js/S.js"></script>
         <script src="js/HOME2.js"></script>
         <script src="js/inner.js"></script>
+        <script src="js/headerAndFooter.js"></script>
     </body>
 </html>
