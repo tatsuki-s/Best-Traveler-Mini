@@ -1,1 +1,3 @@
-images/*
+.vscode/
+.DS_Store  # macOSの隠しファイル
+Thumbs.db  # Windowsのファイル
