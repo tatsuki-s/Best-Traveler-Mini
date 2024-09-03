@@ -57,25 +57,9 @@ main {
 }
 
 @media screen and (max-width: 1180px) {
-	/* 959px以下に適用されるCSS（デカめのタブレット用） */
-    main {
-        margin-left: 7vw;
-        padding-top: 20vh;
-        margin-right: 7vw;
-    }
     table {
         font-size: 25px;
         width: 80vw;
-    }
-}
-
-
-@media screen and (max-width: 710px) {
-	/* 710px以下に適用されるCSS（タブレット用） */
-    main {
-        margin-left: 5vw;
-        padding-top: 18vh;
-        margin-right: 5vw;
     }
 }
 
