@@ -1,0 +1,24 @@
+#ma {
+    margin: 0 8vw 0 8vw;
+}
+.tyt{
+    padding: 0.25em 0.5em;/*上下 左右の余白*/
+    border-left: solid 5px #7db4e6;/*左線*/
+}
+
+
+
+/*ここからfooterの記述*/
+
+
+
+
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    #ma h1 {
+        font-size: 24px;
+    }
+    .tyt {
+        font-size: 20px;
+    }
+}
