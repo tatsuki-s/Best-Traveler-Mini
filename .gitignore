@@ -1,0 +1,35 @@
+# macOS
+.DS_Store
+
+# vscode
+.vscode
+
+# 環境固有ファイル
+.env
+
+# Windows
+Thumbs.db
+
+# Linux
+.cache/
+.config/
+.local/
+.bash_history
+.ssh/
+.viminfo
+.xsession-errors
+core
+*.swp
+*.swo
+*.lock
+*.pid
+
+# Log files
+*.log
+
+# Build directories
+dist/
+build/
+
+# Node modules (if using Node.js)
+node_modules/
