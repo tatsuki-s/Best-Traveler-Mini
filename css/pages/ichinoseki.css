@@ -5,14 +5,14 @@ main {
 .MainContainer {
     display: flex;
     width: 100%;
-    height: 100vh; /* 必要に応じて高さを調整 */
+    height: 120vh; /* 必要に応じて高さを調整。というのも、ここは動的に決めてないため。新たにセンテンスや写真を作りたいときはここをいじる。同文があると思うが、それらよりここの値を大きくすること */
     font-family: "メイリオ";
 }
 /* 左側の設定 */
 .left {
     flex: 3; /* 割合をかけ */
     background-color: white;
-    height: 920px;
+    height: 100vh; /* 必要に応じて高さを調整。というのも、ここは動的に決めてないため。新たにセンテンスや写真を作りたいときはここをいじる */
     overflow-y: auto; /* 垂直方向にスクロール可能にする */
 }
 .left::-webkit-scrollbar {
@@ -22,8 +22,8 @@ main {
 .right {
     margin-top: 20px;
     margin-right: 20px;
-    flex: 7; /* 割合をかけ */
-    height: 920px;
+    flex: 7; /* 割合をかく */
+    height: 100vh; /* 必要に応じて高さを調整。というのも、ここは動的に決めてないため。新たにセンテンスや写真を作りたいときはここをいじる */
 }
 .right img {
     max-width: 100%;
