@@ -1,13 +1,13 @@
 .MainContainer {
     display: flex;
     width: 100%;
-    height: 120vh; /* 必要に応じて高さを調整。というのも、ここは動的に決めてないため。新たにセンテンスや写真を作りたいときはここをいじる。同文があると思うが、それらよりここの値を大きくすること */
+    height: 100vh; /* 必要に応じて高さを調整。というのも、ここは動的に決めてないため。新たにセンテンスや写真を作りたいときはここをいじる。同文があると思うが、それらよりここの値を大きくすること */
     font-family: "メイリオ";
 }
 /* 左側の設定 */
 .left {
     flex: 3; /* 割合をかけ */
-    background-color: white;
+    background-color: rgb(240, 240, 240);
     height: 100vh; /* 必要に応じて高さを調整。というのも、ここは動的に決めてないため。新たにセンテンスや写真を作りたいときはここをいじる */
     overflow-y: auto; /* 垂直方向にスクロール可能にする */
 }
@@ -138,6 +138,12 @@
         margin-right: 10px;
     }
 }
+@media screen and (max-width: 1010px) {
+    main {
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 710px) {
     /*.sp {
         display: block;
