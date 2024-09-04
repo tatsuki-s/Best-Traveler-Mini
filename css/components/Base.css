@@ -21,8 +21,9 @@ li {
     text-align: center;
 }
 main {
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%; /* 残りの幅をコンテンツに割り当て */
     background-color: rgb(240, 240, 240);
     padding-top: 20vh;
     padding-bottom: 10vh;
