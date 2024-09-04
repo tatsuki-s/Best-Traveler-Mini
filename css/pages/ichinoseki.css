@@ -1,3 +1,7 @@
+.busStopName {
+    display: inline-block;
+    text-align: center;
+}
 .MainContainer {
     display: flex;
     width: 100%;
@@ -9,7 +13,6 @@
     flex: 3; /* 割合をかけ */
     background-color: rgb(240, 240, 240);
     height: 100vh; /* 必要に応じて高さを調整。というのも、ここは動的に決めてないため。新たにセンテンスや写真を作りたいときはここをいじる */
-    overflow-y: auto; /* 垂直方向にスクロール可能にする */
 }
 .left::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera */
@@ -47,7 +50,10 @@
     margin-right:auto;
     margin-left: auto;
 }
-
+#Box {
+    overflow-y: auto; /* 垂直方向にスクロール可能にする */
+    height: 20vh;
+}
 .time {
     padding-left: 0;
     display: block;
@@ -57,7 +63,6 @@
     width: 85%;
     margin-right: 20px;
     margin-left: 20px;
-
 }
 .time li {
     margin-bottom: 20px;
@@ -141,6 +146,9 @@
 @media screen and (max-width: 1010px) {
     main {
         height: auto;
+    }
+    #Box {
+        height: auto; /* 高さの制約を解除 */
     }
 }
 
