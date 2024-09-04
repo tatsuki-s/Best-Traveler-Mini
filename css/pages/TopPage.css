@@ -1,36 +1,9 @@
-body {
-    font-family:'serif','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 0; 
-    margin: 0 auto; /*マージンの幅を管理*/
-    color: white;
-}
-a {
-    border: none;
-    text-decoration: none;
-    color: black;
-}
-
 p,h2,h3 {
     font-family: メイリオ;
 }
 
 p {
     padding-bottom: 10px;
-}
-
-li {
-
-    list-style: none;
-    text-align: center;
-}
-/*ここからmainの記述*/
-main {
-    margin-top: 150px;
-    width: 70vw;
-    margin-left: 15vw;
-    margin-right: 15vw;
-    margin-bottom: 30px;
-    color: black;
 }
 
 h2 {
