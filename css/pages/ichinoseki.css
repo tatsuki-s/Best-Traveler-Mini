@@ -172,7 +172,7 @@
      }
      
      .right img {
-		max-width: 100vw;
+		max-width: 100%;
       }
     .left {
         flex: 10;
