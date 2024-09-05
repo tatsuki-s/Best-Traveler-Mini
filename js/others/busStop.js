@@ -28,7 +28,7 @@ function changeYoubi() {
 
 youbi.addEventListener("change", changeYoubi);
 
-changeYoubi;
+changeYoubi();
 
 // 高さを設定する
 
