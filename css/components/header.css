@@ -1,4 +1,4 @@
-.HeaderItems .container .Name .n {
+#HeaderItems #container .Name .n {
     text-shadow:1px 1px 0 white, -1px -1px 0 white,
               -1px 1px 0 white, 1px -1px 0 white,
               0px 1px 0  white,  0-1px 0 white,
@@ -9,7 +9,7 @@
     border-bottom: 1px solid white;
     transition: all 1s 0s ease-in;
 }
-.HeaderItems .container .Name .n:hover {
+#HeaderItems #container .Name .n:hover {
     color: white;
     text-shadow: none;
 }
@@ -26,7 +26,7 @@ header {
 }
 
 /*px指定あり。浮いたヘッダーの文としてmarginをとる。*/
-.menu-content .MENU {
+#menu-content .MENU {
     margin: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -36,7 +36,7 @@ header {
     border-top: solid 2px white;
     border-bottom: solid 2px white;
 }
-.menu-content .MENU:before, .menu-content .MENU:after{
+#menu-content .MENU:before, #menu-content .MENU:after{
     content: '';
     position: absolute;
     top: -10px;
@@ -45,24 +45,24 @@ header {
     height: calc(100% + 20px);
     background-color: white;
 }
-.menu-content .MENU:before {left: 10px;}
-.menu-content .MENU:after {right: 10px;}
-.menu-content .MENU {
+#menu-content .MENU:before {left: 10px;}
+#menu-content .MENU:after {right: 10px;}
+#menu-content .MENU {
 
     padding: 0;
 }
 /*headerの中身*/
-.HeaderItems {
+#HeaderItems {
     display: flex;
     justify-content: space-between;
 }
-.container {
+#container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 /*px指定あり*/
-.icons {
+#icons {
     max-width: 80px;
     height: 80px;
     margin-left: 30px;
@@ -140,7 +140,7 @@ header {
     margin-bottom: 10px;
 
 }
-.menu-content {
+#menu-content {
     display:flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,15 +152,15 @@ header {
     z-index: 80;
     background-color: black;
 }
-.menu-content ul {
+#menu-content ul {
     padding: 0px 10px 0;
     margin-top: 0;
 }
-.menu-content ul li {
+#menu-content ul li {
     margin-bottom: 15px;
     list-style: none;
 }
-.menu-content ul li a {
+#menu-content ul li a {
     border-bottom: solid 1px white;
     margin-bottom: 0;
     display: block;
@@ -173,7 +173,7 @@ header {
     position: relative;
 }
 /*下のwidthとleftの値を足して１００％にすること*/
-.menu-content {
+#menu-content {
     width: 50%;
     height: 100%;
     position: fixed;
@@ -186,7 +186,7 @@ header {
     transition: all 0.5s;/*アニメーション設定*/
     text-align: center;
 } 
-#menu-btn-check:checked ~ .menu-content {
+#menu-btn-check:checked ~ #menu-content {
     left: 50%;/*メニューを画面内へ*/
 }
 .langes {
@@ -234,7 +234,7 @@ header {
     .menu-btn:hover {
         background-color: black;
     }
-    .icons {
+    #icons {
         width: 65px;
         height: 65px;
         margin-right: 0;
@@ -242,11 +242,13 @@ header {
     .Name {
         font-size: 30px;
     }
-    .HeaderItems .container .Name .n {
+    #HeaderItems
+ #container .Name .n {
         font-size: 40px;
         margin-left: 10px;
     }
-    .HeaderItems .container .Name .n:hover {
+    #HeaderItems
+ #container .Name .n:hover {
         text-shadow:1px 1px 0 white, -1px -1px 0 white,
                   -1px 1px 0 white, 1px -1px 0 white,
                   0px 1px 0  white,  0-1px 0 white,
@@ -267,26 +269,26 @@ header {
         background-color: black;
         border: none;
     }
-    .menu-content {
+    #menu-content {
         width: 100%;
         
     } 
-    #menu-btn-check:checked ~ .menu-content {
+    #menu-btn-check:checked ~ #menu-content {
         left: 0%;/*メニューを画面内へ*/
     }
     
-    .menu-content .MENU {
+    #menu-content .MENU {
         font-size: 40px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
-    .menu-content ul li a {
+    #menu-content ul li a {
         font-size: 40px;
     }
 }
 @media screen and (max-width: 500px){
-    .menu-content ul li a {
+    #menu-content ul li a {
         font-size: 30px;
     }
 }

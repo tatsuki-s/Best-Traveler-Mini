@@ -1,10 +1,10 @@
-footer {
+#footer {
     border-top: 1px solid white;
     padding-top: 20px;
     background-color: black;
     padding-bottom: 10px;
 }
-footer p {
+#footer p {
     color: white;
     margin-top: 40px;
     text-align: center;
