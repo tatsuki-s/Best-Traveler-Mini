@@ -32,28 +32,28 @@ changeYoubi();
 
 // 高さを設定する
 
-function setBoxHeight() {
-    // メディアクエリで指定された幅以上のデバイスに対してのみ高さを設定
-    if (window.innerWidth >= 670) {
-        // busStopName IDの高さを取得
-        const busStopElement = document.getElementById('busStopName');
-        const busStopHeight = busStopElement.offsetHeight;
+// function setBoxHeight() {
+//     // メディアクエリで指定された幅以上のデバイスに対してのみ高さを設定
+//     if (window.innerWidth >= 670) {
+//         // busStopName IDの高さを取得
+//         const busStopElement = document.getElementById('busStopName');
+//         const busStopHeight = busStopElement.offsetHeight;
 
-        // ビューポートの高さ (100vh) を取得
-        const viewportHeight = window.innerHeight;
+//         // ビューポートの高さ (100vh) を取得
+//         const viewportHeight = window.innerHeight;
 
-        // 100vh から busStopName の高さを引いた値を計算
-        const newHeight = viewportHeight - busStopHeight;
+//         // 100vh から busStopName の高さを引いた値を計算
+//         const newHeight = viewportHeight - busStopHeight;
 
-        // 高さが負の値にならないようにする
-        const boxElement = document.getElementById('Box');
-        boxElement.style.height = (newHeight > 0 ? newHeight : 0) + 'px';
-    } else {
-        // 幅が670px未満のデバイスでは高さの設定を解除
-        const boxElement = document.getElementById('Box');
-        boxElement.style.height = 'auto';
-    }
-}
+//         // 高さが負の値にならないようにする
+//         const boxElement = document.getElementById('Box');
+//         boxElement.style.height = (newHeight > 0 ? newHeight : 0) + 'px';
+//     } else {
+//         // 幅が670px未満のデバイスでは高さの設定を解除
+//         const boxElement = document.getElementById('Box');
+//         boxElement.style.height = 'auto';
+//     }
+// }
 
 
 // ページロード時とリサイズ時に高さを調整
