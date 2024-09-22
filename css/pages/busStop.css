@@ -104,6 +104,10 @@ main {
     display: flex;
 }
 
+.heikyu {
+    display: flex;
+}
+
 .kyu {
     display: none;
 }
