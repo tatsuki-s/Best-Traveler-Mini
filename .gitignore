@@ -33,3 +33,6 @@ build/
 
 # Node modules (if using Node.js)
 node_modules/
+
+# lightbox のWindows固有ファイル
+*.Zone.Identifier
