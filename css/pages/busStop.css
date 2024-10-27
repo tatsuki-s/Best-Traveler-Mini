@@ -60,7 +60,7 @@ main {
 }
 #Box {
     overflow-y: auto; /* 垂直方向にスクロール可能にする */
-    height: 80vh;
+    height: calc(100vh - 300px);
 }
 .time {
     padding-left: 0;
