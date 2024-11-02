@@ -22,7 +22,7 @@ Best-travelerは，シンプルで見やすいということを目標に作ら�
 
 ### 実行環境
 
-実行環境は，WSL上または実機のUbuntuを前提としていますが，WindowsやMacでもNode.jsが動作すれば
+実行環境は，WSL上または実機のUbuntuを前提としていますが，WindowsやMacでもNode.jsが動作すれば実行できます。
 
 ### 実行手順
 
