@@ -31,9 +31,15 @@
 							<% data.forEach(row => { %>
 								<tr>
 									<td><%- row.出発地 %></td>
-									<td><%=row.バス停名 %></td>
-									<td><%=row.出発時 %>:<%=row.出発分 %></td>
-									<td><%=row.運賃 %>円</td>
+									<td><%= row.バス停名 %></td>
+									<td><%= row.出発時 %>:<%= row.出発分 %></td>
+									<td>
+                                        <%  if (row.運賃 === ""){ %>
+                                            &#215;
+                                        <%  } else { %>
+                                            <%= row.運賃 %>円
+                                        <%  }  %>
+                                    </td>
 								</tr>
 							<% }); %>
                         </tbody>
@@ -42,19 +48,7 @@
             </div>    
         </main>
         <div id="footer"></div>
-        <script>
-        //どうせここでしか使わないので直書き
-        fetch("/header.html")
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById("header").innerHTML = data;
-		});
-		fetch("/footer.html")
-			.then(response => response.text())
-			.then(data => {
-			document.getElementById("footer").innerHTML = data;
-		});
-        </script>
+        <script src="/js/usual/headerAndFooter.js"></script>
         <script src="/js/usual/HeaderHigh.js"></script>
         <script src="/js/usual/Redirect.js"></script>
     </body>
