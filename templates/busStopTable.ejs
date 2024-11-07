@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja_JP">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link href="/css/components/Base.css" rel="stylesheet" />
+        <link href="/css/components/header.css" rel="stylesheet" />
+        <link href="/css/components/footer.css" rel="stylesheet" />
+        <link href="/css/pages/busStopTable.css" rel="stylesheet"/>
+
+        <title>一関から平泉までの乗り換えバス</title>
+        <meta name="description" content="一関から平泉までの乗り換えバスのご案内です。他言語対応していて誰でも使いやすいサイトとなっています" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="header"></div>
+        <main>
+            <!--内容上はここから始まる-->
+            <div class="Maincontainer">
+                <div class="tables">
+					<table>
+	                    <thead>
+                            <tr>
+                                <th>出発地</th>
+                                <th>停車バス停</th>
+                                <th>停車時刻</th>
+                                <th>運賃</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+							<% data.forEach(row => { %>
+								<tr>
+									<td><%- row.出発地 %></td>
+									<td><%=row.バス停名 %></td>
+									<td><%=row.出発時 %>:<%=row.出発分 %></td>
+									<td><%=row.運賃 %>円</td>
+								</tr>
+							<% }); %>
+                        </tbody>
+					</table>
+                </div>
+            </div>    
+        </main>
+        <div id="footer"></div>
+        <script>
+        //どうせここでしか使わないので直書き
+        fetch("/header.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("header").innerHTML = data;
+		});
+		fetch("/footer.html")
+			.then(response => response.text())
+			.then(data => {
+			document.getElementById("footer").innerHTML = data;
+		});
+        </script>
+        <script src="/js/usual/HeaderHigh.js"></script>
+        <script src="/js/usual/Redirect.js"></script>
+    </body>
+</html>
