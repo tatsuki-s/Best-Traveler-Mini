@@ -13,17 +13,31 @@ app.use(express.static(path.join(__dirname, "../templates")));
 
 
 //EJSのテンプレートのディレクトリを指定
-app.set("views", path.join(__dirname, "../templates/"));
-
+app.set("views", path.join(__dirname, "../templates/"));0
 app.set("view engine", "ejs");
 
 //csv関連
 app.get("/:csvData", (req, res) => {
-	const csvPath = req.params.csvData;
+	
+	let csvFileName = req.params.csvData;
+
+	// ハイフンで分割して最初の3つをディレクトリ名に、残りをファイル名に
+	const parts = csvFileName.split("-");
+	if (parts.length < 4) {
+	  res.status(400).send("<h1>Invalid file format...</h1>");
+	  return;
+	}
+  
+	// 最初の3つをディレクトリ、残りをファイル名に結合
+	const directoryPath = path.join(__dirname, "../data/", parts.slice(0, 3).join("/"));
+	const fileName = parts.slice(3).join("-") + ".csv"; // 残りをファイル名に
+  
+	// フルパスを作成
+	const fullPath = path.join(directoryPath, fileName);
+
 	//ここに置くことでページが読み込まれる（リクエスト）たびにリセットされる
 	const results = [];
-
-		fs.createReadStream(path.join(__dirname, `../data/${csvPath}.csv`))
+	fs.createReadStream(fullPath)
 		.on("error", (error) => {
 			console.error("CSVファイルのエラー\n", error);
 			res.status(404).send("<h1>404 not found...</h1>");
@@ -34,7 +48,7 @@ app.get("/:csvData", (req, res) => {
 			console.log(results);
 	    	//res.send(results);
 			res.render("busStopTable", {data: results});
-		console.log(`${csvPath}を取得`);
+		console.log(`${fullPath}を取得`);
 	});
 });
 
