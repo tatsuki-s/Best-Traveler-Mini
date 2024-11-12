@@ -22,7 +22,7 @@
 					<table>
 	                    <thead>
                             <tr>
-                                <th>出発地</th>
+                                <!-- <th>出発地</th> -->
                                 <th>停車バス停</th>
                                 <th>停車時刻</th>
                                 <th>運賃</th>
@@ -31,7 +31,7 @@
                         <tbody>
 							<% data.forEach(row => { %>
 								<tr>
-									<td><%- row.出発地 %></td>
+									<!-- <td><%- row.出発地 %></td> -->
 									<td><%= row.バス停名 %></td>
 									<td><%= row.出発時 %>:<%= row.出発分 < 10 ? '0' + row.出発分 : row.出発分 %>
                                     </td>
