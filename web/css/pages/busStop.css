@@ -121,7 +121,7 @@ main {
 }
 
 .jikoku {
-	flex: 4.5;
+	flex: 4;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -141,6 +141,20 @@ main {
     color:rgb(255, 132, 0);
 }
 
+/* 上り下りの色を指定 */
+.nobori{
+    flex: 0.3;
+    color: red;
+    background-color: red;
+    margin: 0;
+}
+
+.kudari{
+    flex: 0.3;
+    color: blue;
+    background-color: blue;
+    margin: 0;
+}
 
 @media screen and (max-width: 1180px) {
     /* .time li a:hover {
