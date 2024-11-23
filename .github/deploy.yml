@@ -3,24 +3,21 @@ name: Deploy to Server
 on:
   push:
     branches:
-      - main  # 変更がpushされたとき
+      - main  # mainブランチにプッシュされたときに実行
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.HOST_SSH_KEY }}
-
-      - name: Sync files to server
-        run: |
+    - name: Deploy to server via SSH
+      uses: appleboy/ssh-action@v0.1.1
+      with:
+        host: ${{ secrets.HOST_IP }}
+        username: ${{ secrets.HOST_USER }}
+        key: ${{ secrets.HOST_SSH_KEY }}
+        script: |
           rsync -avz --delete ./ nen@163.43.158.178:/var/www/html/
-        env:
-          RSYNC_RSH: 'ssh -o StrictHostKeyChecking=no'
-
