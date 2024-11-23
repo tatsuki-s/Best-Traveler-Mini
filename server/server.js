@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 
+const hostname = '0.0.0.0'; //nginxでローカル公開用の設定
+
 const port = 3000;
 const fs = require("fs");
 const csv = require("csv-parser");
@@ -74,7 +76,7 @@ app.get("/", (req, res) => {
 
 
 
-app.listen(port, () => {
+app.listen(port, hostname, () => {
 	console.log(`The server has started and is listening on port number: ${port}`);
 });
     const schedule = [];
