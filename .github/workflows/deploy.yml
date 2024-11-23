@@ -30,3 +30,6 @@ jobs:
         port: 22
         script: |
           rsync -avz --delete ./ ${{ secrets.HOST_USER }}@${{ secrets.HOST_IP }}:/var/www/html/
+    - name: Debug SSH connection
+      run: |
+        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.HOST_USER }}@${{ secrets.HOST_IP }} "echo SSH connection successful"
