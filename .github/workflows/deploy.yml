@@ -18,7 +18,7 @@ jobs:
         echo "${{ secrets.HOST_SSH_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.HOST_IP }} >> ~/.ssh/known_hosts
-        
+
     - name: Deploy to server via SSH
       uses: appleboy/ssh-action@v0.1.1
       with:
@@ -27,4 +27,3 @@ jobs:
         key: ${{ secrets.HOST_SSH_KEY }}
         script: |
           rsync -avz --delete ./ nen@163.43.158.178:/var/www/html/
-
