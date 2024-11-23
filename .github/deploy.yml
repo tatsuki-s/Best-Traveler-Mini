@@ -20,3 +20,4 @@ jobs:
         key: ${{ secrets.HOST_SSH_KEY }}
         script: |
           rsync -avz --delete ./ nen@163.43.158.178:/var/www/html/
+
