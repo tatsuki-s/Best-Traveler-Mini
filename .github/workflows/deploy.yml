@@ -20,13 +20,17 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H ${{ secrets.HOST_IP }} >> ~/.ssh/known_hosts
 
+    - name: Debug SSH connection
+      run: |
+        ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no ${{ secrets.HOST_USER }}@${{ secrets.HOST_IP }} "echo SSH connection successful"
+      
+
     - name: Deploy to server via SSH
       uses: appleboy/ssh-action@v0.1.1
       with:
         host: ${{ secrets.HOST_IP }}
         username: ${{ secrets.HOST_USER }}
         key: ${{ secrets.HOST_SSH_KEY }}
-        passphrase: ${{ secrets.HOST_SSH_PASSPHRASE }}  # パスフレーズがある場合
         port: 22
         script: |
           rsync -avz --delete ./ ${{ secrets.HOST_USER }}@${{ secrets.HOST_IP }}:/var/www/html/
