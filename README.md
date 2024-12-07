@@ -30,7 +30,9 @@ Best-Travelerの開発において、以下のライブラリ・フレームワ�
 
 - Splide.js
 - Lightbox2
-- jQuery（Lightboxに付属）
+- jQuery（Lightboxが使用）
+
+いずれもCDNとしてjsDelivrを使わせていただきました。
 
 ## ディレクトリ構成
 ```
