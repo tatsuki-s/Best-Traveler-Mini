@@ -1,7 +1,7 @@
 //ヘッダーとフッターの読み込み
-fetch("best-traveler-mini/header.html")
+fetch("Best-Traveler-Mini/header.html")
 .then((response) => response.text())
 .then((data) => document.querySelector("#header").innerHTML = data);
-fetch("best-traveler-mini/footer.html")
+fetch("Best-Traveler-Mini/footer.html")
 .then((response) => response.text())
 .then((data) => document.querySelector("#footer").innerHTML = data);
