@@ -5,11 +5,20 @@
     padding: 0.25em 0.5em;/*上下 左右の余白*/
     border-left: solid 5px #7db4e6;/*左線*/
 }
+.marker-on {
+    text-align: left;
+    list-style: disc;
+}
+/* .marker-on p {
+    display: none;
+} */
+#info {
+    margin-left: 3vw;
+}
 
 
 
 /*ここからfooterの記述*/
-
 
 
 
