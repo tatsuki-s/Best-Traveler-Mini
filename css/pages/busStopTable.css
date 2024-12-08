@@ -33,12 +33,11 @@ table td {
 table {
     width: 50vw;
     font-size: 30px;
-    font-family: "游ゴシック体"
+    font-family: "游ゴシック体";
 }
 
 main {
     margin-right: 10vw;
-	margin-left: 10vw;
     background-color: rgb(240, 240, 240);
     padding-top: 20vh;
     padding-bottom: 10vh;
@@ -48,7 +47,7 @@ main {
 }
 
 
-.Maincontainer {
+#Maincontainer {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
