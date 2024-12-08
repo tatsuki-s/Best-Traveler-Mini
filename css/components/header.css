@@ -246,9 +246,10 @@ header {
         background-color: black;
     }
     #icons {
-        width: 65px;
-        height: 65px;
+        width: 50px;
+        height: 50px;
         margin-right: 0;
+		margin-left: 5px;
     }
     .Name {
         font-size: 30px;
