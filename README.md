@@ -40,7 +40,7 @@ Express.jsなどの必要パッケージを追加します。
 npm install express csv-perser ejs
 ```
 
-あとはserver,jsファイルを実行するだけです。
+あとはserver.jsファイルを実行するだけです。
 
 ```bash
 node seever.js
