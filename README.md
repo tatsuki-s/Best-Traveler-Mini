@@ -32,16 +32,14 @@ Best-Travelerの開発において、以下のライブラリ・フレームワ�
 - Lightbox2
 - jQuery（Lightboxが使用）
 
-いずれもCDNとしてjsDelivrを使わせていただきました。
+いずれもCDNとしてjsDelivrを使っています。
 
 ## ディレクトリ構成
 ```
 Best-Traveler/
-├── web/              # 静的ファイル
-│   ├── index.html 	  # トップページ（本家はTopPage.html）
-│   ├── css/          # CSSファイル
-│   ├── image/        # 画像
-│   └── js/           # JavaScriptファイル
-├── templates/        # 時刻表のテンプレートファイル
+├── index.html 	  # トップページ（本家はTopPage.html）
+├── css/          # CSSファイル
+├── image/        # 画像
+├── js/           # JavaScriptファイル
 └── README.md         # 説明書（このファイル）
 ```
