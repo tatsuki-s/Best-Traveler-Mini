@@ -8,7 +8,7 @@ import TopView from '../views/TopPage.vue'
 // stopDataのすべての駅をルートに追加するための処理
 const stopRoutes = stopData.map(stop => ({
   path: stop.link,  // 停車駅のpathをルートのpathに設定
-  name: stop.name.en,   // 停車駅のnameをルートのnameに設定
+  name: stop.name.en,   // 停車駅の英語版nameをルートのnameに設定
   component: () => import('../views/stops/stopPage.vue'),  // 停車駅のコンポーネントを動的にインポート
 }));
 
@@ -51,6 +51,11 @@ const router = createRouter({
           ],
         },
       ],
+    },
+    {
+      path: '/:pathMatch(.*)*', // 未定義のルートをキャッチ
+      name: 'NotFound',
+      component: () => import('../views/404.vue'),
     },
   ],
   get routes() {

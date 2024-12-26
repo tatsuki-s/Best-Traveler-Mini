@@ -46,7 +46,7 @@ main {
     margin-right: 5%;
     width: 90%; /* 残りの幅をコンテンツに割り当て */
     background-color: rgb(240, 240, 240);
-    padding-top: 20vh;
+    padding-top: 130px;
     padding-bottom: 10vh;
     min-height: 100vh;
 }
@@ -61,14 +61,13 @@ a,
 @media screen and (max-width:770px){
     main {
         margin-left: 7vw;
-        padding-top: 20vh;
+        padding-top: 100px;
         margin-right: 7vw;
     }
 }
 @media screen and (max-width:500px){
     main {
         margin-left: 5vw;
-        padding-top: 20vh;
         margin-right: 5vw;
     }
 }

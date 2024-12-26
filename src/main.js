@@ -12,6 +12,20 @@ const app = createApp(App)
 app.use(router)
 app.use(VueViewer)
 
-VueViewer.setDefaults({ "inline": false, "button": true, "navbar": false, "title": false, "toolbar": false, "tooltip": false, "movable": false, "zoomable": false, "rotatable": false, "scalable": false, "transition": true, "fullscreen": true, "keyboard": false})
+VueViewer.setDefaults({
+     "inline": false, 
+     "button": true, 
+     "navbar": false, 
+     "title": false, 
+     "toolbar": false, 
+     "tooltip": false, 
+     "movable": false, 
+     "zoomable": false, 
+     "rotatable": false, 
+     "scalable": false, 
+     "transition": true, 
+     "fullscreen": true, 
+     "keyboard": false
+    })
 
 app.mount('#app')

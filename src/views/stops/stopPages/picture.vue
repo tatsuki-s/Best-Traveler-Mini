@@ -60,7 +60,7 @@ thumbs {
 
 .menuBar {
 	font-weight: bold;
-	font-size: 120%;
+	font-size: 130%;
 	white-space: nowrap;
 }
 
@@ -70,5 +70,6 @@ thumbs {
 
 .tab{
 	margin: 15px;
+	font-size: 80%;
 }
 </style>
