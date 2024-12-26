@@ -25,7 +25,7 @@ import Footer from './components/footer.vue'
 /* ここでは大まかなスタイルを決める */
 body {
     background-color: rgba(233, 233, 233, 0.845);
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     padding: 0; 
     margin: 0 auto; /*マージンの幅を管理*/
     color: black;

@@ -21,7 +21,7 @@ import Comment from './stopPages/comment.vue'
     display: flex;
     width: 100%;
     height: 100%; /* 必要に応じて高さを調整。というのも、ここは動的に決めてないため。新たにセンテンスや写真を作りたいときはここをいじる。同文があると思うが、それらよりここの値を大きくすること */
-    font-family: "メイリオ";
+    /* font-family: "メイリオ"; */
     /* margin-bottom: 30px; */
 }
 /* 左側の設定 */

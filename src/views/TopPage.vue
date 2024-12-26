@@ -39,10 +39,6 @@
 	</RouterLink>
 </template>
 <style scoped>
-p,h2,h3 {
-    font-family: メイリオ;
-}
-
 p {
     padding-bottom: 10px;
 }
