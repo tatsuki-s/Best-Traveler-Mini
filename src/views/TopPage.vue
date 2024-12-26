@@ -34,7 +34,7 @@
             </p>
         </div>
     </div>
-	<RouterLink to="/ichihira/top">
+	<RouterLink to="/ja/ichihira">
     <div class="jump">stops</div>
 	</RouterLink>
 </template>

@@ -1,8 +1,8 @@
 <template>
 	<div class="allBusStop">
 		<div v-for="(busStop, index) in busStops" :key="busStop.id" class="dbus1">
-			<router-link :to="busStop.link" class="effect bus1 aka">
-				<div class="">{{ busStop.name }}</div>
+			<router-link :to="`/${langPath()}/${linePath()}/${busStop.link}`" class="effect bus1 aka">
+				<div class="">{{ busStop.name[langPath()] }}</div>
 			</router-link>
 			<!-- 最後のバス停以外に線を引く -->
 			<div v-if="index !== busStops.length - 1" class="aida">
@@ -20,6 +20,21 @@ export default {
       busStops: stops,
     };
   },
+  methods: {
+    // 現在のURLの最初の部分 (ja) を取得
+    langPath() {
+      const currentPath = this.$route.path;
+      const pathParts = currentPath.split('/'); // URLを'/'で分割
+      return pathParts[1]; // 最初の部分 (ja)
+    },
+    
+    // 現在のURLの "ichihira" 部分を取得
+    linePath() {
+      const currentPath = this.$route.path;
+      const pathParts = currentPath.split('/'); // URLを'/'で分割
+      return pathParts[2]; // 次の部分 (ichihira)
+    }
+  }
 };
 </script>
 

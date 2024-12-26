@@ -3,38 +3,62 @@ import lineData from '../data/lines.json'
 import stopData from '../data/stops.json'
 import TopView from '../views/TopPage.vue'
 
+
+
+// stopDataのすべての駅をルートに追加するための処理
+const stopRoutes = stopData.map(stop => ({
+  path: stop.link,  // 停車駅のpathをルートのpathに設定
+  name: stop.name.en,   // 停車駅のnameをルートのnameに設定
+  component: () => import('../views/stops/stopPage.vue'),  // 停車駅のコンポーネントを動的にインポート
+}));
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
+  _routes: [
     {
       path: '/',
-      name: 'home',
-      component: TopView,
+      redirect: '/ja',
     },
     {
-      path: '/stops',
-      name: 'stops',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/ichihiraStops.vue'),
-	},
-	{
-		path: '/ichihira',
-		children: [
-			{
-			path: 'top',
-			name: 'ichihiraTop',
-			component: () => import('../views/ichihiraStops.vue'),
-			},
-			{
-			path: 'IchinosekiEkimae',
-			name: 'IchinosekiEkimae',
-			component: () => import('../views/stops/IchinosekiEkimae.vue'),
-			},
-		],
+      path: '/ja',
+      name: 'home',
+      children: [
+        {
+          path: '',
+          name: 'jaTop',
+          component: TopView,
+          // route level code-splitting
+          // this generates a separate chunk (About.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+        },
+        {
+          path: 'stops',
+          name: 'stops',
+          // route level code-splitting
+          // this generates a separate chunk (About.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
+          component: () => import('../views/ichihiraStops.vue'),
+        },
+        {
+          path: 'ichihira',
+          children: [
+            {
+              path: '',
+              name: 'ichihiraTop',
+              component: () => import('../views/ichihiraStops.vue'),
+            },
+            ...stopRoutes,
+          ],
+        },
+      ],
     },
   ],
+  get routes() {
+    return this._routes
+  },
+  set routes(value) {
+    this._routes = value
+  },
   scrollBehavior(to, from, savedPosition) {
     // savedPositionがある場合（ブラウザの戻る/進む時）はそれを使う
     if (savedPosition) {

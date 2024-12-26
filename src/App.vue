@@ -13,9 +13,6 @@ import Footer from './components/footer.vue'
 			</Maincontainer>
 		</main>
 	</body>
-	<RouterLink to="/">Home</RouterLink>
-	<RouterLink to="/stops">stops</RouterLink>
-	<RouterLink to="/IchinosekiEkimae">Ichinoseki</RouterLink>
 	<Footer />
 </template>
 

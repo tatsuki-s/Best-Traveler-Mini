@@ -26,24 +26,24 @@ onMounted(() => {
 </script>
 <template>
     <pictures>
-		  <Splide :options="{ rewind: true, gap: '1rem', isNavigation: true, perPage: 2, arrows: false, drag: false }" ref="thumbs" id="thumbs">
+		  <Splide :options="{ rewind: true, gap: '1rem', isNavigation: true, perPage: 3, arrows: false, drag: false }" ref="thumbs" id="thumbs">
 			<SplideSlide>
-				<p><span class="menuBar">中尊寺・イオン前沢&nbsp;</span>方面</p>
+				<div class="tab"><span class="menuBar">中尊寺・</span><span class="menuBar">イオン前沢</span> <span class="direction">方面</span></div>
 			</SplideSlide>
 			<SplideSlide>
-				<p><span class="menuBar">一関駅前&nbsp;</span>方面</p>
+				<div class="tab"><span class="menuBar">一関駅前&nbsp;</span> <span class="direction">方面</span></div>
 			</SplideSlide>
 		  </Splide>
 
 		  <Splide :options="{ rewind: true, gap: '1rem', autoplay: false, type: 'loop', arrows: false}" ref="main">
 			<SplideSlide>
 				<viewer>
-			 	 <img src="/stopImg/osa-hiraizumi.jpg" alt="StopB">
+			 		<img src="/stopImg/osa-hiraizumi.jpg" alt="StopB">
 				</viewer>
 			</SplideSlide>
 			<SplideSlide>
 				<viewer>
-			 	 <img src="/stopImg/omachikado-ichinoseki.jpg" alt="stopB">
+			 		<img src="/stopImg/omachikado-ichinoseki.jpg" alt="stopB">
 				</viewer>
 			</SplideSlide>
 		  </Splide>
@@ -61,5 +61,14 @@ thumbs {
 .menuBar {
 	font-weight: bold;
 	font-size: 120%;
+	white-space: nowrap;
+}
+
+.direction {
+	white-space: nowrap;
+}
+
+.tab{
+	margin: 15px;
 }
 </style>
