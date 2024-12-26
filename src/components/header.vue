@@ -1,5 +1,5 @@
 <template>
-	   <body>
+	<body>
         <header>
             <div id="HeaderItems">
 				<RouterLink to="/">
@@ -14,44 +14,62 @@
     </body>
     <!--これらはハンバーガーメニューだけど、これってfixedで固定しているだけだからヘッダーだと思ってくれ-->
     <div id="hamburger-menu">
-        <input type="checkbox" id="menu-btn-check">
+        <input type="checkbox" id="menu-btn-check"  v-model="menuOpen" />
         <label for="menu-btn-check" class="menu-btn"><span></span></label>
         <!--ここからメニュー-->
-        <div id="menu-content">
-            <ul>
-                <li style="color: white;">
-                    <h1 class="menu">メニュー</h1>
-                </li>
-                <li class="ite blockes">
-                    <RouterLink class="house" to="/">ホーム</RouterLink>
-                </li>
-                <li class="ite blockes">
-                    <a href="contact.html" class="contact">お問い合わせ</a>
-                </li>
-                <!-- <li class="ite blockes">
-                    <a href="Line.html" class="line">路線選択</a>
-                </li> -->
-                <li class="ite blockes">
-                    <a href="Search.html" class="site">検索</a>
-                </li>
-                <li class="ite blockes">
-                    <a href="Pri.html" class="site">プライバシーポリシー</a>
-                </li>
-                <li class="ite blockes">
-                    <a href="#">ご意見箱<span id="ToGoOther">※別サイトへ移動</span></a>
-                </li>
-            </ul>
-            <div id="box">
-                <select id="mySelect" onchange="redirectToSite()">
-                    <option value="" style="display: none;">Language</option>
-                    <option value="TopPage.html">日本語</option>
-                    <!-- <option value="TopPageEn.html">English</option> -->
-                </select>
+        <div id="menu-box">
+            <div id="menu-space" @click="checkMenu()"></div>
+            <div id="menu-content">
+                <ul>
+                    <li style="color: white;">
+                        <h1 class="menu">メニュー</h1>
+                    </li>
+                    <li class="ite blockes">
+                        <RouterLink class="house" to="/">ホーム</RouterLink>
+                    </li>
+                    <li class="ite blockes">
+                        <a href="contact.html" class="contact">お問い合わせ</a>
+                    </li>
+                    <!-- <li class="ite blockes">
+                        <a href="Line.html" class="line">路線選択</a>
+                    </li> -->
+                    <li class="ite blockes">
+                        <a href="Search.html" class="site">検索</a>
+                    </li>
+                    <li class="ite blockes">
+                        <a href="Pri.html" class="site">プライバシーポリシー</a>
+                    </li>
+                    <li class="ite blockes">
+                        <a href="#">ご意見箱<span id="ToGoOther">※別サイトへ移動</span></a>
+                    </li>
+                </ul>
+                <div id="box">
+                    <select id="mySelect" onchange="redirectToSite()">
+                        <option value="" style="display: none;">Language</option>
+                        <option value="TopPage.html">日本語</option>
+                        <!-- <option value="TopPageEn.html">English</option> -->
+                    </select>
+                </div>
             </div>
         </div>
         <!--ここまでメニュー-->
     </div>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+        menuOpen: false
+        };
+    },
+    methods: {
+        checkMenu() {
+            this.menuOpen = !this.menuOpen;
+        }
+    }
+};
+</script>
 
 <style scoped>
 #HeaderItems #container .Name .n {
@@ -150,7 +168,6 @@ header {
     border-radius: 50%;
     transition: all 1s;
     cursor: pointer;
-    transition: all 0.5 0s ease;
 }
 /* .menu-btn:hover {
     border: 1px solid white;
@@ -201,18 +218,6 @@ header {
     margin-bottom: 10px;
 
 }
-#menu-content {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 50%;
-    height: 100%;
-    position: fixed;
-    overflow-y: auto; /* 垂直方向にスクロール可能にする */
-    z-index: 80;
-    background-color: black;
-}
 #menu-content ul {
     padding: 0px 10px 0;
     margin-top: 0;
@@ -237,21 +242,39 @@ header {
     font-size: 20px;
 }
 /*下のwidthとleftの値を足して１００％にすること*/
+
 #menu-content {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 50%;
     height: 100%;
-    position: fixed;
+    overflow-y: auto; /* 垂直方向にスクロール可能にする */
     overflow-x: hidden;
-    top: 0px;
-    left: 100%;/*leftの値を変更してメニューを画面外へ*/
-    z-index: 90;
+    z-index: 80;
     background-color: black;
-    overflow-y: auto;
-    transition: all 0.5s;/*アニメーション設定*/
     text-align: center;
-} 
-#menu-btn-check:checked ~ #menu-content {
-    left: 50%;/*メニューを画面内へ*/
+}
+
+#menu-space {
+    width: 50%;
+    height: 100%;
+    opacity: 1;
+    z-index: 90;
+}
+#menu-box {
+    display: flex;
+    z-index: 92;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%; 
+    transition: all 0.5s;
+}
+
+#menu-btn-check:checked ~ #menu-box {
+    left: 0;
 }
 .langes {
     border-bottom: 1px solid white;
@@ -339,8 +362,10 @@ header {
     }
     #menu-content {
         width: 100%;
-        
     } 
+    #menu-space {
+        width: 0%;
+    }
     #menu-btn-check:checked ~ #menu-content {
         left: 0%;/*メニューを画面内へ*/
     }
