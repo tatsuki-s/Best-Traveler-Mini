@@ -46,13 +46,13 @@ p {
 h2 {
     text-align: center;
     text-decoration:underline;
-    text-decoration-color: #6f7dff;
+    text-decoration-color: #7db4e6;
 }
 
 .welcome {
     font-weight: bold;
     animation: slideIn 1s ease-out;
-    background: linear-gradient(transparent 70%, #99a3ff 70%);
+    background: linear-gradient(transparent 70%, #7db4e6 70%);
     text-align: center;
     
   }
@@ -75,7 +75,7 @@ h2 {
 .kinou {
     background: #d5daff88;
     padding: 20px;
-    border: 1px solid #99a3ff;
+    border: 1px solid #7db4e6;
 }
 
 .jump {
@@ -84,7 +84,7 @@ h2 {
     text-align: center;
     width: 200px;
     margin-top: 50px;
-    background:#6f7dff;
+    background:#7db4e6;
     padding: 10px;
     border-radius: 20px;
 }
