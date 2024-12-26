@@ -2,14 +2,13 @@
 	   <body>
         <header>
             <div id="HeaderItems">
-                <div id="container">
-						<RouterLink to="/">
-	                    <img src="#" id="icons" alt="ホーム画面のアイコン">
-							<!--リンクを入れる。ホーム画面への-->
-    	                <h1 class="Name no-select"><span class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</span><span id="version">&nbsp;v.1.0.0</span></h1>
-						</RouterLink>
-                </div> 
-                
+				<RouterLink to="/">
+                    <div id="container">
+                        <img src="/favicon.ico" id="icons" alt="ホーム画面のアイコン">
+                            <!--リンクを入れる。ホーム画面への-->
+                        <h1 class="Name no-select"><span class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</span><span id="version">&nbsp;v.1.0.0</span></h1>
+                    </div>
+			    </RouterLink>
             </div>
         </header>
     </body>
@@ -303,9 +302,10 @@ header {
         background-color: black;
     }
     #icons {
-        width: 65px;
-        height: 65px;
+        width: 55px;
+        height: 55px;
         margin-right: 0;
+        margin-left: 5px;
     }
     .Name {
         font-size: 30px;
@@ -330,8 +330,8 @@ header {
         align-items: center;
         top: 5px;
         right: 0px;
-        width: 65px;
-        height: 65px;
+        width: 48px;
+        height: 48px;
     }
     .menu-btn:hover {
         background-color: black;
