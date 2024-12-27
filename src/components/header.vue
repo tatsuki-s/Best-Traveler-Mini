@@ -17,8 +17,8 @@
         <input type="checkbox" id="menu-btn-check"  v-model="menuOpen" />
         <label for="menu-btn-check" class="menu-btn"><span></span></label>
         <!--ここからメニュー-->
-        <div id="menu-box">
-            <div id="menu-space" @click="checkMenu()"></div>
+        <div id="menu-box" @click="checkMenu()">
+            <div id="menu-space"></div>
             <div id="menu-content">
                 <ul>
                     <li style="color: white;">
@@ -44,11 +44,14 @@
                     </li>
                 </ul>
                 <div id="box">
-                    <select id="mySelect" onchange="redirectToSite()">
-                        <option value="" style="display: none;">Language</option>
-                        <option value="TopPage.html">日本語</option>
-                        <!-- <option value="TopPageEn.html">English</option> -->
-                    </select>
+                    <ul>
+                        <li>
+                            <RouterLink to="/ja">日本語</RouterLink>
+                        </li>
+                        <li>
+                            <RouterLink to="/en">English</RouterLink>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -226,7 +229,7 @@ header {
     margin-bottom: 15px;
     list-style: none;
 }
-#menu-content ul li a {
+#menu-content ul .ite a{
     border-bottom: solid 1px white;
     margin-bottom: 0;
     display: block;
@@ -252,7 +255,7 @@ header {
     overflow-y: auto; /* 垂直方向にスクロール可能にする */
     overflow-x: hidden;
     z-index: 80;
-    background-color: black;
+    background-color: #111111;
     text-align: center;
 }
 
@@ -279,7 +282,6 @@ header {
 .langes {
     border-bottom: 1px solid white;
     padding-bottom: 20px;
-
 }
 .langes #siteSelector{
     background-color: black;
@@ -287,10 +289,6 @@ header {
     color: white;
     border: none;
     font-size: 40px;
-}
-/* 初期オプション「Language」を非表示にする */
-#siteSelector option[value=""] {
-    display: none;
 }
 
 .blockes a{
@@ -300,21 +298,20 @@ header {
 .blockes a:hover{
     transform: scale(1.2);
 }
-#box select{
-    background-color: black;
+#box li * {
+    margin-left: 50%;
+    height: 70%;
+    background-color: #111111;
     color: white;
     text-align: center;
-    width: 90%;
+    width: 50%;
+    font-size: 35px; /* 効いてない */
+    height: 50px;
     border: 1px solid white;
-    font-size: 40px;
-    height: 70px;
-    margin-bottom: 20px;
-    box-shadow: 0px 1px 20px white;
 }
-#box select:hover {
+#box li * :hover {
     cursor: pointer;
-    box-shadow: 0px 1px 30px white;/*                                                                                        */
-
+    border: 10px solid white;
 }
 
 @media screen and (max-width: 1000px) {

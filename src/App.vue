@@ -31,7 +31,7 @@ a {
     display: inline-block;
     border: none;
     text-decoration: none;
-    color: black;
+    color: inherit;
 }
 ul {
     padding-left: 0;

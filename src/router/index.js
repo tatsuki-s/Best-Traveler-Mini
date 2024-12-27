@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import lineData from '../data/lines.json'
 import stopData from '../data/stops.json'
 import TopView from '../views/TopPage.vue'
+import TopEn from '../views/TopPageEn.vue'
 
 
 
@@ -49,6 +50,20 @@ const router = createRouter({
             },
             ...stopRoutes,
           ],
+        },
+      ],
+    },
+    {
+      path: '/en',
+      name: 'homeEn',
+      children: [
+        {
+          path: '',
+          name: 'enTop',
+          component: TopEn,
+          // route level code-splitting
+          // this generates a separate chunk (About.[hash].js) for this route
+          // which is lazy-loaded when the route is visited.
         },
       ],
     },
