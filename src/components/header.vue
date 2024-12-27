@@ -305,13 +305,9 @@ header {
     color: white;
     text-align: center;
     width: 50%;
-    font-size: 35px; /* 効いてない */
+    font-size: 30px; /* 効いてない */
     height: 50px;
     border: 1px solid white;
-}
-#box li * :hover {
-    cursor: pointer;
-    border: 10px solid white;
 }
 
 @media screen and (max-width: 1000px) {
@@ -378,6 +374,9 @@ header {
     }
     #ToGoOther {
         display: none;
+    }
+    #box li * {
+        font-size: 30px !important;
     }
 }
 @media screen and (max-width: 500px){
