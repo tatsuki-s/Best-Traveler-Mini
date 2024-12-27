@@ -1,16 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import lineData from '../data/lines.json'
+import articleData from '../data/pageData.json'
 import stopData from '../data/stops.json'
 import TopView from '../views/TopPage.vue'
 import TopEn from '../views/TopPageEn.vue'
-
-
 
 // stopDataのすべての駅をルートに追加するための処理
 const stopRoutes = stopData.map(stop => ({
   path: stop.link,  // 停車駅のpathをルートのpathに設定
   name: stop.name.en,   // 停車駅の英語版nameをルートのnameに設定
   component: () => import('../views/stops/stopPage.vue'),  // 停車駅のコンポーネントを動的にインポート
+}));
+
+const articles = articleData.map(article => ({
+  path: article.id,  
+  name: article.title, 
+  component: () => import('../views/article.vue'),  // 停車駅のコンポーネントを動的にインポート
 }));
 
 const router = createRouter({
@@ -33,12 +38,10 @@ const router = createRouter({
           // which is lazy-loaded when the route is visited.
         },
         {
-          path: 'stops',
-          name: 'stops',
-          // route level code-splitting
-          // this generates a separate chunk (About.[hash].js) for this route
-          // which is lazy-loaded when the route is visited.
-          component: () => import('../views/ichihiraStops.vue'),
+          path: 'article',
+          children: [
+            ...articles,
+          ],
         },
         {
           path: 'ichihira',
