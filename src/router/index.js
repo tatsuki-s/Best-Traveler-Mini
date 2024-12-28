@@ -4,6 +4,8 @@ import articleData from '../data/pageData.json'
 import ichihiraStopData from '../data/ichihiraStops.json'
 import TopView from '../views/TopPage.vue'
 import TopEn from '../views/TopPageEn.vue'
+import Search from '../views/search.vue'
+import { component } from 'v-viewer'
 
 // ichihiraStopDataのすべての駅をルートに追加するための処理
 const ichihiraStopRoutes = ichihiraStopData.map(stop => ({
@@ -51,6 +53,10 @@ const router = createRouter({
           children: [
             ...articles,
           ],
+        },
+        {
+          path:'search',
+          component: Search,
         },
         {
           path: 'ichihira',

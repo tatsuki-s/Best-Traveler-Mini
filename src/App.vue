@@ -13,6 +13,7 @@ import Footer from './components/footer.vue'
 			</Maincontainer>
 		</main>
 	</body>
+    <router-link to="/ja/search">search</router-link>
 	<Footer />
 </template>
 
