@@ -27,9 +27,6 @@
                     <li class="ite blockes">
                         <RouterLink class="house" to="/">ホーム</RouterLink>
                     </li>
-                    <li class="ite blockes">
-                        <a href="contact.html" class="contact">お問い合わせ</a>
-                    </li>
                     <!-- <li class="ite blockes">
                         <a href="Line.html" class="line">路線選択</a>
                     </li> -->
@@ -298,7 +295,7 @@ header {
 .blockes a:hover{
     transform: scale(1.2);
 }
-#box li * {
+#box ul li * {
     margin-left: 50%;
     height: 70%;
     background-color: #111111;
@@ -309,8 +306,14 @@ header {
     height: 50px;
     border: 1px solid white;
 }
+#box ul li *:hover {
+    background-color: rgb(99, 99, 99);
+}
 
 @media screen and (max-width: 1000px) {
+    #box ul li *:hover {
+    background-color: #111111;
+}
     #version {
         display: none;
     }

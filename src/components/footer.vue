@@ -1,13 +1,15 @@
+<script setup lang="ts">
+import router from '@/router';
+
+</script>
+
 <template>
     <footer>
         <div id="footer">
-            <h1 class="FootName fot"><a href="TopPage.html" class="nav">BEST&nbsp;TRAVELER.</a></h1>
+            <h1 class="FootName fot"><router-link to="/" class="nav">BEST&nbsp;TRAVELER.</router-link></h1>
             <ul class="cont">
                 <li class="options fot blockes">
-                    <a href="TopPage.html" class="na house">ホーム</a>
-                </li>
-                <li class="options fot blockes">
-                    <a href="contact.html" class="na contact">お問い合わせ</a>
+                    <router-link to="/" class="na house">ホーム</router-link>
                 </li>
                 <!-- <li class="options fot blockes">
                     <a href="Line.html" class="na line">路線選択</a>
@@ -16,7 +18,7 @@
                     <a href="Search.html" class="na site">検索</a>
                 </li>
                 <li class="options fot blockes">
-                    <a href="Pri.html" class="na line" style="font-size: 17px;">プライバシーポリシー</a>
+                    <router-link to="/ja/article/1" class="na line" style="font-size: 17px;">プライバシーポリシー</router-link>
                 </li>
             </ul>
 	        <p>Copyright © 2024 Agroup All Rights Reserved.</p>
