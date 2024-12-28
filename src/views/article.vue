@@ -1,12 +1,16 @@
 <template>
-  <div>
-    <div v-for="item in data" :key="item.id" id="ma">
-      <h1>{{ item.id.toString() === articleId() ? item.title : '' }}</h1>
-      <div v-for="(content, index) in contents" :key="index">
-        <h2>{{ content }}</h2>
-        <img src=""/>
-        <p></p>
-      </div>
+  <div id="ma">
+    <div v-for="item in data">
+        <div v-if="item.id.toString() === idPath().toString()">
+          <h1>{{ item.title }}</h1>
+          <div v-for="content in item.contents">
+            <h2 v-if="content.heading !== null" class="tyt">{{ content.heading }}</h2>
+            <img v-if="content.image !== null" :src="content.image" alt="image" class="info"/>
+            <span v-if="content.body !== null">
+              <p v-for="text in content.body" class="info">{{ text }}</p>
+            </span>
+          </div>
+        </div>
     </div>
   </div>
 </template>
@@ -17,27 +21,25 @@ import pageData from '../data/pageData.json'
 export default {
   data () {
     return {
-      data: pageData
+      data: pageData,
     };
   },
   methods: {
-    // 現在のURLの最初の部分 (ja) を取得
-    langPath() {
+    idPath() {
       const currentPath = this.$route.path;
       const pathParts = currentPath.split('/'); // URLを'/'で分割
-      return pathParts[1]; // 最初の部分 (ja)
-    },
-    
-    articleId() {
-      const currentPath = this.$route.path;
-      const pathParts = currentPath.split('/'); // URLを'/'で分割
-      return pathParts[3]; // 次の部分 (1/2/3/...)
+      return pathParts[3];
+    }
+  },
+  computed: {
+    strIdPath() {
+      return this.idPath().toString();
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
 #ma {
   margin: 0 8vw 0 8vw;
 }
@@ -49,10 +51,15 @@ export default {
   text-align: left;
   list-style: disc;
 }
+
+img {
+  width: 100%;
+}
+
 /* .marker-on p {
     display: none;
 } */
-#info {
+.info {
     margin-left: 3vw;
 }
 

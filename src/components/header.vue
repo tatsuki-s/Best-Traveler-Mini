@@ -37,7 +37,7 @@
                         <a href="Search.html" class="site">検索</a>
                     </li>
                     <li class="ite blockes">
-                        <a href="Pri.html" class="site">プライバシーポリシー</a>
+                        <RouterLink to="/ja/article/1">プライバシーポリシー</RouterLink>
                     </li>
                     <li class="ite blockes">
                         <a href="#">ご意見箱<span id="ToGoOther">※別サイトへ移動</span></a>
