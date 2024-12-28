@@ -1,3 +1,20 @@
 [
-	{ "id": 1, "name": "一関平泉線", "enName": "Ichinoseki-Hiraizumi-line","link": "ichihira" }
+	{ 
+		"id": 1,
+		"nickName": "ichihira", 
+		"name": {
+			"ja": "一関平泉線",
+			"en": "Ichinoseki-Hiraizumi-line"
+		},
+		"link": "ichihira" 
+	},
+	{
+		"id": 2,
+		"nickName": "", 
+		"name": {
+			"ja": "",
+			"en": ""
+		},
+		"link": "" 
+	}
 ]

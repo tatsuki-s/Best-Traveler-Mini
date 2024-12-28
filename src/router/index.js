@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import lineData from '../data/lines.json'
 import articleData from '../data/pageData.json'
-import stopData from '../data/stops.json'
+import stopData from '../data/ichihiraStops.json'
 import TopView from '../views/TopPage.vue'
 import TopEn from '../views/TopPageEn.vue'
 

@@ -2,7 +2,7 @@
     { 
         "id": 1, 
         "name": { 
-            "ja": "一関駅前", 
+            "ja": "一関駅前10番のりば", 
             "en": "Ichinoseki-Ekimae" 
         }, 
         "link": "IchinosekiEkimae",
@@ -11,24 +11,24 @@
                 "id": 1,
                 "path": ".jpg",
                 "tab": {
-                    "ja": "<p>テスト1</p>",
-                    "en": "<p>Test1</p>"
+                    "ja": "テスト1",
+                    "en": "Test1"
                 }
             },
             {
                 "id": 2,
                 "path": ".jpg",
                 "tab": {
-                    "ja": "<p>テスト2</p>",
-                    "en": "<p>Test3</p>"
+                    "ja": "テスト2",
+                    "en": "Test3"
                 }
             },
             {
                 "id": 3,
                 "path": ".jpg",
                 "tab": {
-                    "ja": "<p>テスト3</p>",
-                    "en": "<p>Test3</p>"
+                    "ja": "テスト3",
+                    "en": "Test3"
                 }
             }
         ],
@@ -36,7 +36,7 @@
         "stopTime": [
             { 
                 "id": 1, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -53,7 +53,7 @@
             },
             { 
                 "id": 2, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -70,7 +70,7 @@
             },
             { 
                 "id": 3, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -87,7 +87,7 @@
             },
             { 
                 "id": 4, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -104,7 +104,7 @@
             },
             { 
                 "id": 5, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -121,7 +121,7 @@
             },
             { 
                 "id": 6, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -138,7 +138,7 @@
             },
             { 
                 "id": 7, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -155,7 +155,7 @@
             },
             { 
                 "id": 8, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -172,7 +172,7 @@
             },
             { 
                 "id": 9, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -189,7 +189,7 @@
             },
             { 
                 "id": 10, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -206,7 +206,7 @@
             },
             { 
                 "id": 11, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -223,7 +223,7 @@
             },
             { 
                 "id": 12, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },
@@ -240,7 +240,7 @@
             },
             { 
                 "id": 13, 
-                "origin": {
+                "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
                 },

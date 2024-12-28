@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import stops from '../data/stops.json'
+import stops from '../data/ichihiraStops.json'
 export default {
   data () {
     return {

@@ -84,7 +84,9 @@
       {
         "heading": "testHeading",
         "image": null,
-        "body": "testBody"
+        "body": [
+          "testBody"
+        ]
       }
     ]
   }
