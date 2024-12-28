@@ -263,7 +263,62 @@
             "ja": "大町通り", 
             "en": "Omachi-Dori" 
         }, 
-        "link": "OmachiDori" 
+        "link": "OmachiDori" ,
+        "pictures": "",
+        "comment": "",
+        "stopTime": [
+            { 
+                "id": 1, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 6,
+                    "minute": 40
+                },
+                "direction": "down",
+                "schedule": "weekday"
+            },
+            { 
+                "id": 2, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 7,
+                    "minute": 15
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 3, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon-Maesawa"
+                },
+                "time": {
+                    "hour": 7,
+                    "minute": 50
+                },
+                "direction": "down",
+                "schedule": "daily"
+            }
+        ]
     },
     { 
         "id": 3, 

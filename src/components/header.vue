@@ -91,8 +91,6 @@ export default {
 }
 /*px指定あり*/
 header {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
     background-color: black;
     width: 100%;
     position: fixed; /* ヘッダーを固定する */

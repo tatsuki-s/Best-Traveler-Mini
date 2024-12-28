@@ -31,7 +31,7 @@ main {
 }
 
 .left {
-    flex: 3; /* 割合をかけ */
+    flex: 3.5; /* 割合をかけ */
     background-color: rgb(240, 240, 240);
     height: 100%; /* 必要に応じて高さを調整。というのも、ここは動的に決めてないため。新たにセンテンスや写真を作りたいときはここをいじる */
 }
@@ -43,7 +43,7 @@ main {
 .right {
     margin-top: 20px;
     margin-right: 20px;
-    flex: 7; /* 割合をかく */
+    flex: 6.5; /* 割合をかく */
     height: 100%; /* 必要に応じて高さを調整。動的に設定している */
 }
 .right Pictures {

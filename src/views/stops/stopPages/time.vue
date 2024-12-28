@@ -4,7 +4,7 @@ import lineData from "../../../data/lines.json"
 import { useRoute } from 'vue-router';
 import { ref } from 'vue';
 
-const selectedSchedule = ref('daily');
+const selectedSchedule = ref('daily');//初期値を設定
 
 const route = useRoute();
 
@@ -45,9 +45,10 @@ const busLineName = () => {
         </span>
        </h1>
 		<select class="youbi" v-model="selectedSchedule">
+            <!-- valueの平日と土日祝日とが逆なのは仕様なので注意 -->
             <option value="daily">{{ langPath() === "ja" ? "すべて" : "Everyday" }}</option>
-			<option value="weekday">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
-			<option value="weekend">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
+			<option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
+			<option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
 		</select>
     </div>
     <div id="Box">
@@ -55,15 +56,17 @@ const busLineName = () => {
              <div class="timeBox">
                 <div v-for="data in timeData">
                     <li v-for="stopTime in data.stopTime">
-                        <RouterLink :to="`${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute}-${stopTime.schedule}`" :class="`forjikoku ${stopTime.schedule}`">
+                        <RouterLink v-if="data.link === stopPath() && ( selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}` ) " :to="`${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute}-${stopTime.schedule}`" :class="`forjikoku ${stopTime.schedule}`">
                             <hr :class="stopTime.direction">
                             <span class="yukisaki">
                                 <p :class="`line ${linePath()}`">
                                     {{ busLineName() }}
                                 </p>
-                                {{ `${langPath() === "ja" ? "経由：" : "via:"}${ stopTime.via[langPath()]}` }}<br/>{{ `${langPath() === "ja" ? "終点：" : "arrival:"}${ stopTime.arrival[langPath()]}` }}
+                                {{ `${ langPath() === "ja" ? "経由：" : "via:"}${ stopTime.via[langPath()]}` }}<br/>{{ `${langPath() === "ja" ? "終点：" : "arrival:"}${ stopTime.arrival[langPath()]}` }}
                             </span>
-                            本体
+                            <span class="jikoku">
+                                {{ stopTime.time.hour }}:{{ stopTime.time.minute }}
+                            </span>
                         </RouterLink>
                     </li>
                 </div>
@@ -95,7 +98,7 @@ const busLineName = () => {
 }
 #Box {
     overflow-y: auto; /* 垂直方向にスクロール可能にする */
-    height: calc(100vh - 300px);
+    height: calc(100vh - 350px);
 }
 .time {
     padding-left: 0;
