@@ -9,26 +9,29 @@
         "pictures": [
             {
                 "id": 1,
-                "path": ".jpg",
+                "type": "image",
+                "path": "/stopImg/ichinoseki-up.jpg",
                 "tab": {
-                    "ja": "テスト1",
-                    "en": "Test1"
+                    "ja": "一ノ関駅",
+                    "en": "Ichinoseki sta."
                 }
             },
             {
                 "id": 2,
-                "path": ".jpg",
+                "type": "image",
+                "path": "/stopImg/ichinosekiBusStop10.jpg",
                 "tab": {
-                    "ja": "テスト2",
+                    "ja": "10番のりば",
                     "en": "Test3"
                 }
             },
             {
                 "id": 3,
-                "path": ".jpg",
+                "type": "image",
+                "path": "/stopImg/ichinosekiBigMap.jpg",
                 "tab": {
-                    "ja": "テスト3",
-                    "en": "Test3"
+                    "ja": "周辺地図",
+                    "en": "Map"
                 }
             }
         ],

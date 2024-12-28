@@ -179,6 +179,9 @@ const busLineName = () => {
 .tsukiichi {
     color:rgb(255, 132, 0);
 }
-
-
+@media screen and (max-width: 670px) {
+    #Box{
+        height: 100%;
+    }
+}
 </style>
