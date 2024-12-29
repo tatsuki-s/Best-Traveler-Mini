@@ -1,10 +1,12 @@
 <script>
 import ichihira from '../data/ichihiraStops.json'
+import lines from '../data/lines.json'
 //import otherLineName from '../data/otherStops.json'
 export default {
   data () {
     return {
-      busStops: {ichihira}
+      busStops: {ichihira},
+      lines: lines
     };
   },
   methods: {
@@ -25,33 +27,39 @@ export default {
 };
 </script>
 <template>
-	<div class="allBusStop">
-		<div v-for="busStop in busStops[linePath()]" :key="busStop.id" class="dbus1">
-			<router-link :to="`/${langPath()}/${linePath()}/${busStop.link}`" class="effect bus1 aka">
-				<div class="">{{ busStop.name[langPath()] }}</div>
-			</router-link>
-			<!-- 最後のバス停以外に線を引く -->
-			<div v-if="busStop.id !== busStops[linePath()].length" class="aida">
-				<br/>
-			</div>
-		</div>
-	</div>
+  <div id="naiyou">
+    <div v-for="line in lines" id="divLineName">
+      <h1>{{ line.nickName === linePath() ? line.name[langPath()] :"" }}</h1>
+    </div>
+    <div class="allBusStop">
+      <div v-for="busStop in busStops[linePath()]" :key="busStop.id" class="dbus1">
+        <router-link :to="`/${langPath()}/${linePath()}/${busStop.link}`" class="effect bus1 aka">
+          <div class="">{{ busStop.name[langPath()] }}</div>
+        </router-link>
+        <!-- 最後のバス停以外に線を引く -->
+        <div v-if="busStop.id !== busStops[linePath()].length" class="aida">
+          <br/>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <style>
-.naiyou {
+#naiyou {
   display: flex;
   flex-flow: column;
   background-color: rgb(240, 240, 240);
   color: black;
   margin-left: 10vw;
   margin-right: 10vw;
-  height: 100%;
+  height: 10%;
   text-align: center;
 }
 
 .divLineName {
   display: flex;
   flex-flow: column;
+  text-align: center;
 }
 
 .lineName{
@@ -59,11 +67,9 @@ export default {
   font-size: 350%;
   text-align: center;
   width:350px;
-  /* margin: 0px; */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
-  /* margin-top: 10px; */
 }
 
 .bus1 {
@@ -118,7 +124,7 @@ export default {
 
 @media screen and (max-width: 959px) {
   /* 959px以下に適用されるCSS（タブレット用） */
-    .naiyou {
+    #naiyou {
       margin-left: 7vw;
       margin-right: 7vw;
     }
@@ -129,7 +135,7 @@ export default {
 
   @media screen and (max-width: 480px) {
   /* 480px以下に適用されるCSS（スマホ用） */
-    .naiyou {
+    #naiyou {
       margin-left: 5vw;
       margin-right: 5vw;
     }

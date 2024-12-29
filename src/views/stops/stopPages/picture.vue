@@ -37,7 +37,7 @@ const stopPath = () => {
 			<viewer v-if="stop.pictures !== null" class="slide">
 				<Splide :options="{ rewind: true, gap: '1rem', autoplay: true, interval: 3000, arrows: true, pagination: true, heightRatio: 0.6,}">
 					<SplideSlide v-for="picture in stop.pictures" :key="picture.id">
-						<h3>{{ picture.tab[langPath()] }}</h3>
+						<h2>{{ picture.tab[langPath()] }}</h2>
 						<img v-if="picture.type === 'image'" :src="picture.path" :alt="picture.tab[langPath()]">
 					</SplideSlide>
 				</Splide>
@@ -54,6 +54,10 @@ const stopPath = () => {
 img {
 	width:100%;
 	object-fit: cover;
+}
+
+h2{
+	margin: 10px;
 }
 
 .menuBar {
