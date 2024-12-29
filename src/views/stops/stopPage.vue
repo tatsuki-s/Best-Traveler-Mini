@@ -2,6 +2,14 @@
 import Pictures from './stopPages/picture.vue'
 import Time from './stopPages/time.vue'
 import Comment from './stopPages/comment.vue'
+
+const props = defineProps({
+  ichihiraData: {
+    type: Object,
+    required: true
+  }
+})
+
 </script>
 <template>
     <!--内容上はここから始まる-->
@@ -52,12 +60,6 @@ main {
     object-fit: cover;
     object-position: center;
 }
-
-/*これは消してください.というのもcomming_soonのところです*/
-.right p {
-    font-size: 30px;
-}
-
 
 /* .time li a:hover {
     background-color: rgb(195, 195, 195);

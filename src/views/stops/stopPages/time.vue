@@ -1,8 +1,11 @@
 <script setup>
-import timeData from "../../../data/ichihiraStops.json"
+import ichihira from "../../../data/ichihiraStops.json"
+
 import lineData from "../../../data/lines.json"
 import { useRoute } from 'vue-router';
 import { ref } from 'vue';
+
+const timeData = {ichihira}
 
 const selectedSchedule = ref('daily');//初期値を設定
 
@@ -40,7 +43,7 @@ const busLineName = () => {
 <template>
     <div id="busStopName">
        <h1 id="Noriba">
-        <span v-for="data in timeData">
+        <span v-for="data in timeData[linePath()]">
             <span v-if="data.link === stopPath()">{{ data.name[langPath()] }}</span>
         </span>
        </h1>
@@ -54,7 +57,7 @@ const busLineName = () => {
     <div id="Box">
         <ul class="time">
              <div class="timeBox">
-                <div v-for="data in timeData">
+                <div v-for="data in timeData[linePath()]">
                     <li v-for="stopTime in data.stopTime">
                         <RouterLink v-if="data.link === stopPath() && ( selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}` ) " :to="`${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute}-${stopTime.schedule}`" :class="`forjikoku ${stopTime.schedule}`">
                             <hr :class="stopTime.direction">

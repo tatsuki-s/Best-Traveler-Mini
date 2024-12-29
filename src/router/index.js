@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import lineData from '../data/lines.json'
 import articleData from '../data/pageData.json'
-import stopData from '../data/ichihiraStops.json'
+import ichihiraStopData from '../data/ichihiraStops.json'
 import TopView from '../views/TopPage.vue'
 import TopEn from '../views/TopPageEn.vue'
 
-// stopDataのすべての駅をルートに追加するための処理
-const stopRoutes = stopData.map(stop => ({
+// ichihiraStopDataのすべての駅をルートに追加するための処理
+const ichihiraStopRoutes = ichihiraStopData.map(stop => ({
   path: stop.link,  // 停車駅のpathをルートのpathに設定
   name: stop.name.en,   // 停車駅の英語版nameをルートのnameに設定
   component: () => import('../views/stops/stopPage.vue'),  // 停車駅のコンポーネントを動的にインポート
@@ -45,13 +45,14 @@ const router = createRouter({
         },
         {
           path: 'ichihira',
+          props: true,
           children: [
             {
               path: '',
               name: 'ichihiraTop',
-              component: () => import('../views/ichihiraStops.vue'),
+              component: () => import('../views/stops.vue'),
             },
-            ...stopRoutes,
+            ...ichihiraStopRoutes,
           ],
         },
       ],

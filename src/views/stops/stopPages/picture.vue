@@ -4,8 +4,8 @@ import { onMounted, watch, ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 
-import ichihiraData from "../../../data/ichihiraStops.json"
-
+import ichihira from "../../../data/ichihiraStops.json"
+const stops = {ichihira}
 
 const route = useRoute();
 
@@ -32,13 +32,13 @@ const stopPath = () => {
 
 </script>
 <template>
-    <pictures v-for="stop in ichihiraData" :key="stop.id">
+    <pictures v-for="stop in stops[linePath()]" :key="stop.id">
 		<div v-show="stop.link === stopPath()">
 			<viewer v-if="stop.pictures !== null" class="slide">
 				<Splide :options="{ rewind: true, gap: '1rem', autoplay: true, interval: 3000, arrows: true, pagination: true, heightRatio: 0.6,}">
 					<SplideSlide v-for="picture in stop.pictures" :key="picture.id">
 						<h3>{{ picture.tab[langPath()] }}</h3>
-						<img :src="picture.path" :alt="picture.tab[langPath()]">
+						<img v-if="picture.type === 'image'" :src="picture.path" :alt="picture.tab[langPath()]">
 					</SplideSlide>
 				</Splide>
 			</viewer>

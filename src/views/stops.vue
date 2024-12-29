@@ -1,23 +1,10 @@
-<template>
-	<div class="allBusStop">
-		<div v-for="(busStop, index) in busStops" :key="busStop.id" class="dbus1">
-			<router-link :to="`/${langPath()}/${linePath()}/${busStop.link}`" class="effect bus1 aka">
-				<div class="">{{ busStop.name[langPath()] }}</div>
-			</router-link>
-			<!-- 最後のバス停以外に線を引く -->
-			<div v-if="index !== busStops.length - 1" class="aida">
-				<br/>
-			</div>
-		</div>
-	</div>
-</template>
-
 <script>
-import stops from '../data/ichihiraStops.json'
+import ichihira from '../data/ichihiraStops.json'
+//import otherLineName from '../data/otherStops.json'
 export default {
   data () {
     return {
-      busStops: stops,
+      busStops: {ichihira}
     };
   },
   methods: {
@@ -37,7 +24,19 @@ export default {
   }
 };
 </script>
-
+<template>
+	<div class="allBusStop">
+		<div v-for="busStop in busStops[linePath()]" :key="busStop.id" class="dbus1">
+			<router-link :to="`/${langPath()}/${linePath()}/${busStop.link}`" class="effect bus1 aka">
+				<div class="">{{ busStop.name[langPath()] }}</div>
+			</router-link>
+			<!-- 最後のバス停以外に線を引く -->
+			<div v-if="busStop.id !== busStops[linePath()].length" class="aida">
+				<br/>
+			</div>
+		</div>
+	</div>
+</template>
 <style>
 .naiyou {
   display: flex;
