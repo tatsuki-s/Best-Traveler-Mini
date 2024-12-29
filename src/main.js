@@ -15,9 +15,9 @@ app.use(VueViewer)
 VueViewer.setDefaults({
      "inline": false, 
      "button": true, 
-     "navbar": false, 
-     "title": false, 
-     "toolbar": false, 
+     "navbar": true, 
+     "title": true, 
+     "toolbar": true, 
      "tooltip": false, 
      "movable": false, 
      "zoomable": false, 

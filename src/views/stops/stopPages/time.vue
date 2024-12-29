@@ -132,9 +132,8 @@ const busLineName = () => {
 
 .jikoku {
 	flex: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline;
+    text-align: right;
 }
 
 .line {

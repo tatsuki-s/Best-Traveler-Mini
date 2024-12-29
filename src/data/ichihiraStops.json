@@ -35,7 +35,7 @@
                 }
             }
         ],
-        "comment": "これはテストです",
+        "comment": "バスに「平泉巡回バス るんるん」と書いてあっても一関平泉線のバスである可能性があります。ご注意ください。",
         "stopTime": [
             { 
                 "id": 1, 
@@ -267,7 +267,7 @@
             "en": "Omachi-Dori" 
         }, 
         "link": "OmachiDori" ,
-        "pictures": "",
+        "pictures": null,
         "comment": "",
         "stopTime": [
             { 
@@ -329,7 +329,8 @@
             "ja": "大町角", 
             "en": "Omachi-Kado" 
         }, 
-        "link": "OmachiKado" 
+        "link": "OmachiKado",
+        "pictures": null
     },
     { 
         "id": 4, 
@@ -337,7 +338,8 @@
             "ja": "一関一高前", 
             "en": "Ichinoseki-Ichiko-Mae" 
         }, 
-        "link": "IchinosekiIchikoMae" 
+        "link": "IchinosekiIchikoMae",
+        "pictures": null
     },
     { 
         "id": 5, 
@@ -345,7 +347,8 @@
             "ja": "磐井橋", 
             "en": "Iwai-Bashi" 
         }, 
-        "link": "IwaiBashi" 
+        "link": "IwaiBashi",
+        "pictures": null
     },
     { 
         "id": 6, 
@@ -353,7 +356,8 @@
             "ja": "竹山", 
             "en": "Takeyama" 
         }, 
-        "link": "Takeyama" 
+        "link": "Takeyama",
+        "pictures": null
     },
     { 
         "id": 7, 
@@ -361,7 +365,8 @@
             "ja": "配志和神社前", 
             "en": "Haishiwa-Jinaja-Mae" 
         }, 
-        "link": "HaishiwaJinjaMae" 
+        "link": "HaishiwaJinjaMae",
+        "pictures": null
     },
     { 
         "id": 8, 
@@ -369,7 +374,8 @@
             "ja": "山目一丁目", 
             "en": "Yamame-Ichome" 
         }, 
-        "link": "YamanomeIchome" 
+        "link": "YamanomeIchome",
+        "pictures": null
     },
     { 
         "id": 9, 
@@ -377,7 +383,8 @@
             "ja": "中里市民センター前", 
             "en": "Nakasato-Shimin-Center-Mae" 
         }, 
-        "link": "NakasatoShiminCenterMae" 
+        "link": "NakasatoShiminCenterMae",
+        "pictures": null
     },
     { 
         "id": 10, 
@@ -385,7 +392,8 @@
             "ja": "山目駅前", 
             "en": "Yamame-Ekimae" 
         }, 
-        "link": "YamanomeEkimae" 
+        "link": "YamanomeEkimae",
+        "pictures": null
     },
     { 
         "id": 11, 
@@ -393,7 +401,8 @@
             "ja": "沢田入口", 
             "en": "Sawada-Iriguchi" 
         }, 
-        "link": "SawadaIriguchi" 
+        "link": "SawadaIriguchi",
+        "pictures": null
     },
     { 
         "id": 12, 
@@ -401,7 +410,8 @@
             "ja": "中里新町", 
             "en": "Nakasato-Shinmachi" 
         }, 
-        "link": "NakasatoShinmachi" 
+        "link": "NakasatoShinmachi",
+        "pictures": null
     },
     { 
         "id": 13, 
@@ -409,7 +419,8 @@
             "ja": "大佐", 
             "en": "Osa" 
         }, 
-        "link": "Osa" 
+        "link": "Osa" ,
+        "pictures": null
     },
     { 
         "id": 14, 
@@ -417,7 +428,8 @@
             "ja": "川屋敷", 
             "en": "Kawayashiki" 
         }, 
-        "link": "Kawayashiki" 
+        "link": "Kawayashiki",
+        "pictures": null
     },
     { 
         "id": 15, 
@@ -425,7 +437,8 @@
             "ja": "佐野", 
             "en": "Sano" 
         }, 
-        "link": "Sano" 
+        "link": "Sano",
+        "pictures": null
     },
     { 
         "id": 16, 
@@ -433,7 +446,8 @@
             "ja": "祇園", 
             "en": "Gion" 
         }, 
-        "link": "Gion" 
+        "link": "Gion",
+        "pictures": null
     },
     { 
         "id": 17, 
@@ -441,7 +455,8 @@
             "ja": "毛越寺", 
             "en": "Motsuji" 
         }, 
-        "link": "Motsuji" 
+        "link": "Motsuji",
+        "pictures": null
     },
     { 
         "id": 18, 
@@ -449,7 +464,8 @@
             "ja": "平泉駅前", 
             "en": "Hiraizumi-Ekimae" 
         }, 
-        "link": "HiraizumiEkimae" 
+        "link": "HiraizumiEkimae",
+        "pictures": null
     },
     { 
         "id": 19, 
@@ -457,7 +473,8 @@
             "ja": "鈴沢", 
             "en": "Suzusawa" 
         }, 
-        "link": "Suzusawa" 
+        "link": "Suzusawa",
+        "pictures": null
     },
     { 
         "id": 20, 
@@ -465,7 +482,8 @@
             "ja": "花舘", 
             "en": "Hanadate" 
         }, 
-        "link": "Hanadate" 
+        "link": "Hanadate",
+        "pictures": null
     },
     { 
         "id": 21, 
@@ -473,7 +491,8 @@
             "ja": "中尊寺", 
             "en": "Chusonji" 
         }, 
-        "link": "Chusonji" 
+        "link": "Chusonji",
+        "pictures": null
     },
     { 
         "id": 22, 
@@ -481,7 +500,8 @@
             "ja": "衣川橋", 
             "en": "Koromokawa-Bashi" 
         }, 
-        "link": "KoromokawaBashi" 
+        "link": "KoromokawaBashi",
+        "pictures": null
     },
     { 
         "id": 23, 
@@ -489,7 +509,8 @@
             "ja": "瀬原", 
             "en": "Sewara" 
         }, 
-        "link": "Sewara" 
+        "link": "Sewara",
+        "pictures": null
     },
     { 
         "id": 24, 
@@ -497,7 +518,8 @@
             "ja": "徳沢", 
             "en": "Tokusawa" 
         }, 
-        "link": "Tokusawa" 
+        "link": "Tokusawa",
+        "pictures": null
     },
     { 
         "id": 25, 
@@ -505,7 +527,8 @@
             "ja": "白鳥", 
             "en": "Shirotori" 
         }, 
-        "link": "Shirotori" 
+        "link": "Shirotori",
+        "pictures": null
     },
     { 
         "id": 26, 
@@ -513,7 +536,8 @@
             "ja": "塔ヶ崎", 
             "en": "Togasaki" 
         }, 
-        "link": "Togasaki" 
+        "link": "Togasaki",
+        "pictures": null
     },
     { 
         "id": 27, 
@@ -521,7 +545,8 @@
             "ja": "丁切", 
             "en": "Chogiri" 
         }, 
-        "link": "Chogiri" 
+        "link": "Chogiri",
+        "pictures": null
     },
     { 
         "id": 28, 
@@ -529,7 +554,8 @@
             "ja": "三日町", 
             "en": "Mikkamachi" 
         }, 
-        "link": "Mikkamachi" 
+        "link": "Mikkamachi",
+        "pictures": null
     },
     { 
         "id": 29, 
@@ -537,7 +563,8 @@
             "ja": "七日町", 
             "en": "Nanokamachi" 
         }, 
-        "link": "Nanokamachi" 
+        "link": "Nanokamachi",
+        "pictures": null
     },
     { 
         "id": 30, 
@@ -545,7 +572,8 @@
             "ja": "前沢新町", 
             "en": "Maesawa-Shinmachi" 
         }, 
-        "link": "MaesawaShinmachi" 
+        "link": "MaesawaShinmachi",
+        "pictures": null
     },
     { 
         "id": 31, 
@@ -553,7 +581,8 @@
             "ja": "二十人町", 
             "en": "Nijuninmachi" 
         }, 
-        "link": "Nijuninmachi" 
+        "link": "Nijuninmachi",
+        "pictures": null
     },
     { 
         "id": 32, 
@@ -561,7 +590,8 @@
             "ja": "母体口", 
             "en": "Botaiguchi" 
         }, 
-        "link": "Botaiguchi" 
+        "link": "Botaiguchi",
+        "pictures": null
     },
     { 
         "id": 33, 
@@ -569,7 +599,8 @@
             "ja": "前沢保育所前", 
             "en": "Maesawa-Hoikusho-Mae" 
         }, 
-        "link": "MaesawaHoikushoMae" 
+        "link": "MaesawaHoikushoMae",
+        "pictures": null
     },
     { 
         "id": 34, 
@@ -577,6 +608,7 @@
             "ja": "イオン前沢", 
             "en": "Aeon-Maesawa" 
         }, 
-        "link": "AeonMaesawa" 
+        "link": "AeonMaesawa",
+        "pictures": null
     }
 ]
