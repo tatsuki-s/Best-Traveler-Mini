@@ -44,11 +44,11 @@ const langPath = () => {
             </p>
         </div>
     </div>
-	<RouterLink to="/ja/ichihira" class="linkButton">
-        <div class="jump">
+    <div class="jump">
+        <RouterLink to="/ja/ichihira" class="linkButton">
             <h1>一関平泉線の<br/>バス停を見る</h1>
-        </div>
-	</RouterLink>
+        </RouterLink>
+    </div>
 </template>
 <style scoped>
 p {
@@ -90,13 +90,13 @@ h2 {
     border: 1px solid #7db4e6;
 }
 
-.linkButton{
+.jump {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.jump {
+.linkButton{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,12 +104,12 @@ h2 {
     width: 300px;
     height: 200px;
     margin-top: 50px;
-    background:#7db4e6;
+    background-color:#7db4e6;
     padding: 10px;
     border-radius: 20px;
 }
 
-.jump h1 {
+.linkButton h1 {
     padding: 15px;
 }
 

@@ -44,11 +44,11 @@ const langPath = () => {
                     <!-- <li class="ite blockes">
                         <a href="Search.html" class="site">{{ langPath() === 'ja' ? '検索' : 'Search' }}</a>
                     </li> -->
-                    <li class="ite blockes">
+                    <li class="ite blockes big">
                         <RouterLink to="/ja/article/1">{{ langPath() === 'ja' ? 'プライバシーポリシー' : 'Privacy policy' }}</RouterLink>
                     </li>
-                    <li class="ite blockes">
-                        <a href="#">{{ langPath() === 'ja' ? '利用者アンケート' : 'Questionnaire' }}<span id="ToGoOther">{{ langPath() === 'ja' ? '※別サイトに移動' : '' }}</span></a>
+                    <li class="ite blockes big">
+                        <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAHpV2FBUMTVMOEM0WjhFNTdWOEhYTTdXOTZPNVA5MC4u" target="_blank" rel="noopener noreferrer">{{ langPath() === 'ja' ? '利用者アンケート' : 'Questionnaire' }}<span id="ToGoOther">{{ langPath() === 'ja' ? '※別サイトに移動' : '' }}</span></a>
                     </li>
                 </ul>
                 <div id="box">
@@ -240,7 +240,8 @@ header {
     margin-bottom: 0;
     display: block;
     width: 100%;
-    font-size: 40px;
+    font-size: 30px;
+    font-weight: bold;
     box-sizing: border-box;
     color: white;
     text-decoration: none;

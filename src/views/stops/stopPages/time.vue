@@ -120,7 +120,7 @@ const busLineName = () => {
 .time li {
     margin-bottom: 20px;
 }
-.time li a {
+.time li .forjikoku {
     color: white;
     font-size: 60px;
     width: 100%;
