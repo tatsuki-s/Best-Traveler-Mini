@@ -12,7 +12,7 @@
                 "type": "image",
                 "path": "/stopImg/ichinoseki-up.jpg",
                 "tab": {
-                    "ja": "一ノ関駅",
+                    "ja": "JR 一ノ関駅",
                     "en": "Ichinoseki sta."
                 }
             },
@@ -22,7 +22,7 @@
                 "path": "/stopImg/ichinosekiBusStop10.jpg",
                 "tab": {
                     "ja": "10番のりば",
-                    "en": "Test3"
+                    "en": "No 10"
                 }
             },
             {
@@ -270,7 +270,26 @@
             "en": "Omachi-Dori" 
         }, 
         "link": "OmachiDori" ,
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/omachidori-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/omachidori-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chudonji, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": "",
         "stopTime": [
             { 
@@ -285,7 +304,7 @@
                 },
                 "time": {
                     "hour": 6,
-                    "minute": 40
+                    "minute": 42
                 },
                 "direction": "down",
                 "schedule": "weekday"
@@ -302,13 +321,27 @@
                 },
                 "time": {
                     "hour": 7,
-                    "minute": 15
+                    "minute": 17
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 3, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 7,
+                    "minute": 46
                 },
                 "direction": "up",
                 "schedule": "daily"
             },
             { 
-                "id": 3, 
+                "id": 4, 
                 "via": {
                     "ja": "中尊寺",
                     "en": "Chusonji"
@@ -319,10 +352,348 @@
                 },
                 "time": {
                     "hour": 7,
-                    "minute": 50
+                    "minute": 52
                 },
                 "direction": "down",
                 "schedule": "daily"
+            },
+            { 
+                "id": 5, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 26
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 6, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 9,
+                    "minute": 25
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 7, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 9,
+                    "minute": 37
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 8, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 10,
+                    "minute": 27
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 9, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 10,
+                    "minute": 41
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 10, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 11,
+                    "minute": 31
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 11, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon-Maesawa"
+                },
+                "time": {
+                    "hour": 11,
+                    "minute": 37
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 12, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 37
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 13, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 10
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 14, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon-Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 27
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 15, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 41
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 16, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 14,
+                    "minute": 27
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 17, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 15,
+                    "minute": 0
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 18, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 15,
+                    "minute": 27
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 19,
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 15,
+                    "minute": 31
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 20, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon-Maesawa"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 27
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 21, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 31
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 22, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 17,
+                    "minute": 27
+                },
+                "direction": "down",
+                "schedule": "weekday"
+            },
+            { 
+                "id": 23, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 18,
+                    "minute": 0
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 24, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 18,
+                    "minute": 27
+                },
+                "direction": "down",
+                "schedule": "weekday"
+            },
+            { 
+                "id": 25, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 18,
+                    "minute": 31
+                },
+                "direction": "up",
+                "schedule": "weekday"
+            },
+            { 
+                "id": 26, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 19,
+                    "minute": 31
+                },
+                "direction": "up",
+                "schedule": "weekday"
             }
         ]
     },
@@ -333,7 +704,435 @@
             "en": "Omachi-Kado" 
         }, 
         "link": "OmachiKado",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/omachikado-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/omachikado-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chudonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        },
+        "stopTime":[
+            { 
+                "id": 1, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 6,
+                    "minute": 43
+                },
+                "direction": "down",
+                "schedule": "weekday"
+            },
+            { 
+                "id": 2, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 7,
+                    "minute": 18
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 3, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 7,
+                    "minute": 45
+                },
+                "direction": "up",
+                "schedule": "weekday"
+            },
+            { 
+                "id": 4, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon-Maesawa"
+                },
+                "time": {
+                    "hour": 7,
+                    "minute": 53
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 5, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 25
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 6, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 9,
+                    "minute": 24
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 7, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 9,
+                    "minute": 38
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 8, 
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 10,
+                    "minute": 28
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 9, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 10,
+                    "minute": 40
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 10,
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 11,
+                    "minute": 30
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 11,
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon-Maesawa"
+                },
+                "time": {
+                    "hour": 11,
+                    "minute": 38
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 12,
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 38
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 13,
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 9
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 14,
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon-Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 28
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 15,
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 40
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 16,
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 14,
+                    "minute": 28
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 17,
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 14,
+                    "minute": 59
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 18,
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 15,
+                    "minute": 28
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 19,
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 15,
+                    "minute": 30
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 20,
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon-Maesawa"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 28
+                },
+                "direction": "down",
+                "schedule": "daily"
+            },
+            { 
+                "id": 21,
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 30
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 22,
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 17,
+                    "minute": 28
+                },
+                "direction": "down",
+                "schedule": "weekday"
+            },
+            { 
+                "id": 23,
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 17,
+                    "minute": 59
+                },
+                "direction": "up",
+                "schedule": "daily"
+            },
+            { 
+                "id": 24,
+                "via": {
+                    "ja": "中尊寺",
+                    "en": "Chusonji"
+                },
+                "arrival": {
+                    "ja": "瀬原",
+                    "en": "Sewara"
+                },
+                "time": {
+                    "hour": 18,
+                    "minute": 28
+                },
+                "direction": "down",
+                "schedule": "weekday"
+            },
+            { 
+                "id": 25, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 18,
+                    "minute": 30
+                },
+                "direction": "up",
+                "schedule": "weekday"
+            },
+            { 
+                "id": 26, 
+                "via": null,
+                "arrival": {
+                    "ja": "一関駅前",
+                    "en": "Ichinoseki Ekimae"
+                },
+                "time": {
+                    "hour": 19,
+                    "minute": 30
+                },
+                "direction": "up",
+                "schedule": "weekday"
+            }
+        ]
     },
     { 
         "id": 4, 
@@ -342,7 +1141,30 @@
             "en": "Ichinoseki-Ichiko-Mae" 
         }, 
         "link": "IchinosekiIchikoMae",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/ichinosekiichikomae-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/ichinosekiichikomae-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 5, 
@@ -351,7 +1173,11 @@
             "en": "Iwai-Bashi" 
         }, 
         "link": "IwaiBashi",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : ["磐井橋の一関駅前方面のバスはすべて通過となります。ご注意ください。"],
+            "en" : null
+        }
     },
     { 
         "id": 6, 
@@ -360,7 +1186,30 @@
             "en": "Takeyama" 
         }, 
         "link": "Takeyama",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/takeyama-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/takeyama-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 7, 
@@ -369,7 +1218,30 @@
             "en": "Haishiwa-Jinaja-Mae" 
         }, 
         "link": "HaishiwaJinjaMae",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/haishiwajinjamae-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/haishiwajinjamae-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 8, 
@@ -378,7 +1250,30 @@
             "en": "Yamame-Ichome" 
         }, 
         "link": "YamanomeIchome",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/yamanomeichome-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/yamanomeichome-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 9, 
@@ -387,7 +1282,30 @@
             "en": "Nakasato-Shimin-Center-Mae" 
         }, 
         "link": "NakasatoShiminCenterMae",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/nakasatoshimincentermae-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/nakasatoshimincentermae-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 10, 
@@ -396,7 +1314,30 @@
             "en": "Yamame-Ekimae" 
         }, 
         "link": "YamanomeEkimae",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/yamanomeekimae-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/yamanomeekimae-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 11, 
@@ -405,7 +1346,30 @@
             "en": "Sawada-Iriguchi" 
         }, 
         "link": "SawadaIriguchi",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/sawadairiguchi-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/sawadairiguchi-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 12, 
@@ -414,7 +1378,30 @@
             "en": "Nakasato-Shinmachi" 
         }, 
         "link": "NakasatoShinmachi",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/nakasatoshinmachi-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/nakasatoshinmachi-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 13, 
@@ -423,7 +1410,30 @@
             "en": "Osa" 
         }, 
         "link": "Osa" ,
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/osa-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/osa-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 14, 
@@ -432,7 +1442,30 @@
             "en": "Kawayashiki" 
         }, 
         "link": "Kawayashiki",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/kawayashiki-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/kawayashiki-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 15, 
@@ -441,7 +1474,11 @@
             "en": "Sano" 
         }, 
         "link": "Sano",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 16, 
@@ -450,7 +1487,30 @@
             "en": "Gion" 
         }, 
         "link": "Gion",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/gion-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/gion-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 17, 
@@ -459,7 +1519,30 @@
             "en": "Motsuji" 
         }, 
         "link": "Motsuji",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/motsuji-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/motsuji-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 18, 
@@ -468,7 +1551,30 @@
             "en": "Hiraizumi-Ekimae" 
         }, 
         "link": "HiraizumiEkimae",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/hiraizumiekimae-up.jpg",
+                "tab": {
+                    "ja": "JR 平泉駅",
+                    "en": "Hiraizumi sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/hiraizumiekimae-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji, Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 19, 
@@ -477,7 +1583,11 @@
             "en": "Suzusawa" 
         }, 
         "link": "Suzusawa",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 20, 
@@ -486,7 +1596,11 @@
             "en": "Hanadate" 
         }, 
         "link": "Hanadate",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 21, 
@@ -495,7 +1609,30 @@
             "en": "Chusonji" 
         }, 
         "link": "Chusonji",
-        "pictures": null
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/chusonji-up.jpg",
+                "tab": {
+                    "ja": "一関駅前・平泉駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/chusonji-down.jpg",
+                "tab": {
+                    "ja": "イオン前沢 方面",
+                    "en": "For Aeon Maesawa"
+                }
+            }
+        ],
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 22, 
@@ -504,7 +1641,11 @@
             "en": "Koromokawa-Bashi" 
         }, 
         "link": "KoromokawaBashi",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 23, 
@@ -513,7 +1654,11 @@
             "en": "Sewara" 
         }, 
         "link": "Sewara",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 24, 
@@ -522,7 +1667,11 @@
             "en": "Tokusawa" 
         }, 
         "link": "Tokusawa",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 25, 
@@ -531,7 +1680,11 @@
             "en": "Shirotori" 
         }, 
         "link": "Shirotori",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 26, 
@@ -540,7 +1693,11 @@
             "en": "Togasaki" 
         }, 
         "link": "Togasaki",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 27, 
@@ -549,7 +1706,11 @@
             "en": "Chogiri" 
         }, 
         "link": "Chogiri",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 28, 
@@ -558,7 +1719,11 @@
             "en": "Mikkamachi" 
         }, 
         "link": "Mikkamachi",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 29, 
@@ -567,7 +1732,11 @@
             "en": "Nanokamachi" 
         }, 
         "link": "Nanokamachi",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 30, 
@@ -576,7 +1745,11 @@
             "en": "Maesawa-Shinmachi" 
         }, 
         "link": "MaesawaShinmachi",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 31, 
@@ -585,7 +1758,11 @@
             "en": "Nijuninmachi" 
         }, 
         "link": "Nijuninmachi",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 32, 
@@ -594,7 +1771,11 @@
             "en": "Botaiguchi" 
         }, 
         "link": "Botaiguchi",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 33, 
@@ -603,7 +1784,11 @@
             "en": "Maesawa-Hoikusho-Mae" 
         }, 
         "link": "MaesawaHoikushoMae",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     },
     { 
         "id": 34, 
@@ -612,6 +1797,10 @@
             "en": "Aeon-Maesawa" 
         }, 
         "link": "AeonMaesawa",
-        "pictures": null
+        "pictures": null,
+        "comment": {
+            "ja" : null,
+            "en" : null
+        }
     }
 ]

@@ -65,10 +65,14 @@ const busLineName = () => {
                                 <p :class="`line ${linePath()}`">
                                     {{ busLineName() }}
                                 </p>
-                                {{ `${ langPath() === "ja" ? "経由：" : "via:"}${ stopTime.via[langPath()]}` }}<br/>{{ `${langPath() === "ja" ? "終点：" : "arrival:"}${ stopTime.arrival[langPath()]}` }}
+                                <p style="margin:0;" v-if="stopTime.via && stopTime.via[langPath()]">
+                                {{ `${ langPath() === "ja" ? "経由：" : "via:"}${ stopTime.via[langPath()]}` }}
+                                </p>
+                                <p v-else></p>
+                                {{ `${langPath() === "ja" ? "終点：" : "arrival:"}${ stopTime.arrival[langPath()]}` }}
                             </span>
                             <span class="jikoku">
-                                {{ stopTime.time.hour }}:{{ stopTime.time.minute }}
+                                {{ stopTime.time.hour }}:{{ stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute }}
                             </span>
                         </RouterLink>
                     </li>

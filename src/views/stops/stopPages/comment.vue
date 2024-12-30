@@ -30,7 +30,9 @@ const stopPath = () => {
 <template>
     <div v-for="item in commentData[linePath()]">
         <div v-if="stopPath() === item.link" id="comment">
-            <p v-for="comment in item.comment[langPath()]">{{ comment }}</p>
+            <div v-for="comment in item.comment[langPath()]">
+              <p v-if="comment !== '' || comment !== null">{{ comment }}</p>
+            </div>
         </div>
     </div>
 </template>

@@ -1,3 +1,14 @@
+<script setup>
+import { useRoute } from 'vue-router';
+const route = useRoute();
+
+// 現在のURLの最初の部分 (ja) を取得
+const langPath = () => {
+  const currentPath = route.path;
+  const pathParts = currentPath.split('/'); // URLを'/'で分割
+  return pathParts[1]; // 最初の部分 (ja)
+};
+</script>
 <template>
     <!--内容上はここから始まる-->
     <div class="welcome">
@@ -18,8 +29,7 @@
         <div class="kinou">
             <h3>①バス時刻表がどこでも見られる！</h3>
             <p>
-                &nbsp;&nbsp;基本的にバス停の時刻表というのは、そのバス停に行かなければ見ることはできませんが、当サイトならいつでもどこでもバス停ごとの時刻表が閲覧可能。<br/>
-                &nbsp;&nbsp;前のバス・後のバスの時刻も見ることができるので、外出の計画がたてやすいです。
+                &nbsp;&nbsp;基本的にバス停の時刻表というのは、そのバス停に行かなければ見ることはできませんが、当サイトならいつでもどこでもバス停ごとの時刻表が閲覧可能です！
             </p>
             <h3>②バス停の写真があるから迷わない！</h3>
             <p>
@@ -27,15 +37,17 @@
                 &nbsp;&nbsp;バス停は基本的にのぼりとくだりで2箇所あるため、地図を確認してもわからないことがあります。<br/>
                 &nbsp;&nbsp;しかし、当サイトならバス停周辺の写真があるため、目立たないバス停でも見つけやすいです。
             </p>
-            <h3>③周辺の施設がわかる！</h3>
+            <h3>③シンプルで見やすいながら便利！</h3>
             <p>
-                &nbsp;&nbsp;バス停に思いの外早く到着してしまったとき、ずっとバス停の前で立っているのは疲れますよね？<br/>
-                &nbsp;&nbsp;そんなとき、当サイトでバス停トップページをご覧いただくと、周辺のおすすめスポットを紹介してくれるので、そこで時間を潰せたり、バス停周辺で新しいであいがあったりするかもしれません。
+                &nbsp;&nbsp;当サイトは，みやすさにこだわって開発されています。そのため，非常にシンプルです<br/>
+                &nbsp;&nbsp;しかし，検索機能に写真機能の提供など，非常に便利な機能をそろえています。
             </p>
         </div>
     </div>
-	<RouterLink to="/ja/ichihira">
-    <div class="jump">stops</div>
+	<RouterLink to="/ja/ichihira" class="linkButton">
+        <div class="jump">
+            <h1>一関平泉線の<br/>バス停を見る</h1>
+        </div>
 	</RouterLink>
 </template>
 <style scoped>
@@ -78,16 +90,27 @@ h2 {
     border: 1px solid #7db4e6;
 }
 
+.linkButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .jump {
-    margin-right: auto;
-    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 200px;
+    width: 300px;
+    height: 200px;
     margin-top: 50px;
     background:#7db4e6;
     padding: 10px;
     border-radius: 20px;
 }
 
+.jump h1 {
+    padding: 15px;
+}
 
 </style>

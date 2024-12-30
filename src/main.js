@@ -20,7 +20,7 @@ VueViewer.setDefaults({
      "toolbar": true, 
      "tooltip": false, 
      "movable": false, 
-     "zoomable": false, 
+     "zoomable": true, 
      "rotatable": false, 
      "scalable": false, 
      "transition": true, 

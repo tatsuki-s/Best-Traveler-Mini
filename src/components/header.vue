@@ -1,3 +1,14 @@
+<script setup>
+import { useRoute } from 'vue-router';
+const route = useRoute();
+
+// 現在のURLの最初の部分 (ja) を取得
+const langPath = () => {
+  const currentPath = route.path;
+  const pathParts = currentPath.split('/'); // URLを'/'で分割
+  return pathParts[1]; // 最初の部分 (ja)
+};
+</script>
 <template>
 	<body>
         <header>
@@ -22,22 +33,22 @@
             <div id="menu-content">
                 <ul>
                     <li style="color: white;">
-                        <h1 class="menu">メニュー</h1>
+                        <h1 class="menu">{{ langPath() === 'ja' ? 'メニュー' : 'Menu' }}</h1>
                     </li>
                     <li class="ite blockes">
-                        <RouterLink class="house" to="/">ホーム</RouterLink>
+                        <RouterLink class="house" to="/">{{ langPath() === 'ja' ? 'ホーム' : 'Home' }}</RouterLink>
                     </li>
                     <!-- <li class="ite blockes">
                         <a href="Line.html" class="line">路線選択</a>
                     </li> -->
+                    <!-- <li class="ite blockes">
+                        <a href="Search.html" class="site">{{ langPath() === 'ja' ? '検索' : 'Search' }}</a>
+                    </li> -->
                     <li class="ite blockes">
-                        <a href="Search.html" class="site">検索</a>
+                        <RouterLink to="/ja/article/1">{{ langPath() === 'ja' ? 'プライバシーポリシー' : 'Privacy policy' }}</RouterLink>
                     </li>
                     <li class="ite blockes">
-                        <RouterLink to="/ja/article/1">プライバシーポリシー</RouterLink>
-                    </li>
-                    <li class="ite blockes">
-                        <a href="#">ご意見箱<span id="ToGoOther">※別サイトへ移動</span></a>
+                        <a href="#">{{ langPath() === 'ja' ? '利用者アンケート' : 'Questionnaire' }}<span id="ToGoOther">{{ langPath() === 'ja' ? '※別サイトに移動' : '' }}</span></a>
                     </li>
                 </ul>
                 <div id="box">

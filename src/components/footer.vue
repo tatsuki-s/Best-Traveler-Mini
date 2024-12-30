@@ -1,6 +1,13 @@
-<script setup lang="ts">
-import router from '@/router';
+<script setup>
+import { useRoute } from 'vue-router';
+const route = useRoute();
 
+// 現在のURLの最初の部分 (ja) を取得
+const langPath = () => {
+  const currentPath = route.path;
+  const pathParts = currentPath.split('/'); // URLを'/'で分割
+  return pathParts[1]; // 最初の部分 (ja)
+};
 </script>
 
 <template>
@@ -9,16 +16,19 @@ import router from '@/router';
             <h1 class="FootName fot"><router-link to="/" class="nav">BEST&nbsp;TRAVELER.</router-link></h1>
             <ul class="cont">
                 <li class="options fot blockes">
-                    <router-link to="/" class="na house">ホーム</router-link>
+                    <router-link to="/" class="na house">{{ langPath() === 'ja' ? 'ホーム' : 'Home' }}</router-link>
                 </li>
                 <!-- <li class="options fot blockes">
                     <a href="Line.html" class="na line">路線選択</a>
                 </li> -->
-                <li class="options fot blockes">
+                <!-- <li class="options fot blockes">
                     <a href="Search.html" class="na site">検索</a>
+                </li> -->
+                <li class="options fot blockes">
+                    <router-link to="/ja/article/1" class="na line" style="font-size: 17px;">{{ langPath() === 'ja' ? 'プライバシーポリシー' : 'Privacy policy' }}</router-link>
                 </li>
                 <li class="options fot blockes">
-                    <router-link to="/ja/article/1" class="na line" style="font-size: 17px;">プライバシーポリシー</router-link>
+                    <a href="#" class="na house">{{ langPath() === 'ja' ? '利用者アンケート' : 'Questionnaire' }}</a>
                 </li>
             </ul>
 	        <p>Copyright © 2024 Agroup All Rights Reserved.</p>
