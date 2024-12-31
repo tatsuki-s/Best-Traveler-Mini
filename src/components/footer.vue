@@ -13,10 +13,10 @@ const langPath = () => {
 <template>
     <footer>
         <div id="footer">
-            <h1 class="FootName fot"><router-link :to="`/${langPath()}`" class="nav">BEST&nbsp;TRAVELER.</router-link></h1>
+            <h1 class="FootName fot"><router-link :to="`/${langPath() === 'ja' || langPath() === 'en' ? langPath() : ''}`" class="nav">BEST&nbsp;TRAVELER.</router-link></h1>
             <ul class="cont">
                 <li class="options fot blockes">
-                    <router-link :to="`/${langPath()}`" class="na house">{{ langPath() === 'ja' ? 'ホーム' : 'Home' }}</router-link>
+                    <router-link :to="`/${langPath() === 'ja' || langPath() === 'en' ? langPath() : ''}`" class="na house">{{ langPath() === 'ja' ? 'ホーム' : 'Home' }}</router-link>
                 </li>
                 <!-- <li class="options fot blockes">
                     <a href="Line.html" class="na line">路線選択</a>
