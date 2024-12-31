@@ -3,14 +3,14 @@
     <div class="welcome">
         <h1>Welcome&nbsp;to&nbsp;<span class="appNameTitle">&quot;BEST&nbsp;TRAVELER.&quot;</span></h1>
     </div>
-        <h2>This site will soon be available in English</h2>
+        <h2>This page will soon be available in English</h2>
         <p>                  
         </p>
 
   
         <div class="jump">
-        <RouterLink to="/ja/ichihira" class="linkButton">
-            <h1>View pages<br/>(Japanese only)</h1>
+        <RouterLink to="/en/ichihira" class="linkButton">
+            <h1>View pages<br/>(Some Japanese only)</h1>
         </RouterLink>
     </div>
 </template>

@@ -1581,7 +1581,7 @@
         "pictures": null,
         "comment": {
             "ja" : ["磐井橋の一関駅前方面のバスはすべて通過となります。ご注意ください。"],
-            "en" : null
+            "en" : ["All buses bound for Ichinoseki Station do not stop at this bus stop."]
         },
         "stopTime": [
             {

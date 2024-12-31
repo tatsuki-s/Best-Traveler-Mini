@@ -8,7 +8,7 @@ import TopEn from '../views/TopPageEn.vue'
 // ichihiraStopDataのすべての駅をルートに追加するための処理
 const ichihiraStopRoutes = ichihiraStopData.map(stop => ({
   path: stop.link,  // 停車駅のpathをルートのpathに設定
-  name: stop.name.en,   // 停車駅の英語版nameをルートのnameに設定
+  name: stop.name.ja,   // 停車駅の英語版nameをルートのnameに設定
   component: () => import('../views/stops/stopPage.vue'),  // 停車駅のコンポーネントを動的にインポート
 }));
 
@@ -16,6 +16,18 @@ const articles = articleData.map(article => ({
   path: article.id,  
   name: article.title, 
   component: () => import('../views/article.vue'),  // 停車駅のコンポーネントを動的にインポート
+}));
+
+const ichihiraStopRoutesEn = ichihiraStopData.map(stop => ({
+  path: stop.link, // 停車駅のpathをルートのpathに設定 (英語用)
+  name: stop.name.en, // 停車駅の英語版nameをルートのnameに設定
+  component: () => import('../views/stops/stopPage.vue'), // 停車駅のコンポーネントを動的にインポート
+}));
+
+const articlesEn = articleData.map(article => ({
+  path: article.id,  
+  name: `${article.title}-en`, 
+  component: () => import('../views/article.vue'), // 記事コンポーネントを動的にインポート
 }));
 
 const router = createRouter({
@@ -33,9 +45,6 @@ const router = createRouter({
           path: '',
           name: 'jaTop',
           component: TopView,
-          // route level code-splitting
-          // this generates a separate chunk (About.[hash].js) for this route
-          // which is lazy-loaded when the route is visited.
         },
         {
           path: 'article',
@@ -45,7 +54,6 @@ const router = createRouter({
         },
         {
           path: 'ichihira',
-          props: true,
           children: [
             {
               path: '',
@@ -65,9 +73,17 @@ const router = createRouter({
           path: '',
           name: 'enTop',
           component: TopEn,
-          // route level code-splitting
-          // this generates a separate chunk (About.[hash].js) for this route
-          // which is lazy-loaded when the route is visited.
+        },
+        {
+          path: 'ichihira',
+          children: [
+            {
+              path: '',
+              name: 'ichihiraTopEn',
+              component: () => import('../views/stops.vue'), // 英語版のトップ
+            },
+            ...ichihiraStopRoutesEn,
+          ],
         },
       ],
     },
@@ -84,13 +100,11 @@ const router = createRouter({
     this._routes = value
   },
   scrollBehavior(to, from, savedPosition) {
-    // savedPositionがある場合（ブラウザの戻る/進む時）はそれを使う
     if (savedPosition) {
       return savedPosition;
     }
-    // 通常のページ遷移時にはページトップへスクロール
     return { top: 0 };
   },
-})
+});
 
-export default router
+export default router;

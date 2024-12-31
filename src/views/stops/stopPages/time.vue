@@ -47,8 +47,8 @@ const busLineName = () => {
             <span v-if="data.link === stopPath()">{{ data.name[langPath()] }}</span>
         </span>
        </h1>
-		<select class="youbi" v-model="selectedSchedule">
-            <!-- valueの平日と土日祝日とが逆なのは仕様なので注意 -->
+		<select id="youbi" v-model="selectedSchedule">
+            <!-- valeの平日と土日祝日とが逆なのは仕様なので注意 -->
             <option value="daily">{{ langPath() === "ja" ? "すべて" : "Everyday" }}</option>
 			<option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
 			<option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
@@ -59,7 +59,7 @@ const busLineName = () => {
              <div class="timeBox">
                 <div v-for="data in timeData[linePath()]">
                     <li v-for="stopTime in data.stopTime">
-                        <RouterLink v-if="data.link === stopPath() && ( selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}` ) " :to="`${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute}-${stopTime.schedule}`" :class="`forjikoku ${stopTime.schedule}`">
+                        <div v-if="data.link === stopPath() && ( selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}` ) " :to="`${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute}-${stopTime.schedule}`" :class="`forjikoku ${stopTime.schedule}`">
                             <hr :class="stopTime.direction">
                             <span class="yukisaki">
                                 <p :class="`line ${linePath()}`">
@@ -74,7 +74,7 @@ const busLineName = () => {
                             <span class="jikoku">
                                 {{ stopTime.time.hour }}:{{ stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute }}
                             </span>
-                        </RouterLink>
+                        </div>
                     </li>
                 </div>
             </div>
@@ -89,7 +89,7 @@ const busLineName = () => {
 #Noriba {
     text-align: center;
 }
-.youbi {
+#youbi {
     display: flex;
     text-align: center;
     margin-bottom: 20px;
@@ -97,15 +97,17 @@ const busLineName = () => {
     width: 50%;
     font-weight: bold;
     font-size: 20px;
-    background-color: rgb(194, 194, 194);
-    color: rgb(0, 0, 0);
+    background-color: #cccccc;
+    color: #333333;
     border-radius: 12px;
     margin-right:auto;
     margin-left: auto;
+    border: 2px solid black;
 }
 #Box {
     overflow-y: auto; /* 垂直方向にスクロール可能にする */
     height: calc(100vh - 350px);
+    min-height: 240px;
 }
 .time {
     padding-left: 0;

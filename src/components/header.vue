@@ -13,11 +13,11 @@ const langPath = () => {
 	<body>
         <header>
             <div id="HeaderItems">
-				<RouterLink to="/">
+				<RouterLink :to="`/${langPath()}`">
                     <div id="container">
                         <img src="/favicon.ico" id="icons" alt="ホーム画面のアイコン">
                             <!--リンクを入れる。ホーム画面への-->
-                        <h1 class="Name no-select"><span class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</span><span id="version">&nbsp;v.1.0.0</span></h1>
+                        <h1 class="Name no-select"><span class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</span><span id="version">&nbsp;Beta</span></h1>
                     </div>
 			    </RouterLink>
             </div>
@@ -36,7 +36,7 @@ const langPath = () => {
                         <h1 class="menu">{{ langPath() === 'ja' ? 'メニュー' : 'Menu' }}</h1>
                     </li>
                     <li class="ite blockes">
-                        <RouterLink class="house" to="/">{{ langPath() === 'ja' ? 'ホーム' : 'Home' }}</RouterLink>
+                        <RouterLink class="house" :to="`/${langPath()}`">{{ langPath() === 'ja' ? 'ホーム' : 'Home' }}</RouterLink>
                     </li>
                     <!-- <li class="ite blockes">
                         <a href="Line.html" class="line">路線選択</a>
