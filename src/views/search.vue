@@ -1,39 +1,47 @@
 <template>
-    <div class="search-container">
-                    <input type="text" id="searchInput" class="no-select" oninput="searchFunction()" placeholder="検索...">
-                </div>
-    <ul id="itemList">
-      <li v-for="stop in data">
-        <ul>
-          <li v-for="line in stop.lines" :data-reading="line.read">
-            <a href="IchinosekiEkimae22.html">
-              <p class="en">{{ line.nameen }}</p>
-              <p class="ja">{{ line.name }}</p>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <li id="noResult" style="display: none;">
+    <div id="search-container">
+      <input type="text" v-model="keyword" id="searchInput" placeholder="検索">
+      <ul id="itemList">
+        <li v-for="line in filteredLines" :key="line.id">
+            <RouterLink to="/" class="rout">
+                    <p class="en">{{ line.nameen }}</p>
+                    <p class="ja">{{ line.name }}</p>
+            </RouterLink>
+        </li>
+      <li id="noResult" :class="{'search-box-none': keyword === ''}">
         <p style="color: black;">見つかりませんか？スペルをお確かめください。</p>
       </li>
-    </ul>
+      </ul>
+    </div>
   </template>
   
   <script>
-  import search from '../data/search.json'
-  
+  import { RouterLink } from 'vue-router';
+import search from '../data/search.json'
   export default {
     data() {
       return {
-        data: search,  // stopsとlinesを含むデータ
+        keyword: '',
+        stopsData: search
       };
+    },
+    computed: {
+      filteredLines() {
+        return this.stopsData[0].lines.filter(line =>
+          line.name.includes(this.keyword) ||
+          line.nameen.includes(this.keyword) ||
+          line.read.some(reading => reading.includes(this.keyword)) // read配列内も検索
+        );
+      }
     }
-  }
+  };
   </script>
-  
-  
+    
 <style>
-.search-container {
+.search-box-none {
+    display: none;
+}
+#search-container {
     margin-bottom: 20px;
     max-width: auto;
     text-align: center;
@@ -50,7 +58,7 @@
     padding: 10px;
     border: 4px solid black;
     border-radius: 4px;
-    background-color: white;
+    background-color:  rgb(255, 255, 255);
     color: black;
     outline: none;
     font-size: 40px;
@@ -62,8 +70,8 @@
     min-height: 100vh;
 }
 
-#itemList li a{
-    background-color: rgb(223, 223, 223);
+.rout{
+    background-color: rgb(255, 255, 255);
     color: black;
     width: 30vw;
     padding: 3px;
@@ -71,6 +79,9 @@
     border-radius: 4px;
     font-size: 30px;
     margin-bottom: 20px;
+}
+.rout:hover{
+    opacity: 0.7;
 }
 
 
@@ -93,10 +104,13 @@
 
 @media screen and (max-width: 1180px) {
 	/* 959px以下に適用されるCSS（デカめのタブレット用） */
-    #itemList li a {
+    .rout {
         width: 70vw;
     }
-    #itemList li a {
+    .rout:hover{
+    opacity: 1;
+}
+    .rout {
         font-size: 20px;
     }
     #itemList {
@@ -104,7 +118,7 @@
     }
 }
 @media screen and (max-width: 710px) {
-    #itemList li a {
+    .rout {
         font-size: 16px;
     }
 }
