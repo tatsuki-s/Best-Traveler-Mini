@@ -1,14 +1,10 @@
-# vue-test
+# べすとらのvueを使った実装
 
-This template should help get you started developing with Vue 3 in Vite.
+今回使用されるvueのversionは３です。
 
-## Recommended IDE Setup
+以下は推奨するIDEの設定です。（vue.js公式より
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+推奨エディターはMicrosoftのVSCodeです。そこでVolarを調べて拡張機能としてインストールします。Veturは無効化もしくはインストールしないでください。
 
 ##まずはプロジェクトディレクトリに移動します。
 
@@ -16,7 +12,9 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 cd <<your project directory>>
 ```
 
-## まずは必要なパッケージをインストールします。　
+## 起動するためのコマンド
+
+### まずは必要なパッケージをインストールします。　
 
 ```sh
 npm install
@@ -32,6 +30,28 @@ npm run dev
 
 ```sh
 http://localhost:5173
+```
+
+### ポート番号を変更したい場合はルートディレクトリにvite.config.jsを作成し、編集していきます。
+
+```sh
+touch vite.config.js
+```
+
+### 作成したファイルを以下を例に編集します。
+
+```sh
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  server: {
+    port: 5173,  // 開発サーバーのポートを変更
+    open: true,  // 開発サーバー起動時にブラウザを自動で開く
+  },
+  build: {
+    outDir: 'dist', // ビルド結果の出力先ディレクトリ
+  },
+});
 ```
 
 
