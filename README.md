@@ -9,7 +9,7 @@
 ##まずはプロジェクトディレクトリに移動します。
 
 ```sh
-cd <<your project directory>>
+cd <<YourProjectDirectory>>
 ```
 
 ## 起動するためのコマンド
