@@ -21,11 +21,11 @@ const langPath = () => {
                 <!-- <li class="options fot blockes">
                     <a href="Line.html" class="na line">路線選択</a>
                 </li> -->
-                <!-- <li class="options fot blockes">
-                    <a href="Search.html" class="na site">検索</a>
-                </li> -->
                 <li class="options fot blockes">
                     <router-link to="/ja/article/1" class="na line" style="font-size: 17px;">{{ langPath() === 'ja' ? 'プライバシーポリシー' : 'Privacy policy' }}</router-link>
+                </li>
+                <li class="options fot blockes">
+                    <router-link :to="`/${langPath()}/search`" class="na line" style="font-size: 17px;">{{ langPath() === 'ja' ? 'バス停検索' : 'Search' }}</router-link>
                 </li>
                 <li class="options fot blockes">
                     <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAHpV2FBUMTVMOEM0WjhFNTdWOEhYTTdXOTZPNVA5MC4u" target="_blank" rel="noopener noreferrer" class="na house">{{ langPath() === 'ja' ? 'アンケート' : 'Questionnaire' }}</a>

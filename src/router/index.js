@@ -4,14 +4,25 @@ import articleData from '../data/pageData.json'
 import ichihiraStopData from '../data/ichihiraStops.json'
 import TopView from '../views/TopPage.vue'
 import TopEn from '../views/TopPageEn.vue'
+import timeTable from '../views/timeTable.vue'
 import Search from '../views/search.vue'
 import { component } from 'v-viewer'
 
 // ichihiraStopDataのすべての駅をルートに追加するための処理
 const ichihiraStopRoutes = ichihiraStopData.map(stop => ({
-  path: stop.link,  // 停車駅のpathをルートのpathに設定
-  name: stop.name.ja,   // 停車駅の英語版nameをルートのnameに設定
-  component: () => import('../views/stops/stopPage.vue'),  // 停車駅のコンポーネントを動的にインポート
+  path: stop.link,
+  // children: [
+    // {
+      // path: '', // 停車駅のメインページ
+      name: stop.name.ja,
+      component: () => import('../views/stops/stopPage.vue'),
+    // },
+    // ...stop.stopTime.map(time => ({
+      // path: `${String(time.time.hour).padStart(2, '0')}${String(time.time.minute).padStart(2, '0')}-${time.schedule}`,
+      // name: `table${time.id}`,
+      // component: () => timeTable,
+    // })),
+  // ],
 }));
 
 const articles = articleData.map(article => ({
@@ -79,6 +90,10 @@ const router = createRouter({
           path: '',
           name: 'enTop',
           component: TopEn,
+        },
+        {
+          path:'search',
+          component: Search,
         },
         {
           path: 'ichihira',

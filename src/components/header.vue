@@ -48,6 +48,9 @@ const langPath = () => {
                         <RouterLink to="/ja/article/1">{{ langPath() === 'ja' ? 'プライバシーポリシー' : 'Privacy policy' }}</RouterLink>
                     </li>
                     <li class="ite blockes big">
+                        <RouterLink :to="`/${langPath()}/search`">{{ langPath() === 'ja' ? 'バス停検索' : 'Search' }}</RouterLink>
+                    </li>
+                    <li class="ite blockes big">
                         <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAHpV2FBUMTVMOEM0WjhFNTdWOEhYTTdXOTZPNVA5MC4u" target="_blank" rel="noopener noreferrer">{{ langPath() === 'ja' ? '利用者アンケート' : 'Questionnaire' }}<span id="ToGoOther">{{ langPath() === 'ja' ? '※別サイトに移動' : '' }}</span></a>
                     </li>
                 </ul>
