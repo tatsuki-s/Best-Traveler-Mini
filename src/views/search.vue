@@ -3,24 +3,24 @@
       <input type="text" v-model="keyword" id="searchInput" placeholder="検索">
       <ul id="itemList">
         <li v-for="stop in stopsData" :key="stop.stops">
-    <ul>
-      <li v-for="line in stop.lines" :key="line.id">
-        <RouterLink :to="`${stop.stops}/${line.pas}`" class="rout">
-          <p class="en">{{ line.pas }}</p>
-          <p class="ja">{{ line.name }}</p>
-        </RouterLink>
-      </li>
-    </ul>
-  </li>
-      <li id="noResult" :class="{'search-box-none': keyword === ''}">
-        <p style="color: black;">見つかりませんか？スペルをお確かめください。</p>
-      </li>
+          <ul>
+            <li v-for="line in filteredLines(stop)" :key="line.id">
+              <RouterLink :to="stop.stops + '/' + line.pas" class="rout">
+                <p class="en">{{ line.id }}{{ line.pas }}</p>
+                <p class="ja">{{ line.name }}</p>
+              </RouterLink>
+            </li>
+          </ul>
+        </li>
+        <li id="noResult" :class="{'search-box-none': keyword === ''}">
+          <p style="color: black;">見つかりませんか？スペルをお確かめください。</p>
+        </li>
       </ul>
     </div>
   </template>
   
   <script>
-import search from '../data/search.json'
+  import search from '../data/search.json'
   export default {
     data() {
       return {
@@ -28,18 +28,23 @@ import search from '../data/search.json'
         stopsData: search
       };
     },
-    computed: {
-      filteredLines() {
-        return this.stopsData[0].lines.filter(line =>
-          line.name.includes(this.keyword) ||
-          line.nameen.includes(this.keyword) ||
-          line.pas.includes(this.keyword) ||
-          line.read.some(reading => reading.includes(this.keyword))
-        );
+    methods: {
+      filteredLines(stop) {
+        // stop.linesが存在するか確認してからfilterを実行
+        if (stop.lines) {
+          return stop.lines.filter(line =>
+            line.name.includes(this.keyword) ||
+            line.nameen.includes(this.keyword) ||
+            line.pas.includes(this.keyword) ||
+            line.read.some(reading => reading.includes(this.keyword))
+          );
+        }
+        return []; // linesがない場合は空の配列を返す
       }
     }
   };
   </script>
+  
     
 <style>
 .search-box-none {
