@@ -6,172 +6,206 @@
                 "id" : 1,
                 "name" : "一関駅前10番のりば",
                 "nameen" : "ichinosekiekimae10bannnoriba",
+                "pas" : "IchinosekiEkimae",
                 "read" : ["一関駅前10番のりば","ichinoseki bus stop 10"]
             },
             {
                 "id" : 2,
                 "name" : "大町通り",
                 "nameen" : "oomachidoori",
+                "pas" : "OmachiDori",
                 "read" : ["ohmachidoori","oomachidoori"]
             },{
                 "id" : 3,
                 "name" : "大町角",
                 "nameen" : "oomachikado",
+                "pas":"OmachiKado",
                 "read" : ["ohmachikado","oomachikado"]
             },{
                 "id" : 4,
                 "name": "一関一高前",
                 "nameen" : "ichinosekiichikomae",
+                "pas" : "IchinosekiIchikoMae",
                 "read" : ["ichinosekiichikomae","front of ichinoseki ichikou"]
             },{
                 "id" : 5,
                 "name" : "磐井橋",
                 "nameen" : "iwaibashi",
+                "pas" : "IwaiBashi",
                 "read" : ["iwaibashi"]
             },{
                 "id" : "6",
                 "name" : "竹山",
                 "nameen" : "takeyama",
+                "pas":"Takeyama",
                 "read" : ["takeyama"]
             },{
                 "id" : "7",
                 "name" : "配志和神社前",
                 "nameen" : "haishiwajinjamae",
+                "pas" : "HaishiwaJinjaMae",
                 "read" : ["haishiwajinjamae"]
             },{
                 "id" : "8",
                 "name" : "山目一丁目",
                 "nameen" : "yamanomeicchoume",
+                "pas" : "YamanomeIchome",
                 "read" : ["yamanomeicchoume"]
             },{
                 "id" : "9",
                 "name" : "中里市民センター前",
                 "nameen" : "nakasatoshiminsentamae",
+                "pas" : "NakasatoShiminCenterMae",
                 "read" : ["nakasatoshiminsenta-mae"]
             },{
                 "id" : "10",
                 "name" : "山目駅前",
                 "nameen" : "yamanomeekimae",
+                "pas" : "YamanomeEkimae",
                 "read" : ["yamanomeekimae"]
             },{
                 "id" : "11",
                 "name" : "沢田入口",
-                "nameen" : "sawatairiguchi",
+                "nameen" : "sawadairiguchi",
+                "pas" : "SawadaIriguchi",
                 "read" : ["sawatairiguchi"]
             },{
                 "id" : "12",
                 "name" : "中里新町",
                 "nameen" : "nakasatosinmachi",
+                "pas" :"NakasatoShinmachi",
                 "read" : ["nakasatosinmachi"]
             },{
                 "id" : "13",
                 "name" : "大佐",
                 "nameen" : "oosa",
+                "pas" : "Osa",
                 "read" : ["oosa"]
             },{
                 "id" : "14",
                 "name" : "川屋敷",
                 "nameen" : "kawayashiki",
+                "pas":"Kawayashiki",
                 "read" : ["kawayashiki"]
             },{
                 "id" : "15",
                 "name" : "佐野",
                 "nameen" : "sano",
+                "pas" : "Sano",
                 "read" : ["sano"]
             },{
                 "id" : "16",
                 "name" : "祇園",
                 "nameen" : "gion",
+                "pas" : "Gion",
                 "read" : ["gion"]
             },{
                 "id" : "17",
                 "name" : "毛越寺",
                 "nameen" : "motsuji",
+                "pas" : "Motsuji",
                 "read" : ["moutsuuji"]
             },{
                 "id" : "18",
                 "name" : "平泉駅前",
                 "nameen" : "hiraizumiekimae",
+                "pas" : "HiraizumiEkimae",
                 "read" : ["hiraizumiekimae"]
             },{
                 "id" : "19",
                 "name" : "鈴沢",
                 "nameen" : "suzusawa",
+                "pas" : "Suzusawa",
                 "read" : ["suzusawa"]
             },{
                 "id" : "",
                 "name" : "花舘",
                 "nameen" : "hanadate",
+                "pas":"Hanadate",
                 "read" : ["hanadate"]
             },{
                 "id" : "20",
                 "name" : "中尊寺",
                 "nameen" : "chusonji",
+                "pas":"Chusonji",
                 "read" : ["chuusonji"]
             },{
                 "id" : "21",
                 "name" : "衣川橋",
                 "nameen" : "koromokawabashi",
+                "pas" : "KoromokawaBashi",
                 "read" : ["koromokawabashi"]
             },{
                 "id" : "22",
                 "name" : "瀬原",
-                "nameen" : "sehara",
+                "nameen" : "sewara",
+                "pas" : "Sewara",
                 "read" : ["sehara"]
             },{
                 "id" : "23",
                 "name" : "徳沢",
                 "nameen" : "tokusawa",
+                "pas":"Tokusawa",
                 "read" : ["tokusawa"]
             },{
                 "id" : "24",
                 "name" : "白鳥",
                 "nameen" : "shirotori",
+                "pas":"Shirotori",
                 "read" : ["hakucho","shirotori"]
             },{
                 "id" : "25",
                 "name" : "塔ヶ崎",
                 "nameen" : "togasaki",
+                "pas":"Togasaki",
                 "read" : ["tougasaki"]
             },{
                 "id" : "26",
                 "name" : "丁切",
                 "nameen" : "chougiri",
+                "pas":"Chogiri",
                 "read" : ["chougiri"]
             },{
                 "id" : "27",
                 "name" : "三日町",
                 "nameen" : "mikkacho",
+                "pas":"Mikkamachi",
                 "read" : ["mikkamachi","mikkachou"]
             },{
                 "id" : "28",
                 "name" : "七日町",
                 "nameen" : "nanokacho",
+                "pas" : "Nanokamachi",
                 "read" : ["nanokachou"]
             },{
                 "id" : "29",
                 "name" : "前沢新町",
                 "nameen" : "maesawashinmachi",
+                "pas":"MaesawaShinmachi",
                 "read" : ["maesawashinmachi"]
             },{
                 "id" : "30",
                 "name" : "二十人町",
                 "nameen" : "nijuninmachi",
+                "pas":"Nijuninmachi",
                 "read" : ["nijuuninmachi"]
             },{
                 "id" : "31",
                 "name" : "母体口",
                 "nameen" : "botaiguchi",
+                "pas":"Botaiguchi",
                 "read" : ["botaiguchi"]
             },{
                 "id" : "32",
                 "name" : "前沢保育所前",
                 "nameen" : "maesawahoikushomae",
+                "pas":"MaesawaHoikushoMae",
                 "read" : ["maeasawahoikushomae"]
             },{
                 "id" : "33",
                 "name" : "イオン前沢",
                 "nameen" : "ionmaesawa",
+                "pas":"AeonMaesawa",
                 "read" : ["ionmaesawa"]
             }
         ]

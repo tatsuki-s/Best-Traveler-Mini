@@ -18,7 +18,7 @@ import Footer from './components/footer.vue'
 </template>
 
 <style scoped>
-/*mein*/
+/*main*/
 
 /* ここでは大まかなスタイルを決める */
 body {

@@ -2,12 +2,16 @@
     <div id="search-container">
       <input type="text" v-model="keyword" id="searchInput" placeholder="検索">
       <ul id="itemList">
-        <li v-for="line in filteredLines" :key="line.id">
-            <RouterLink to="/" class="rout">
-                    <p class="en">{{ line.nameen }}</p>
-                    <p class="ja">{{ line.name }}</p>
-            </RouterLink>
-        </li>
+        <li v-for="stop in stopsData" :key="stop.stops">
+    <ul>
+      <li v-for="line in stop.lines" :key="line.id">
+        <RouterLink :to="`${stop.stops}/${line.pas}`" class="rout">
+          <p class="en">{{ line.pas }}</p>
+          <p class="ja">{{ line.name }}</p>
+        </RouterLink>
+      </li>
+    </ul>
+  </li>
       <li id="noResult" :class="{'search-box-none': keyword === ''}">
         <p style="color: black;">見つかりませんか？スペルをお確かめください。</p>
       </li>
@@ -16,7 +20,6 @@
   </template>
   
   <script>
-  import { RouterLink } from 'vue-router';
 import search from '../data/search.json'
   export default {
     data() {
@@ -30,7 +33,8 @@ import search from '../data/search.json'
         return this.stopsData[0].lines.filter(line =>
           line.name.includes(this.keyword) ||
           line.nameen.includes(this.keyword) ||
-          line.read.some(reading => reading.includes(this.keyword)) // read配列内も検索
+          line.pas.includes(this.keyword) ||
+          line.read.some(reading => reading.includes(this.keyword))
         );
       }
     }
