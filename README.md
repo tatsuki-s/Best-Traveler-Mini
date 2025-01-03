@@ -1,4 +1,4 @@
-# べすとらのvueを使った実装
+# Best-Travelerのvueでの実装
 
 今回使用されるvueのversionは３です。
 
@@ -9,7 +9,7 @@
 ##まずはプロジェクトディレクトリに移動します。
 
 ```sh
-cd <<YourProjectDirectory>>
+cd <YourProjectDirectory>
 ```
 
 ## 起動するためのコマンド
