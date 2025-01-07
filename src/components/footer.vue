@@ -28,7 +28,7 @@ const langPath = () => {
                     <router-link :to="`/${langPath()}/search`" class="na line" style="font-size: 17px;">{{ langPath() === 'ja' ? 'バス停検索' : 'Search' }}</router-link>
                 </li>
                 <li class="options fot blockes">
-                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAHpV2FBUMTVMOEM0WjhFNTdWOEhYTTdXOTZPNVA5MC4u" target="_blank" rel="noopener noreferrer" class="na house">{{ langPath() === 'ja' ? 'アンケート' : 'Questionnaire' }}</a>
+                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=XYP-cpVeEkWK4KezivJfyIfUxWb4hF1FnEZGWseDl_FUM1A5NzQ4QzdLVTZJWENTVDc0UTRWWU9SNi4u" target="_blank" rel="noopener noreferrer" class="na house">{{ langPath() === 'ja' ? 'アンケート' : 'Questionnaire' }}</a>
                 </li>
             </ul>
 	        <p>Copyright © 2024 Agroup All Rights Reserved.</p>
