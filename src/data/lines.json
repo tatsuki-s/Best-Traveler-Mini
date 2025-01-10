@@ -6,7 +6,15 @@
 			"ja": "一関平泉線",
 			"en": "Ichinoseki-Hiraizumi-Line"
 		},
-		"link": "ichihira" 
+		"link": "ichihira" ,
+		"nobori" : {
+			"ja": "一ノ関駅前",
+            "en": "Ichinoseki Ekimae"
+		},
+		"kudari": {
+            "ja": "瀬原/イオン前沢",
+            "en": "Sewara/Aeon-Maesawa"
+        }
 	},
 	{
 		"id": 2,

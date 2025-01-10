@@ -53,20 +53,20 @@ const busLineName = () => {
         <div style="display: flex; flex-wrap: nowrap; flex-direction: row;">
             <label class="no-select">
                 <input type="radio" v-model="selectedDirection" value="both">
-                両方
+                {{ langPath() === "ja" ? "両方" : "both" }} 
             </label>
             <label class="no-select">
                 <input type="radio" v-model="selectedDirection" value="upward">
-                一関駅方面（上り）
+                {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].nobori[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
             </label>
             <label class="no-select">
                 <input type="radio" v-model="selectedDirection" value="downward">
-                イオン前沢行き（下り）
+                {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].kudari[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
             </label>
         </div>
 
         <select id="youbi" v-model="selectedSchedule" class="no-select">
-                        <!-- valeの平日と土日祝日とが逆なのは仕様なので注意 -->
+                        <!-- valueの平日と土日祝日とが逆なのは仕様なので注意 -->
             <option value="daily">{{ langPath() === "ja" ? "すべて" : "Everyday" }}</option>
             <option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
             <option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
