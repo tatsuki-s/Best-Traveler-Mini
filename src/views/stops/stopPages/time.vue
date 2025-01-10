@@ -8,6 +8,7 @@ import { ref } from 'vue';
 const timeData = {ichihira}
 
 const selectedSchedule = ref('daily');//初期値を設定
+const selectedDirection = ref('both');  // デフォルトで上り・下り両方を表示
 
 const route = useRoute();
 
@@ -42,48 +43,71 @@ const busLineName = () => {
 </script>
 <template>
     <div id="busStopName">
-       <h1 id="Noriba">
-        <span v-for="data in timeData[linePath()]">
-            <span v-if="data.link === stopPath()">{{ data.name[langPath()] }}</span>
-        </span>
-       </h1>
-		<select id="youbi" v-model="selectedSchedule">
-            <!-- valeの平日と土日祝日とが逆なのは仕様なので注意 -->
+        <h1 id="Noriba">
+            <span v-for="data in timeData[linePath()]">
+                <span v-if="data.link === stopPath()">{{ data.name[langPath()] }}</span>
+            </span>
+        </h1>
+    
+        <!-- 上り/下りを切り替えるボタンを追加 -->
+        <div style="display: flex; flex-wrap: nowrap; flex-direction: row;">
+            <label class="no-select">
+                <input type="radio" v-model="selectedDirection" value="both">
+                両方
+            </label>
+            <label class="no-select">
+                <input type="radio" v-model="selectedDirection" value="upward">
+                一関駅方面（上り）
+            </label>
+            <label class="no-select">
+                <input type="radio" v-model="selectedDirection" value="downward">
+                イオン前沢行き（下り）
+            </label>
+        </div>
+
+        <select id="youbi" v-model="selectedSchedule" class="no-select">
+                        <!-- valeの平日と土日祝日とが逆なのは仕様なので注意 -->
             <option value="daily">{{ langPath() === "ja" ? "すべて" : "Everyday" }}</option>
-			<option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
-			<option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
-		</select>
+            <option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
+            <option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
+        </select>
     </div>
     <div id="Box">
-        <ul class="time">
-             <div class="timeBox">
-                <div v-for="data in timeData[linePath()]">
-                    <li v-for="stopTime in data.stopTime">
-                        <RouterLink
-                        v-if="data.link === stopPath() && ( selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}` ) " 
-                        :to="`${stopPath()}/${stopTime.arrival.en.replace(/\s+/g, '')}-${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute}-${stopTime.schedule}`" 
+  <ul class="time">
+    <li class="timeBox" v-for="data in timeData[linePath()]" :key="data.id">
+      <div v-for="stopTime in data.stopTime" :key="stopTime.id">
+        <RouterLink
+                        v-if="data.link === stopPath() && 
+            (selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}`) && 
+            (selectedDirection === 'both' || 
+            (selectedDirection === 'upward' && stopTime.direction === 'up') || 
+            (selectedDirection === 'downward' && stopTime.direction !== 'up'))"
+            
+                        :to="`${stopPath()}/${stopTime.arrival.en.replace(/\s+/g, '')}-${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute}-${stopTime.schedule}`"
+            
                         :class="`forjikoku ${stopTime.schedule}`"
-                        >
-                            <hr :class="stopTime.direction">
-                            <span class="yukisaki">
-                                <p :class="`line ${linePath()}`">
-                                    {{ busLineName() }}
-                                </p>
-                                <p style="margin:0;" v-if="stopTime.via && stopTime.via[langPath()]">
-                                {{ `${ langPath() === "ja" ? "経由：" : "via:"}${ stopTime.via[langPath()]}` }}
-                                </p>
-                                <p v-else></p>
-                                {{ `${langPath() === "ja" ? "終点：" : "arrival:"}${ stopTime.arrival[langPath()]}` }}
-                            </span>
-                            <span class="jikoku">
-                                {{ stopTime.time.hour }}:{{ stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute }}
-                            </span>
-                        </RouterLink>
-                    </li>
-                </div>
-            </div>
-        </ul>
-    </div>
+                        
+        >
+
+          <hr :class="stopTime.direction" />
+          <span class="yukisaki">
+            <p :class="`line ${linePath()}`">
+              {{ busLineName() }}
+            </p>
+            <p style="margin:0;" v-if="stopTime.via && stopTime.via[langPath()]">
+              {{ `${ langPath() === "ja" ? "経由：" : "via:"}${ stopTime.via[langPath()]}` }}
+            </p>
+            <p v-else></p>
+            {{ `${langPath() === "ja" ? "終点：" : "arrival:"}${ stopTime.arrival[langPath()]}` }}
+          </span>
+          <span class="jikoku">
+            {{ stopTime.time.hour }}:{{ stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute }}
+          </span>
+        </div>
+      </RouterLink>
+    </li>
+  </ul>
+</div>
 </template>
 <style scoped>
 .busStopName {
@@ -134,6 +158,7 @@ const busLineName = () => {
     transition: all 1s 0s ease;
     background-color: rgb(63, 63, 63);
     border-radius: 4px;   
+    margin-bottom: 20px;
 }
 .yukisaki {
 	display: inline-block;

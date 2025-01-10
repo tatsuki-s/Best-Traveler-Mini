@@ -37,7 +37,7 @@
         ],
         "comment": {
             "ja" : ["バスに「平泉巡回バス るんるん」と書いてあっても一関平泉線のバスである可能性があります。ご注意ください。"],
-            "en" : ["Runrun(るんるん) might be fake."]
+            "en" : ["Please note that even if a bus displays 'Hiraizumi Loop Bus RunRun' there is a possibility that it is the Ichinoseki-Hiraizumi Line."]
         },
         "stopTime": [
             { 
