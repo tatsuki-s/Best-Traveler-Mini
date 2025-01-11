@@ -2,7 +2,7 @@
     { 
         "id": 1, 
         "name": { 
-            "ja": "一関駅前10番のりば", 
+            "ja": "一関駅前 10番のりば", 
             "en": "Ichinoseki-Ekimae" 
         }, 
         "link": "IchinosekiEkimae",
@@ -82,7 +82,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 7,
@@ -133,7 +133,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 11,
@@ -167,7 +167,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 13,
@@ -218,7 +218,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 16,
@@ -290,7 +290,10 @@
                 }
             }
         ],
-        "comment": "",
+        "comment": {
+            "ja" : null,
+            "en" : null
+        },
         "stopTime": [
             { 
                 "id": 1, 
@@ -348,7 +351,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 7,
@@ -455,7 +458,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 11,
@@ -503,7 +506,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 13,
@@ -596,7 +599,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 16,
@@ -728,7 +731,7 @@
             "ja" : null,
             "en" : null
         },
-        "stopTime":[
+        "stopTime": [
             { 
                 "id": 1, 
                 "via": {
@@ -785,7 +788,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 7,
@@ -892,7 +895,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 11,
@@ -940,7 +943,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 13,
@@ -1033,7 +1036,7 @@
                 },
                 "arrival": {
                     "ja": "イオン前沢",
-                    "en": "Aeon-Maesawa"
+                    "en": "Aeon Maesawa"
                 },
                 "time": {
                     "hour": 16,
@@ -1838,7 +1841,7 @@
             "ja" : null,
             "en" : null
         },
-        "stopTime":[
+        "stopTime": [
             {
                 "id": 1,
                 "via": {
@@ -2275,7 +2278,7 @@
             "ja" : null,
             "en" : null
         },
-        "stopTime":[
+        "stopTime": [
             {
                 "id": 1,
                 "via": {
@@ -4501,7 +4504,7 @@
                     "minute": 36
                 },
                 "direction": "up",
-                "schedule": "daily"
+                "schedule": "weekday"
             },
             {
                 "id": 4,
@@ -4938,7 +4941,7 @@
                     "minute": 35
                 },
                 "direction": "up",
-                "schedule": "daily"
+                "schedule": "weekday"
             },
             {
                 "id": 4,
@@ -4997,7 +5000,7 @@
                 },
                 "time": {
                     "hour": 9,
-                    "minute": 47
+                    "minute": 48
                 },
                 "direction": "down",
                 "schedule": "daily"
@@ -10603,7 +10606,7 @@
         "id": 34, 
         "name": { 
             "ja": "イオン前沢", 
-            "en": "Aeon-Maesawa" 
+            "en": "Aeon Maesawa" 
         }, 
         "link": "AeonMaesawa",
         "pictures": null,

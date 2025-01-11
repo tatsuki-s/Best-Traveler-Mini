@@ -59,7 +59,11 @@ const busLineName = () => {
              <div class="timeBox">
                 <div v-for="data in timeData[linePath()]">
                     <li v-for="stopTime in data.stopTime">
-                        <div v-if="data.link === stopPath() && ( selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}` ) " :to="`${stopPath()}/${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute}-${stopTime.schedule}`" :class="`forjikoku ${stopTime.schedule}`">
+                        <RouterLink
+                        v-if="data.link === stopPath() && ( selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}` ) " 
+                        :to="`${stopPath()}/${stopTime.arrival.en.replace(/\s+/g, '')}-${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute}-${stopTime.schedule}`" 
+                        :class="`forjikoku ${stopTime.schedule}`"
+                        >
                             <hr :class="stopTime.direction">
                             <span class="yukisaki">
                                 <p :class="`line ${linePath()}`">
@@ -74,7 +78,7 @@ const busLineName = () => {
                             <span class="jikoku">
                                 {{ stopTime.time.hour }}:{{ stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute }}
                             </span>
-                        </div>
+                        </RouterLink>
                     </li>
                 </div>
             </div>
