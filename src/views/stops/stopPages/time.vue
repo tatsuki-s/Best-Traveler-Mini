@@ -88,7 +88,6 @@ const busLineName = () => {
                         :class="`forjikoku ${stopTime.schedule}`"
                         
         >
-
           <hr :class="stopTime.direction" />
           <span class="yukisaki">
             <p :class="`line ${linePath()}`">
@@ -103,8 +102,8 @@ const busLineName = () => {
           <span class="jikoku">
             {{ stopTime.time.hour }}:{{ stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute }}
           </span>
-        </div>
       </RouterLink>
+    </div>
     </li>
   </ul>
 </div>
