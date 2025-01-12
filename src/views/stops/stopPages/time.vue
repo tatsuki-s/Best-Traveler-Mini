@@ -49,8 +49,14 @@ const busLineName = () => {
             </span>
         </h1>
     
-        <!-- 上り/下りを切り替えるボタンを追加 -->
-        <div style="display: flex; flex-wrap: nowrap; flex-direction: row;">
+        <select id="youbi" v-model="selectedSchedule" class="no-select">
+                        <!-- valueの平日と土日祝日とが逆なのは仕様なので注意 -->
+            <option value="daily">{{ langPath() === "ja" ? "すべて" : "Everyday" }}</option>
+            <option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
+            <option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
+        </select>
+
+        <div class="label-container">
             <label class="no-select">
                 <input type="radio" v-model="selectedDirection" value="both">
                 {{ langPath() === "ja" ? "両方" : "both" }} 
@@ -65,12 +71,6 @@ const busLineName = () => {
             </label>
         </div>
 
-        <select id="youbi" v-model="selectedSchedule" class="no-select">
-                        <!-- valueの平日と土日祝日とが逆なのは仕様なので注意 -->
-            <option value="daily">{{ langPath() === "ja" ? "すべて" : "Everyday" }}</option>
-            <option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
-            <option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
-        </select>
     </div>
     <div id="Box">
   <ul class="time">
@@ -120,7 +120,6 @@ const busLineName = () => {
 #youbi {
     display: flex;
     text-align: center;
-    margin-bottom: 20px;
     height: 40px;
     width: 50%;
     font-weight: bold;
@@ -216,7 +215,23 @@ const busLineName = () => {
 .tsukiichi {
     color:rgb(255, 132, 0);
 }
+
+.label-container {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+
+    }
+@media screen and (max-width: 840px) {
+    .label-container {
+        flex-wrap: wrap;
+    }
+}
 @media screen and (max-width: 670px) {
+    
     #Box{
         height: 100%;
     }
