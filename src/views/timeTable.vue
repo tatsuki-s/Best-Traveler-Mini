@@ -95,34 +95,34 @@ async function fetchCSV(path) {
 </script>
 
 <template>
-<div id="mainTable">    
-    <p v-if="loading">Loading CSV data...</p>
-    <p v-if="error" class="error">{{ error }}</p>
+<div id="mainTable">
     <h3>{{ langPath() === 'ja' ? '小学生は半額，小学生未満は無料' : 'Half price for elementary school students, free for pre-elementary school students' }}</h3>
     <div class="tables">
-        <table v-if="!loading && !error && rows.length">
-            <thead>
-                <tr>
-                    <!-- <th>出発地</th> -->
-                    <th>{{langPath() === 'ja' ? '停車バス停' : 'Stop Name'}}</th>
-                    <th>{{langPath() === 'ja' ? '停車時刻' : 'Stop Time'}}</th>
-                    <th>{{langPath() === 'ja' ? '運賃' : 'Fare'}}</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="(row, rowIndex) in rows" :key="rowIndex">
-                    <td>
-                        <span v-for="name in stopName">
-                            {{ row.バス停名 === name.ja ? name[langPath()] : '' }}
-                        </span>                        
-                        <!-- 一関駅前だけJSONだと10番のりばと書いていてマッチしないので特別に処理 -->
-                        <span v-if="row.バス停名 === '一関駅前'">{{ langPath() === 'ja' ? '一関駅前' : 'Ichinoseki Ekimae' }}</span> 
-                    </td>
-                    <td>{{ `${row.出発時}:${String(row.出発分).padStart(2, '0')}` }}</td>
-                    <td>{{ row.運賃 !== '' && row.運賃 !== null ? (langPath() === 'ja' ? `${row.運賃} 円` : `${row.運賃} JPY`) : '✕' }}</td>
-                </tr>
-            </tbody>
-        </table>
+      <p v-if="loading">Loading...</p>
+      <p v-if="error" class="error">Error</p>
+      <table v-if="!loading && !error && rows.length">
+          <thead>
+              <tr>
+                  <!-- <th>出発地</th> -->
+                  <th>{{langPath() === 'ja' ? '停車バス停' : 'Stop Name'}}</th>
+                  <th>{{langPath() === 'ja' ? '停車時刻' : 'Stop Time'}}</th>
+                  <th>{{langPath() === 'ja' ? '運賃' : 'Fare'}}</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr v-for="(row, rowIndex) in rows" :key="rowIndex">
+                  <td>
+                      <span v-for="name in stopName">
+                          {{ row.バス停名 === name.ja ? name[langPath()] : '' }}
+                      </span>                        
+                      <!-- 一関駅前だけJSONだと10番のりばと書いていてマッチしないので特別に処理 -->
+                      <span v-if="row.バス停名 === '一関駅前'">{{ langPath() === 'ja' ? '一関駅前' : 'Ichinoseki Ekimae' }}</span> 
+                  </td>
+                  <td>{{ `${row.出発時}:${String(row.出発分).padStart(2, '0')}` }}</td>
+                  <td>{{ row.運賃 !== '' && row.運賃 !== null ? (langPath() === 'ja' ? `${row.運賃} 円` : `${row.運賃} JPY`) : '✕' }}</td>
+              </tr>
+          </tbody>
+      </table>
         <p v-else-if="!loading && !error">No data available.</p>
     </div>
 </div>

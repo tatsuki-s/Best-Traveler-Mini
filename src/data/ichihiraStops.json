@@ -3224,7 +3224,7 @@
                     "minute": 18
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 6,
@@ -3255,7 +3255,7 @@
                     "minute": 17
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 8,
@@ -3269,7 +3269,7 @@
                     "minute": 33
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 9,
@@ -3300,7 +3300,7 @@
                     "minute": 23
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 11,
@@ -3348,7 +3348,7 @@
                     "minute": 2
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 14,
@@ -3362,7 +3362,7 @@
                     "minute": 33
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 15,
@@ -3410,7 +3410,7 @@
                     "minute": 52
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 18,
@@ -3424,7 +3424,7 @@
                     "minute": 23
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 19,
@@ -3455,7 +3455,7 @@
                     "minute": 23
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 21,
@@ -5265,7 +5265,7 @@
                     "minute": 20
                 },
                 "direction": "up",
-                "schedule": "daily"
+                "schedule": "weekday"
             },
             {
                 "id": 25,
@@ -5296,7 +5296,7 @@
                     "minute": 20
                 },
                 "direction": "up",
-                "schedule": "daily"
+                "schedule": "weekday"
             }
         ]        
     },
@@ -5827,7 +5827,7 @@
                     "minute": 13
                 },
                 "direction": "up",
-                "schedule": "weekday"
+                "schedule": "daily"
             },
             {
                 "id": 6,
@@ -6306,7 +6306,7 @@
                 },
                 "time": {
                     "hour": 10,
-                    "minute": 17
+                    "minute": 27
                 },
                 "direction": "up",
                 "schedule": "daily"

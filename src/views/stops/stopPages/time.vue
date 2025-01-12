@@ -57,15 +57,15 @@ const busLineName = () => {
         </select>
 
         <div class="label-container">
-            <label class="no-select">
+            <label class="no-select oneRow">
                 <input type="radio" v-model="selectedDirection" value="both">
                 {{ langPath() === "ja" ? "両方" : "both" }} 
             </label>
-            <label class="no-select">
+            <label class="no-select oneRow">
                 <input type="radio" v-model="selectedDirection" value="upward">
                 {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].nobori[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
             </label>
-            <label class="no-select">
+            <label class="no-select oneRow">
                 <input type="radio" v-model="selectedDirection" value="downward">
                 {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].kudari[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
             </label>
@@ -172,6 +172,10 @@ const busLineName = () => {
     text-align: right;
 }
 
+.oneRow {
+    white-space: nowrap;
+}
+
 .line {
     font-size: 20px;
     margin: 0px;
@@ -222,7 +226,7 @@ const busLineName = () => {
         justify-content: center;
         align-items: center;
         padding-bottom: 20px;
-
+        margin: 10px;
     }
 @media screen and (max-width: 840px) {
     .label-container {
