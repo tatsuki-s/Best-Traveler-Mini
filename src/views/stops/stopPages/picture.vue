@@ -33,7 +33,7 @@ const stopPath = () => {
 </script>
 <template>
     <pictures v-for="stop in stops[linePath()]" :key="stop.id">
-		<div v-show="stop.link === stopPath()">
+		<div v-if="stop.link === stopPath()">
 			<viewer v-if="stop.pictures !== null" class="slide">
 				<Splide :options="{ rewind: true, gap: '1rem', autoplay: true, interval: 3000, arrows: true, pagination: true, heightRatio: 0.6,}">
 					<SplideSlide v-for="picture in stop.pictures" :key="picture.id">
