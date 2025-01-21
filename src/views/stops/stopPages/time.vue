@@ -7,8 +7,8 @@ import { ref } from 'vue';
 
 const timeData = {ichihira}
 
-const selectedSchedule = ref('daily');//初期値を設定
-const selectedDirection = ref('both');  // デフォルトで上り・下り両方を表示
+const selectedSchedule = ref('weekend');//初期値を設定
+const selectedDirection = ref('upward');  // デフォルトで上りを表示
 
 const route = useRoute();
 
@@ -51,16 +51,16 @@ const busLineName = () => {
     
         <select id="youbi" v-model="selectedSchedule" class="no-select">
                         <!-- valueの平日と土日祝日とが逆なのは仕様なので注意 -->
-            <option value="daily">{{ langPath() === "ja" ? "すべて" : "Everyday" }}</option>
+            <!-- <option value="daily">{{ langPath() === "ja" ? "すべて" : "Everyday" }}</option> -->
             <option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
             <option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
         </select>
 
         <div class="label-container">
-            <label class="no-select oneRow">
+            <!-- <label class="no-select oneRow">
                 <input type="radio" v-model="selectedDirection" value="both">
                 {{ langPath() === "ja" ? "両方" : "both" }} 
-            </label>
+            </label> -->
             <label class="no-select oneRow">
                 <input type="radio" v-model="selectedDirection" value="upward">
                 {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].nobori[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}

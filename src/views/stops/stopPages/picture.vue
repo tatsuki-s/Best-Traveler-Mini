@@ -57,13 +57,19 @@ img {
 }
 
 h2{
-	margin: 10px;
+	margin: 3px;
 }
 
 .menuBar {
 	font-weight: bold;
 	font-size: 130%;
 	white-space: nowrap;
+}
+
+@media screen and (max-width: 670px) {
+	h2 {
+		font-size: 18px;
+	}
 }
 
 </style>
