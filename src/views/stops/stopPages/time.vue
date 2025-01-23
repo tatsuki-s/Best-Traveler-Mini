@@ -8,7 +8,7 @@ import { ref } from 'vue';
 const timeData = {ichihira}
 
 const selectedSchedule = ref('weekend');//初期値を設定
-const selectedDirection = ref('upward');  // デフォルトで上りを表示
+const selectedDirection = ref('downward');  // デフォルトで上りを表示
 
 const route = useRoute();
 
@@ -55,19 +55,18 @@ const busLineName = () => {
             <option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
             <option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
         </select>
-
         <div class="label-container">
             <!-- <label class="no-select oneRow">
                 <input type="radio" v-model="selectedDirection" value="both">
                 {{ langPath() === "ja" ? "両方" : "both" }} 
             </label> -->
             <label class="no-select oneRow">
-                <input type="radio" v-model="selectedDirection" value="upward">
-                {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].nobori[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
-            </label>
-            <label class="no-select oneRow">
                 <input type="radio" v-model="selectedDirection" value="downward">
                 {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].kudari[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
+            </label>
+            <label class="no-select oneRow">
+                <input type="radio" v-model="selectedDirection" value="upward">
+                {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].nobori[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
             </label>
         </div>
 
