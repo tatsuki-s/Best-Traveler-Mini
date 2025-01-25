@@ -3,7 +3,7 @@ import ichihira from "../../../data/ichihiraStops.json"
 
 import lineData from "../../../data/lines.json"
 import { useRoute } from 'vue-router';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 const timeData = {ichihira}
 
@@ -40,6 +40,14 @@ const busLineName = () => {
   return currentLine ? currentLine.name[langPath()] : "";
 };
 
+onMounted(() => {
+    timeData[linePath()].forEach((data) => { //forEachでオブジェクトを直接扱う
+        if (data.link === stopPath() && data.sort === false) {
+            selectedDirection.value = 'both';
+        }
+    });
+});
+
 </script>
 <template>
     <div id="busStopName">
@@ -55,21 +63,23 @@ const busLineName = () => {
             <option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
             <option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
         </select>
-        <div class="label-container">
-            <!-- <label class="no-select oneRow">
-                <input type="radio" v-model="selectedDirection" value="both">
-                {{ langPath() === "ja" ? "両方" : "both" }} 
-            </label> -->
-            <label class="no-select oneRow">
-                <input type="radio" v-model="selectedDirection" value="downward">
-                {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].kudari[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
-            </label>
-            <label class="no-select oneRow">
-                <input type="radio" v-model="selectedDirection" value="upward">
-                {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].nobori[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
-            </label>
+        <div v-for="data in timeData[linePath()]">
+            <div v-if="data.link === stopPath() && data.sort" class="label-container">
+                <!-- <label class="no-select oneRow">
+                    <input type="radio" v-model="selectedDirection" value="both">
+                    {{ langPath() === "ja" ? "両方" : "both" }} 
+                </label> -->
+                <label class="no-select oneRow">
+                    <input type="radio" v-model="selectedDirection" value="downward">
+                    {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].kudari[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
+                </label>
+                <label class="no-select oneRow">
+                    <input type="radio" v-model="selectedDirection" value="upward">
+                    {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].nobori[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
+                </label>
+            </div>
+            <p v-else></p>
         </div>
-
     </div>
     <div id="Box">
   <ul class="time">

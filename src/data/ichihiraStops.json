@@ -39,6 +39,7 @@
             "ja" : ["バスに「平泉巡回バス るんるん」と書いてあっても一関平泉線のバスである可能性があります。ご注意ください。"],
             "en" : ["Please note that even if a bus displays 'Hiraizumi Loop Bus RunRun' there is a possibility that it is the Ichinoseki-Hiraizumi Line."]
         },
+        "sort": false,
         "stopTime": [
             { 
                 "id": 1, 
@@ -294,6 +295,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             { 
                 "id": 1, 
@@ -731,6 +733,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             { 
                 "id": 1, 
@@ -1168,6 +1171,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -1586,6 +1590,7 @@
             "ja" : ["磐井橋の一関駅前方面のバスはすべて通過となります。ご注意ください。"],
             "en" : ["All buses bound for Ichinoseki Station do not stop at this bus stop."]
         },
+        "sort": false,
         "stopTime": [
             {
                 "id": 1,
@@ -1841,6 +1846,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -2278,6 +2284,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -2715,6 +2722,8 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -3146,6 +3155,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -3583,6 +3593,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -4020,6 +4031,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -4457,6 +4469,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -4894,6 +4907,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -5331,6 +5345,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -5749,6 +5764,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -6186,6 +6202,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -6623,6 +6640,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -7060,6 +7078,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -7478,6 +7497,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -7896,6 +7916,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -8333,6 +8354,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -8712,6 +8734,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -9091,6 +9114,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -9344,6 +9368,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -9471,6 +9496,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -9598,6 +9624,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -9725,6 +9752,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -9852,6 +9880,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -9979,6 +10008,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -10106,6 +10136,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -10233,6 +10264,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -10360,6 +10392,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -10487,6 +10520,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": true,
         "stopTime": [
             {
                 "id": 1,
@@ -10614,6 +10648,7 @@
             "ja" : null,
             "en" : null
         },
+        "sort": false,
         "stopTime": [
             {
                 "id": 1,
