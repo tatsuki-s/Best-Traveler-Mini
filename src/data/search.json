@@ -7,7 +7,7 @@
                 "name" : "一関駅前10番のりば",
                 "nameen" : "ichinosekiekimae10bannnoriba",
                 "pas" : "IchinosekiEkimae",
-                "read" : ["一関駅前10番のりば","ichinoseki bus stop 10"]
+                "read" : ["一関駅前10番のりば","ichinoseki bus stop 10", "ichinoseki station", "ichinoseki-station"]
             },
             {
                 "id" : 2,
@@ -62,7 +62,7 @@
                 "name" : "山目駅前",
                 "nameen" : "yamanomeekimae",
                 "pas" : "YamanomeEkimae",
-                "read" : ["yamanomeekimae"]
+                "read" : ["yamanomeekimae", "yamanome station", "yamanome-station"]
             },{
                 "id" : "11",
                 "name" : "沢田入口",
@@ -110,7 +110,7 @@
                 "name" : "平泉駅前",
                 "nameen" : "hiraizumiekimae",
                 "pas" : "HiraizumiEkimae",
-                "read" : ["hiraizumiekimae"]
+                "read" : ["hiraizumiekimae", "hiraizumi station", "hiraizumi-station"]
             },{
                 "id" : "19",
                 "name" : "鈴沢",

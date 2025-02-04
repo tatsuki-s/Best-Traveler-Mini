@@ -2695,7 +2695,7 @@
         "id": 8, 
         "name": { 
             "ja": "山目一丁目", 
-            "en": "Yamanome-station" 
+            "en": "Yamanome-Ichome" 
         }, 
         "link": "YamanomeIchome",
         "pictures": [
@@ -3566,7 +3566,7 @@
         "id": 10, 
         "name": { 
             "ja": "山目駅前", 
-            "en": "Yamame-Ekimae" 
+            "en": "Yamanome-station" 
         }, 
         "link": "YamanomeEkimae",
         "pictures": [
