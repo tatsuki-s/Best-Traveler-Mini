@@ -84,7 +84,7 @@ onMounted(() => {
     <div id="Box">
   <ul class="time">
     <li class="timeBox" v-for="data in timeData[linePath()]" :key="data.id">
-      <div v-for="stopTime in data.stopTime" :key="stopTime.id">
+      <div v-for="stopTime in (index, data.stopTime)" :key="stopTime.index">
         <RouterLink
                         v-if="data.link === stopPath() && 
             (selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}`) && 
