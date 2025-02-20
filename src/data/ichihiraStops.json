@@ -9783,7 +9783,21 @@
                     "minute": 14
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 14
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -9867,7 +9881,21 @@
                     "minute": 59
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 11,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 11,
+                    "minute": 59
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 12,
@@ -9923,7 +9951,21 @@
                     "minute": 49
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 15,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 49
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 16,
@@ -10007,7 +10049,21 @@
                     "minute": 49
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 21,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 49
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 22,
@@ -10163,7 +10219,21 @@
                     "minute": 16
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 16
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -10247,7 +10317,21 @@
                     "minute": 1
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 11,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 1
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 12,
@@ -10303,7 +10387,21 @@
                     "minute": 51
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 15,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 51
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 16,
@@ -10387,7 +10485,21 @@
                     "minute": 51
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 21,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 51
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 22,
@@ -10515,7 +10627,21 @@
                     "minute": 18
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 18
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -10571,7 +10697,21 @@
                     "minute": 3
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 3
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -10613,7 +10753,21 @@
                     "minute": 53
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 10,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 53
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 11,
@@ -10669,7 +10823,21 @@
                     "minute": 53
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 14,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 53
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 15,
@@ -10741,7 +10909,21 @@
                     "minute": 20
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 20
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -10769,7 +10951,21 @@
                     "minute": 5
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 5
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -10797,7 +10993,21 @@
                     "minute": 55
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 55
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -10825,7 +11035,21 @@
                     "minute": 55
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 55
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -10869,7 +11093,21 @@
                     "minute": 22
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 22
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -10897,7 +11135,21 @@
                     "minute": 7
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 7
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -10925,7 +11177,21 @@
                     "minute": 57
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 57
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -10953,7 +11219,21 @@
                     "minute": 57
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 57
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -10997,7 +11277,21 @@
                     "minute": 23
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 23
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -11025,7 +11319,21 @@
                     "minute": 8
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 8
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -11053,7 +11361,21 @@
                     "minute": 58
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 58
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -11081,7 +11403,21 @@
                     "minute": 58
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 16,
+                    "minute": 58
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -11125,7 +11461,21 @@
                     "minute": 24
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 24
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -11153,7 +11503,21 @@
                     "minute": 9
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 9
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -11181,7 +11545,21 @@
                     "minute": 59
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 59
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -11209,7 +11587,21 @@
                     "minute": 59
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 13,
+                    "minute": 59
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -11253,7 +11645,21 @@
                     "minute": 26
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 26
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -11281,7 +11687,21 @@
                     "minute": 11
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 11
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -11309,7 +11729,21 @@
                     "minute": 1
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 14,
+                    "minute": 1
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -11337,7 +11771,21 @@
                     "minute": 1
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 17,
+                    "minute": 1
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -11381,7 +11829,21 @@
                     "minute": 27
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 27
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -11409,7 +11871,21 @@
                     "minute": 12
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 12
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -11437,7 +11913,21 @@
                     "minute": 2
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 14,
+                    "minute": 2
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -11465,7 +11955,21 @@
                     "minute": 2
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 17,
+                    "minute": 2
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -11509,7 +12013,21 @@
                     "minute": 27
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 27
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -11537,7 +12055,21 @@
                     "minute": 12
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 12
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -11565,7 +12097,21 @@
                     "minute": 2
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 14,
+                    "minute": 2
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -11593,7 +12139,21 @@
                     "minute": 2
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 17,
+                    "minute": 2
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -11637,7 +12197,21 @@
                     "minute": 28
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 28
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -11665,7 +12239,21 @@
                     "minute": 13
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 13
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -11693,7 +12281,21 @@
                     "minute": 3
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 14,
+                    "minute": 3
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -11721,7 +12323,21 @@
                     "minute": 3
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 17,
+                    "minute": 3
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -11765,7 +12381,21 @@
                     "minute": 29
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 29
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -11793,7 +12423,21 @@
                     "minute": 14
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 14
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -11821,7 +12465,21 @@
                     "minute": 4
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 14,
+                    "minute": 4
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -11849,7 +12507,21 @@
                     "minute": 4
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 17,
+                    "minute": 4
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
@@ -11893,7 +12565,21 @@
                     "minute": 30
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 1,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 8,
+                    "minute": 30
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 2,
@@ -11921,7 +12607,21 @@
                     "minute": 15
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 3,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 12,
+                    "minute": 15
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 4,
@@ -11949,7 +12649,21 @@
                     "minute": 5
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 5,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 14,
+                    "minute": 5
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 6,
@@ -11977,7 +12691,21 @@
                     "minute": 5
                 },
                 "direction": "down",
-                "schedule": "daily"
+                "schedule": "weekday"
+            },
+            {
+                "id": 7,
+                "via": null,
+                "arrival": {
+                    "ja": "イオン前沢",
+                    "en": "Aeon Maesawa"
+                },
+                "time": {
+                    "hour": 17,
+                    "minute": 5
+                },
+                "direction": "down",
+                "schedule": "weekend"
             },
             {
                 "id": 8,
