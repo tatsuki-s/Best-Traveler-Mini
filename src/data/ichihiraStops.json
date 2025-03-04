@@ -1857,7 +1857,17 @@
             "en": "Iwai-Bashi" 
         }, 
         "link": "IwaiBashi",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/iwaibashi.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-temple, and Aeon Maesawa."
+                }
+            }
+        ],
         "comment": {
             "ja" : ["磐井橋の一関駅前方面のバスはすべて通過となります。ご注意ください。"],
             "en" : ["All buses bound for Ichinoseki Station do not stop at this bus stop."]
@@ -6710,7 +6720,26 @@
             "en": "Sano" 
         }, 
         "link": "Sano",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/sano-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/sano-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -7707,19 +7736,19 @@
             {
                 "id": 1,
                 "type": "image",
-                "path": "/stopImg/motsuji-up.jpg",
+                "path": "/stopImg/motsuji-1.jpg",
                 "tab": {
-                    "ja": "一関駅前 方面",
-                    "en": "For Ichinoseki sta."
+                    "ja": "毛越寺停留所",
+                    "en": "Motsuji stop"
                 }
             },
             {
                 "id": 2,
                 "type": "image",
-                "path": "/stopImg/motsuji-down.jpg",
+                "path": "/stopImg/motsuji-2.jpg",
                 "tab": {
-                    "ja": "中尊寺・イオン前沢 方面",
-                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                    "ja": "毛越寺停留所",
+                    "en": "Motsuji stop"
                 }
             }
         ],
@@ -8715,7 +8744,26 @@
             "en": "Suzusawa" 
         }, 
         "link": "Suzusawa",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/suzusawa-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/suzusawa-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -9202,7 +9250,26 @@
             "en": "Hanadate" 
         }, 
         "link": "Hanadate",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/hanadate-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/hanadate-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -10144,7 +10211,26 @@
             "en": "Koromokawa-Bashi" 
         }, 
         "link": "KoromokawaBashi",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/koromokawabashi-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/koromokawabashi-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -10580,7 +10666,26 @@
             "en": "Sewara" 
         }, 
         "link": "Sewara",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/sewara-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/sewara-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -10890,7 +10995,26 @@
             "en": "Tokusawa" 
         }, 
         "link": "Tokusawa",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/tokusawa-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/tokusawa-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -11074,7 +11198,26 @@
             "en": "Shirotori" 
         }, 
         "link": "Shirotori",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/shirotori-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/shirotori-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -11258,7 +11401,26 @@
             "en": "Tougasaki" 
         }, 
         "link": "Togasaki",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/togasaki-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/togasaki-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -11442,7 +11604,26 @@
             "en": "Chougiri" 
         }, 
         "link": "Chogiri",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/chogiri-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/chogiri-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -11626,7 +11807,26 @@
             "en": "Mikkamachi" 
         }, 
         "link": "Mikkamachi",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/mikkamachi-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/mikkamachi-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -11810,7 +12010,26 @@
             "en": "Nanokamachi" 
         }, 
         "link": "Nanokamachi",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/nanokamachi-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/nanokamachi-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -11994,7 +12213,26 @@
             "en": "Maesawa-Shinmachi" 
         }, 
         "link": "MaesawaShinmachi",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/maesawashinmachi-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/maesawashinmachi-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -12178,7 +12416,26 @@
             "en": "Nijuninmachi" 
         }, 
         "link": "Nijuninmachi",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/nijuninmachi-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/nijuninmachi-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -12362,7 +12619,26 @@
             "en": "Motaiguchi" 
         }, 
         "link": "Botaiguchi",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/motaiguchi-1.jpg",
+                "tab": {
+                    "ja": "母体口停留所",
+                    "en": "Motaiguchi stop"
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/motaiguchi-2.jpg",
+                "tab": {
+                    "ja": "母体口停留所",
+                    "en": "Motaiguchi stop"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -12546,7 +12822,26 @@
             "en": "Maesawa-Hoikujyo-Mae" 
         }, 
         "link": "MaesawaHoikushoMae",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/maesawahoikushomae-up.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            },
+            {
+                "id": 2,
+                "type": "image",
+                "path": "/stopImg/maesawahoikushomae-down.jpg",
+                "tab": {
+                    "ja": "中尊寺・イオン前沢 方面",
+                    "en": "For Chusonji-Temple, Aeon Maesawa"
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
@@ -12730,7 +13025,17 @@
             "en": "Aeon Maesawa" 
         }, 
         "link": "AeonMaesawa",
-        "pictures": null,
+        "pictures": [
+            {
+                "id": 1,
+                "type": "image",
+                "path": "/stopImg/aeonmaesawa.jpg",
+                "tab": {
+                    "ja": "一関駅前 方面",
+                    "en": "For Ichinoseki sta."
+                }
+            }
+        ],
         "comment": {
             "ja" : null,
             "en" : null
