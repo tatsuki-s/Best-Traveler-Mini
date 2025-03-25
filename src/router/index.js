@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import lineData from '../data/lines.json'
 import articleData from '../data/pageData.json'
-import ichihiraStopData from '../data/ichihiraStops.json'
 import TopView from '../views/TopPage.vue'
 import TopEn from '../views/TopPageEn.vue'
 import timeTable from '../views/timeTable.vue'
@@ -9,22 +8,34 @@ import Search from '../views/search.vue'
 import StopPage from '../views/stops/stopPage.vue';
 import { component } from 'v-viewer'
 
+//必要な路線データをインポート
+import ichihiraStopData from '../data/ichihiraStops.json'
 
-// ichihiraStopDataのすべての駅をルートに追加するための処理
-const ichihiraStopRoutes = ichihiraStopData.map(stop => ({
-  path: stop.link,
-  children: [
-    {
-      path: '', // 停車駅のメインページ
-      name: stop.name.ja,
-      component: StopPage,
-    },
-    ...stop.stopTime.map(time => ({
-      path: `${time.arrival.en.replace(/\s+/g, '')}-${String(time.time.hour).padStart(2, '0')}${String(time.time.minute).padStart(2, '0')}-${time.schedule}`,
-      component: timeTable,
-    })),
-  ],
-}));
+//路線データからパスを作成する関数
+function generateStopRoutes (lineName, stopData) {
+  return {
+    path: lineName,
+    children: [
+      {
+        path: '',
+        component: () => import('../views/stops.vue'),
+      }, 
+        ...stopData.map(stop => ({
+          path: stop.link,
+          children: [
+            {
+              path: '', // 停留所のメインページ
+              component: StopPage,
+            },
+            ...stop.stopTime.map(time => ({
+              path: `${time.arrival.en.replace(/\s+/g, '')}-${String(time.time.hour).padStart(2, '0')}${String(time.time.minute).padStart(2, '0')}-${time.schedule}`,
+              component: timeTable,
+            })),
+          ],
+        })),
+    ],
+  };
+}
 
 const articles = articleData.map(article => ({
   path: article.id,  
@@ -32,26 +43,16 @@ const articles = articleData.map(article => ({
   component: () => import('../views/article.vue'),  // 停車駅のコンポーネントを動的にインポート
 }));
 
-const ichihiraStopRoutesEn = ichihiraStopData.map(stop => ({
-  path: stop.link,
-  children: [
-    {
-      path: '', // 停車駅のメインページ
-      name: stop.name.en,
-      component: StopPage,
-    },
-    ...stop.stopTime.map(time => ({
-      path: `${time.arrival.en.replace(/\s+/g, '')}-${String(time.time.hour).padStart(2, '0')}${String(time.time.minute).padStart(2, '0')}-${time.schedule}`,
-      component: timeTable,
-    })),
-  ],
-}));
+// const articlesEn = articleData.map(article => ({
+//   path: article.id,  
+//   name: `${article.title}-en`, 
+//   component: () => import('../views/article.vue'), // 記事コンポーネントを動的にインポート
+// }));
 
-const articlesEn = articleData.map(article => ({
-  path: article.id,  
-  name: `${article.title}-en`, 
-  component: () => import('../views/article.vue'), // 記事コンポーネントを動的にインポート
-}));
+//対応する路線データを定義
+const ichihiraRoutes = generateStopRoutes('ichihira', ichihiraStopData);
+//他路線追加の災異は同様に追記
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -79,17 +80,7 @@ const router = createRouter({
           path:'search',
           component: Search,
         },
-        {
-          path: 'ichihira',
-          children: [
-            {
-              path: '',
-              name: 'ichihiraTop',
-              component: () => import('../views/stops.vue'),
-            },
-            ...ichihiraStopRoutes,
-          ],
-        },
+        ichihiraRoutes,
       ],
     },
     {
@@ -105,17 +96,8 @@ const router = createRouter({
           path:'search',
           component: Search,
         },
-        {
-          path: 'ichihira',
-          children: [
-            {
-              path: '',
-              name: 'ichihiraTopEn',
-              component: () => import('../views/stops.vue'), // 英語版のトップ
-            },
-            ...ichihiraStopRoutesEn,
-          ],
-        },
+        // generateStopRoutes('ichihira', ichihiraStopData)
+        ichihiraRoutes,
       ],
     },
     {

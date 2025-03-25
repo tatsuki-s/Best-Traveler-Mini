@@ -32,12 +32,12 @@ export default {
       <h1>{{ line.nickName === linePath() ? line.name[langPath()] :"" }}</h1>
     </div>
     <div class="allBusStop">
-      <div v-for="busStop in busStops[linePath()]" :key="busStop.id" class="dbus1">
+      <div v-for="(busStop, index) in busStops[linePath()]" :key="busStop.id" class="dbus1">
         <router-link :to="`/${langPath()}/${linePath()}/${busStop.link}`" class="effect bus1 aka">
           <div class="">{{ busStop.name[langPath()] }}</div>
         </router-link>
         <!-- 最後のバス停以外に線を引く -->
-        <div v-if="busStop.id !== busStops[linePath()].length" class="aida">
+        <div v-if="index +1 !== busStops[linePath()].length" class="aida">
           <br/>
         </div>
       </div>
@@ -79,9 +79,8 @@ export default {
   width: 100%;
   height: 100px;
   text-align: center;
-  border-radius: 12px;
   font-size: 35px;
-  border-radius: 4px;
+  border-radius: 1rem;
   border: 3px solid black;
   /* font-weight: bold; */
 }

@@ -315,9 +315,10 @@ header {
     color: white;
     text-align: center;
     width: 50%;
-    font-size: 30px; /* 効いてない */
+    font-size: 30px;
     height: 50px;
     border: 1px solid white;
+    border-radius: 1rem;
 }
 #box ul li *:hover {
     background-color: rgb(99, 99, 99);

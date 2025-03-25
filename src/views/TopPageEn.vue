@@ -70,7 +70,7 @@ h2 {
     margin-top: 50px;
     background-color:#7db4e6;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 1rem;
 }
 
 .linkButton h1 {

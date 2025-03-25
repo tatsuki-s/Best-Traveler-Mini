@@ -65,7 +65,7 @@
     width: 50vw;
     padding: 10px;
     border: 4px solid black;
-    border-radius: 4px;
+    border-radius: 1rem;
     background-color:  rgb(255, 255, 255);
     color: black;
     outline: none;
@@ -84,7 +84,7 @@
     width: 30vw;
     padding: 3px;
     border: 3px solid black;
-    border-radius: 4px;
+    border-radius: 1rem;
     font-size: 30px;
     margin-bottom: 20px;
 }

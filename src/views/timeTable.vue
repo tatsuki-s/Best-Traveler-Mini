@@ -145,7 +145,7 @@ table td {
 
 /* タイトルの色 */
 table th {
-    background-color: #6f7dff;
+    background-color: #7db4e6;
 }
 
 /* 表のセルごとのborder */

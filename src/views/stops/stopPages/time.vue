@@ -97,7 +97,7 @@ onMounted(() => {
                         :class="`forjikoku ${stopTime.schedule}`"
                         
         >
-          <hr :class="stopTime.direction" />
+          <!-- <hr :class="stopTime.direction" /> -->
           <span class="yukisaki">
             <p :class="`line ${linePath()}`">
               {{ busLineName() }}
@@ -134,7 +134,7 @@ onMounted(() => {
     font-size: 20px;
     background-color: #cccccc;
     color: #333333;
-    border-radius: 12px;
+    border-radius: 0.5rem;
     margin-right:auto;
     margin-left: auto;
     border: 2px solid black;
@@ -163,8 +163,8 @@ onMounted(() => {
     width: 100%;
     border: 3px solid black;
     transition: all 1s 0s ease;
-    background-color: rgb(63, 63, 63);
-    border-radius: 4px;   
+    background-color: #333333;
+    border-radius: 1rem;
     margin-bottom: 20px;
 }
 .yukisaki {

@@ -14,15 +14,10 @@
 		"kudari": {
             "ja": "瀬原/イオン前沢",
             "en": "Sewara/Aeon-Maesawa"
-        }
-	},
-	{
-		"id": 2,
-		"nickName": "", 
-		"name": {
-			"ja": "",
-			"en": ""
-		},
-		"link": "" 
+        },
+		"supportLang": {
+			"ja": true,
+			"en": true
+		}
 	}
 ]
