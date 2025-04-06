@@ -1,36 +1,28 @@
 <script setup>
 import { useRoute } from 'vue-router';
-import ichihira from "../../../data/ichihiraStops.json"
 
-const commentData = {ichihira}
+const props = defineProps({
+  lineName: String,
+  stopData: Array
+});
+//Propsの[]を消すための処置
+const timeData = ({ [props.lineName]: props.stopData });
 
 const route = useRoute();
-
-// 現在のURLの最初の部分 (ja) を取得
-const langPath = () => {
+const usePath = () => {
   const currentPath = route.path;
   const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[1]; // 最初の部分 (ja)
-};
-
-// 現在のURLの "ichihira" 部分を取得
-const linePath = () => {
-  const currentPath = route.path;
-  const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[2]; // 次の部分 (ichihira)
-};
-
-const stopPath = () => {
-  const currentPath = route.path;
-  const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[3]; 
-// const busStops = stops;
+  return {
+    langPath: pathParts[1] || '',
+    stopPath: pathParts[3] || ''
+  };
 }
+const { langPath, stopPath } = usePath()
 </script>
 <template>
-    <div v-for="item in commentData[linePath()]">
-        <div v-if="stopPath() === item.link" id="comment">
-            <div v-for="comment in item.comment[langPath()]">
+    <div v-for="item in timeData[props.lineName]">
+        <div v-if="stopPath === item.link" id="comment">
+            <div v-for="comment in item.comment[langPath]">
               <p v-if="comment !== '' || comment !== null">{{ comment }}</p>
             </div>
         </div>

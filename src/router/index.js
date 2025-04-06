@@ -19,6 +19,7 @@ function generateStopRoutes (lineName, stopData) {
       {
         path: '',
         component: () => import('../views/stops.vue'),
+        props: (route) => ({ lineName, stopData }),
       }, 
         ...stopData.map(stop => ({
           path: stop.link,
@@ -26,10 +27,12 @@ function generateStopRoutes (lineName, stopData) {
             {
               path: '', // 停留所のメインページ
               component: StopPage,
+              props: (route) => ({ lineName, stopData }),
             },
             ...stop.stopTime.map(time => ({
               path: `${time.arrival.en.replace(/\s+/g, '')}-${String(time.time.hour).padStart(2, '0')}${String(time.time.minute).padStart(2, '0')}-${time.schedule}`,
               component: timeTable,
+              props: (route) => ({ lineName, stopData }),
             })),
           ],
         })),
@@ -51,9 +54,9 @@ const articles = articleData.map(article => ({
 
 //対応する路線データを定義
 const ichihiraRoutes = generateStopRoutes('ichihira', ichihiraStopData);
-//他路線追加の災異は同様に追記
+//他路線追加の際は同様に追記
 
-
+  
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   _routes: [
@@ -96,7 +99,6 @@ const router = createRouter({
           path:'search',
           component: Search,
         },
-        // generateStopRoutes('ichihira', ichihiraStopData)
         ichihiraRoutes,
       ],
     },

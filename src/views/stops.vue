@@ -1,43 +1,40 @@
-<script>
-import ichihira from '../data/ichihiraStops.json'
-import lines from '../data/lines.json'
-//import otherLineName from '../data/otherStops.json'
-export default {
-  data () {
-    return {
-      busStops: {ichihira},
-      lines: lines
-    };
-  },
-  methods: {
-    // 現在のURLの最初の部分 (ja) を取得
-    langPath() {
-      const currentPath = this.$route.path;
-      const pathParts = currentPath.split('/'); // URLを'/'で分割
-      return pathParts[1]; // 最初の部分 (ja)
-    },
-    
-    // 現在のURLの "ichihira" 部分を取得
-    linePath() {
-      const currentPath = this.$route.path;
-      const pathParts = currentPath.split('/'); // URLを'/'で分割
-      return pathParts[2]; // 次の部分 (ichihira)
-    }
-  }
-};
+<script setup>
+import { useRoute } from 'vue-router'
+import lineData from '../data/lines.json'
+
+const lines = ( lineData );
+
+const props = defineProps({
+  lineName: String,
+  stopData: Array
+});
+
+const busStops = ({ [props.lineName]: props.stopData });
+
+const route = useRoute();
+const usePath = () => {
+  const currentPath = route.path;
+  const pathParts = currentPath.split('/'); // URLを'/'で分割
+  return {
+    langPath: pathParts[1] || ''
+  };
+}
+const { langPath }= usePath()
+
 </script>
 <template>
   <div id="naiyou">
     <div v-for="line in lines" id="divLineName">
-      <h1>{{ line.nickName === linePath() ? line.name[langPath()] :"" }}</h1>
+      <h1>{{ line.nickName === lineName ? line.name[langPath] :"" }}</h1>
     </div>
+
     <div class="allBusStop">
-      <div v-for="(busStop, index) in busStops[linePath()]" :key="busStop.id" class="dbus1">
-        <router-link :to="`/${langPath()}/${linePath()}/${busStop.link}`" class="effect bus1 aka">
-          <div class="">{{ busStop.name[langPath()] }}</div>
+      <div v-for="(busStop, index) in busStops[lineName]" :key="busStop.id" class="dbus1">
+        <router-link :to="`/${langPath}/${lineName}/${busStop.link}`" class="effect bus1 aka">
+          <div class="">{{ busStop.name[langPath] }}</div>
         </router-link>
         <!-- 最後のバス停以外に線を引く -->
-        <div v-if="index +1 !== busStops[linePath()].length" class="aida">
+        <div v-if="index +1 !== busStops[lineName].length" class="aida">
           <br/>
         </div>
       </div>

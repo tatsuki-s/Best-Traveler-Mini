@@ -2,16 +2,25 @@
 import Pictures from './stopPages/picture.vue'
 import Time from './stopPages/time.vue'
 import Comment from './stopPages/comment.vue'
+import Name from './stopPages/name.vue'
+
+const props = defineProps({
+  lineName: String,
+  stopData: Array
+});
+
+
 </script>
 <template>
     <!--内容上はここから始まる-->
     <div class="MainContainer">
         <div class="left">
-			<Time />
+            <Name :lineName="lineName" :stopData="stopData"/>
+			<Time :lineName="lineName" :stopData="stopData"/>
         </div>
         <div class="right">
-			<Pictures />
-			<Comment />
+			<Pictures :lineName="lineName" :stopData="stopData"/>
+			<Comment :lineName="lineName" :stopData="stopData"/>
         </div>
     </div>
 </template>

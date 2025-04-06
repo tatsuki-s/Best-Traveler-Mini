@@ -1,29 +1,10 @@
 <script setup>
-import { useRoute } from 'vue-router';
-const route = useRoute();
-
-// 現在のURLの最初の部分 (ja) を取得
-const langPath = () => {
-  const currentPath = route.path;
-  const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[1]; // 最初の部分 (ja)
-};
 </script>
 <template>
     <!--内容上はここから始まる-->
     <div class="welcome">
         <h1>Welcome&nbsp;to&nbsp;<span class="appNameTitle">&quot;BEST&nbsp;TRAVELER.&quot;</span></h1>
     </div>
-        <!-- <h2>当サイト設立の経緯</h2>
-        <p>
-            &nbsp;&nbsp;突然ですが、最後にバスに乗ったのはいつですか？<br/>
-            &nbsp;&nbsp;近年はドライバー不足などにより、地方での公共交通機関の本数は年々少なくなってきています。<br/>
-            &nbsp;&nbsp;しかし、バスがなくなると様々な問題が起こると考えられます。<br/>
-            &nbsp;&nbsp;高齢者ドライバーが無理をしてでも自動車を運転せざるを得なくなり、交通事故が起こってしまうかもしれません。<br/>
-            &nbsp;&nbsp;観光客が、移動手段がないという理由で観光を諦めるかもしれません。<br/>
-            &nbsp;&nbsp;このような問題を解決するために、 BEST TRAVELER. は開発されました。                    
-        </p> -->
-    
     <div>
         <h2>当サイト機能のご紹介</h2>
         <div class="kinou">

@@ -17,7 +17,7 @@ const langPath = () => {
                     <div id="container">
                         <img src="/favicon.ico" id="icons" alt="ホーム画面のアイコン">
                             <!--リンクを入れる。ホーム画面への-->
-                        <h1 class="Name no-select"><span class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</span><span id="version">&nbsp;Beta</span></h1>
+                        <h1 class="Name no-select"><span class="n">BEST<span class="sp"></span><span class="gyou">&nbsp;</span>TRAVELER.</span><span id="version">&nbsp;1.0.0</span></h1>
                     </div>
 			    </RouterLink>
             </div>

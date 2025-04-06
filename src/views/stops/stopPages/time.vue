@@ -1,48 +1,40 @@
 <script setup>
-import ichihira from "../../../data/ichihiraStops.json"
-
 import lineData from "../../../data/lines.json"
 import { useRoute } from 'vue-router';
 import { ref, onMounted } from 'vue';
 
-const timeData = {ichihira}
+const props = defineProps({
+  lineName: String,
+  stopData: Array
+});
+//Propsの[]を消すための処置
+const timeData = ({ [props.lineName]: props.stopData });
 
 const selectedSchedule = ref('weekend');//初期値を設定
 const selectedDirection = ref('downward');  // デフォルトで上りを表示
 
+//path判定まわり
 const route = useRoute();
-
-// 現在のURLの最初の部分 (ja) を取得
-const langPath = () => {
+const usePath = () => {
   const currentPath = route.path;
   const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[1]; // 最初の部分 (ja)
-};
-
-// 現在のURLの "ichihira" 部分を取得
-const linePath = () => {
-  const currentPath = route.path;
-  const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[2]; // 次の部分 (ichihira)
-};
-
-const stopPath = () => {
-  const currentPath = route.path;
-  const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[3]; 
-// const busStops = stops;
+  return {
+    langPath: pathParts[1] || '',
+    stopPath: pathParts[3] || ''
+  };
 }
+const { langPath, stopPath } = usePath()
 
 //言語に応じて路線を出す定数
 const busLineName = () => {
   const busLines = lineData;
-  const currentLine = busLines.find(line => line.nickName === linePath());
-  return currentLine ? currentLine.name[langPath()] : "";
+  const currentLine = busLines.find(line => line.nickName === props.lineName);
+  return currentLine ? currentLine.name[langPath] : "";
 };
 
 onMounted(() => {
-    timeData[linePath()].forEach((data) => { //forEachでオブジェクトを直接扱う
-        if (data.link === stopPath() && data.sort === false) {
+    timeData[props.lineName].forEach((data) => { //forEachでオブジェクトを直接扱う
+        if (data.link === stopPath && data.sort === false) {
             selectedDirection.value = 'both';
         }
     });
@@ -50,79 +42,70 @@ onMounted(() => {
 
 </script>
 <template>
-    <div id="busStopName">
-        <h1 id="Noriba">
-            <span v-for="data in timeData[linePath()]">
-                <span v-if="data.link === stopPath()">{{ data.name[langPath()] }}</span>
-            </span>
-        </h1>
-    
+    <div id="scheduleSelect">    
         <select id="youbi" v-model="selectedSchedule" class="no-select">
-                        <!-- valueの平日と土日祝日とが逆なのは仕様なので注意 -->
-            <!-- <option value="daily">{{ langPath() === "ja" ? "すべて" : "Everyday" }}</option> -->
-            <option value="weekend">{{ langPath() === "ja" ? "平日" : "Weekday" }}</option>
-            <option value="weekday">{{ langPath() === "ja" ? "土日祝日" : "Weekend" }}</option>
+            <!-- valueの平日と土日祝日とが逆なのは仕様なので注意 -->
+            <!-- <option value="daily">{{ langPath === "ja" ? "すべて" : "Everyday" }}</option> -->
+            <option value="weekend">{{ langPath === "ja" ? "平日" : "Weekday" }}</option>
+            <option value="weekday">{{ langPath === "ja" ? "土日祝日" : "Weekend" }}</option>
         </select>
-        <div v-for="data in timeData[linePath()]">
-            <div v-if="data.link === stopPath() && data.sort" class="label-container">
+        <div v-for="data in timeData[props.lineName]">
+            <div v-if="data.link === stopPath && data.sort" class="label-container">
                 <!-- <label class="no-select oneRow">
                     <input type="radio" v-model="selectedDirection" value="both">
-                    {{ langPath() === "ja" ? "両方" : "both" }} 
+                    {{ langPath === "ja" ? "両方" : "both" }} 
                 </label> -->
                 <label class="no-select oneRow">
                     <input type="radio" v-model="selectedDirection" value="downward">
-                    {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].kudari[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
+                    {{ `${langPath === "ja" ? "" : "To "}${ lineData[0].kudari[langPath] }${ langPath === "ja" ? "方面" : "" }` }}
                 </label>
                 <label class="no-select oneRow">
                     <input type="radio" v-model="selectedDirection" value="upward">
-                    {{ `${langPath() === "ja" ? "" : "To "}${ lineData[0].nobori[langPath()] }${ langPath() === "ja" ? "方面" : "" }` }}
+                    {{ `${langPath === "ja" ? "" : "To "}${ lineData[0].nobori[langPath] }${ langPath === "ja" ? "方面" : "" }` }}
                 </label>
             </div>
             <p v-else></p>
         </div>
     </div>
     <div id="Box">
-  <ul class="time">
-    <li class="timeBox" v-for="data in timeData[linePath()]" :key="data.id">
-      <div v-for="stopTime in (index, data.stopTime)" :key="stopTime.index">
-        <RouterLink
-                        v-if="data.link === stopPath() && 
-            (selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}`) && 
-            (selectedDirection === 'both' || 
-            (selectedDirection === 'upward' && stopTime.direction === 'up') || 
-            (selectedDirection === 'downward' && stopTime.direction !== 'up'))"
-            
-                        :to="`${stopPath()}/${stopTime.arrival.en.replace(/\s+/g, '')}-${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute}-${stopTime.schedule}`"
-            
-                        :class="`forjikoku ${stopTime.schedule}`"
-                        
-        >
-          <!-- <hr :class="stopTime.direction" /> -->
-          <span class="yukisaki">
-            <p :class="`line ${linePath()}`">
-              {{ busLineName() }}
-            </p>
-            <p style="margin:0;" v-if="stopTime.via && stopTime.via[langPath()]">
-              {{ `${ langPath() === "ja" ? "経由：" : "via:"}${ stopTime.via[langPath()]}` }}
-            </p>
-            <p v-else></p>
-            {{ `${langPath() === "ja" ? "終点：" : "arrival:"}${ stopTime.arrival[langPath()]}` }}
-          </span>
-          <span class="jikoku">
-            {{ stopTime.time.hour }}:{{ stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute }}
-          </span>
-      </RouterLink>
+        <ul class="time">
+            <li class="timeBox" v-for="data in timeData[props.lineName]" :key="data.id">
+            <div v-for="stopTime in (index, data.stopTime)" :key="stopTime.index">
+                <RouterLink
+                                v-if="data.link === stopPath && 
+                    (selectedSchedule === 'daily' || selectedSchedule !== `${stopTime.schedule}`) && 
+                    (selectedDirection === 'both' || 
+                    (selectedDirection === 'upward' && stopTime.direction === 'up') || 
+                    (selectedDirection === 'downward' && stopTime.direction !== 'up'))"
+                    
+                                :to="`${stopPath}/${stopTime.arrival.en.replace(/\s+/g, '')}-${stopTime.time.hour < 10 ? '0' + stopTime.time.hour : stopTime.time.hour}${stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute}-${stopTime.schedule}`"
+                    
+                                :class="`forjikoku ${stopTime.schedule}`"
+                                
+                >
+                <!-- <hr :class="stopTime.direction" /> -->
+                <span class="yukisaki">
+                    <p :class="`line ${props.lineName}`">
+                    {{ busLineName() }}
+                    </p>
+                    <p style="margin:0;" v-if="stopTime.via && stopTime.via[langPath]">
+                    {{ `${ langPath === "ja" ? "経由：" : "Via:"}${ stopTime.via[langPath]}` }}
+                    </p>
+                    <p v-else></p>
+                    {{ `${langPath === "ja" ? "終点：" : "Arrival:"}${ stopTime.arrival[langPath]}` }}
+                </span>
+                <span class="jikoku">
+                    {{ stopTime.time.hour }}:{{ stopTime.time.minute < 10 ? '0' + stopTime.time.minute : stopTime.time.minute }}
+                </span>
+            </RouterLink>
+            </div>
+            </li>
+        </ul>
     </div>
-    </li>
-  </ul>
-</div>
 </template>
 <style scoped>
-.busStopName {
+.scheduleSelect {
     display: inline-block;
-    text-align: center;
-}
-#Noriba {
     text-align: center;
 }
 #youbi {

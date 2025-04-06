@@ -2,49 +2,30 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import Papa from 'papaparse';
-import ichihira from '../data/ichihiraStops.json'
 
-const stops = {ichihira}
+const props = defineProps({
+  lineName: String,
+  stopData: Array
+});
+//Propsの[]を消すための処置
+const timeData = ({ [props.lineName]: props.stopData });
 
 const route = useRoute();
-
-// 現在のURLの最初の部分 (ja) を取得
-const langPath = () => {
+const usePath = () => {
   const currentPath = route.path;
   const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[1]; // 最初の部分 (ja)
-};
-
-// 現在のURLの "ichihira" 部分を取得
-const linePath = () => {
-  const currentPath = route.path;
-  const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[2]; // 次の部分 (ichihira)
-};
-
-const stopPath = () => {
-  const currentPath = route.path;
-  const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[3];
-};
-
-const tablePath = () => {
-  const currentPath = route.path;
-  const pathParts = currentPath.split('/'); // URLを'/'で分割
-  return pathParts[4];
-};
+  return {
+    langPath: pathParts[1] || '',
+    stopPath: pathParts[3] || '',
+    tablePath: pathParts[4] || ''
+  };
+}
+const { langPath, stopPath, tablePath } = usePath()
 
 const csvPath = () => {
-  const table = tablePath();
+  const table = tablePath;
   const csvParts = table.split('-'); // URLを'-'で分割
   return `${csvParts[0]}/${csvParts[1]}-${csvParts[2]}`;
-};
-
-// 言語に応じて路線を出す定数
-const busLineName = () => {
-  const busLines = lineData;
-  const currentLine = busLines.find(line => line.nickName === linePath());
-  return currentLine ? currentLine.name[langPath()] : "";
 };
 
 // 状態管理
@@ -57,8 +38,8 @@ const stopName = ref('');
 
 // 初期化時にCSVデータを取得
 onMounted(async () => {
-  fileURL.value = `/csvData/${linePath()}/${stopPath()}/${csvPath()}.csv`; // 言語に応じたCSVのURLを設定
-  stopName.value = stops[linePath()].map(line => line.name);
+  fileURL.value = `/csvData/${props.lineName}/${stopPath}/${csvPath()}.csv`; // 言語に応じたCSVのURLを設定
+  stopName.value = timeData[props.lineName].map(line => line.name);
   try {
     await fetchCSV(fileURL.value); // CSVデータを取得
   } catch (err) {
@@ -96,7 +77,7 @@ async function fetchCSV(path) {
 
 <template>
 <div id="mainTable">
-    <h3>{{ langPath() === 'ja' ? '小学生は半額，小学生未満は無料' : 'Half price for elementary school students, free for pre-elementary school students' }}</h3>
+    <h3>{{ langPath === 'ja' ? '小学生は半額，小学生未満は無料' : 'Half price for elementary school students, free for pre-elementary school students' }}</h3>
     <div class="tables">
       <p v-if="loading">Loading...</p>
       <p v-if="error" class="error">Error</p>
@@ -104,22 +85,22 @@ async function fetchCSV(path) {
           <thead>
               <tr>
                   <!-- <th>出発地</th> -->
-                  <th>{{langPath() === 'ja' ? '停車バス停' : 'Stop Name'}}</th>
-                  <th>{{langPath() === 'ja' ? '停車時刻' : 'Stop Time'}}</th>
-                  <th>{{langPath() === 'ja' ? '運賃' : 'Fare'}}</th>
+                  <th>{{langPath === 'ja' ? '停車バス停' : 'Stop Name'}}</th>
+                  <th>{{langPath === 'ja' ? '停車時刻' : 'Stop Time'}}</th>
+                  <th>{{langPath === 'ja' ? '運賃' : 'Fare(YEN)'}}</th>
               </tr>
           </thead>
           <tbody>
               <tr v-for="(row, rowIndex) in rows" :key="rowIndex">
                   <td>
                       <span v-for="name in stopName">
-                          {{ row.バス停名 === name.ja ? name[langPath()] : '' }}
+                          {{ row.バス停名 === name.ja ? name[langPath] : '' }}
                       </span>                        
                       <!-- 一関駅前だけJSONだと10番のりばと書いていてマッチしないので特別に処理 -->
-                      <span v-if="row.バス停名 === '一関駅前'">{{ langPath() === 'ja' ? '一関駅前' : 'Ichinoseki Ekimae' }}</span> 
+                      <span v-if="row.バス停名 === '一関駅前'">{{ langPath === 'ja' ? '一関駅前' : 'Ichinoseki Ekimae' }}</span> 
                   </td>
                   <td>{{ `${row.出発時}:${String(row.出発分).padStart(2, '0')}` }}</td>
-                  <td>{{ row.運賃 !== '' && row.運賃 !== null ? (langPath() === 'ja' ? `${row.運賃} 円` : `${row.運賃} JPY`) : '✕' }}</td>
+                  <td>{{ row.運賃 !== '' && row.運賃 !== null ? (langPath === 'ja' ? `${row.運賃} 円` : `${row.運賃}`) : '✕' }}</td>
               </tr>
           </tbody>
       </table>

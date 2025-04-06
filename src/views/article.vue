@@ -1,20 +1,3 @@
-<template>
-  <div id="ma">
-    <div v-for="item in data">
-        <div v-if="item.id.toString() === idPath().toString()">
-          <h1>{{ item.title }}</h1>
-          <div v-for="content in item.contents">
-            <h2 v-if="content.heading !== null" class="tyt">{{ content.heading }}</h2>
-            <img v-if="content.image !== null" :src="content.image" alt="image" class="info"/>
-            <span v-if="content.body !== null">
-              <p v-for="text in content.body" class="info">{{ text }}</p>
-            </span>
-          </div>
-        </div>
-    </div>
-  </div>
-</template>
-
 <script>
 import pageData from '../data/pageData.json'
 
@@ -38,7 +21,22 @@ export default {
   }
 }
 </script>
-
+<template>
+  <div id="ma">
+    <div v-for="item in data">
+        <div v-if="item.id.toString() === idPath().toString()">
+          <h1>{{ item.title }}</h1>
+          <div v-for="content in item.contents">
+            <h2 v-if="content.heading !== null" class="tyt">{{ content.heading }}</h2>
+            <img v-if="content.image !== null" :src="content.image" alt="image" class="info"/>
+            <span v-if="content.body !== null">
+              <p v-for="text in content.body" class="info">{{ text }}</p>
+            </span>
+          </div>
+        </div>
+    </div>
+  </div>
+</template>
 <style scoped>
 #ma {
   margin: 0 8vw 0 8vw;
